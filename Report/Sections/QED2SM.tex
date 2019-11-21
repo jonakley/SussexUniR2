@@ -1,0 +1,175 @@
+\section{QED Contribution to R$_2$ in the Standard Model}
+\label{sec:QED2SM} 
+\subsection{2-point functions}
+{\bf Z-boson self-energy}
+\begin{align*}
+\begin{gathered}
+\feynmandiagram [layered layout, horizontal=b to c] {
+	a [particle={\(Z,\alpha\)}] -- [photon, momentum=\(p_1\)] b
+	  -- [fermion, half left, looseness=1.5, momentum=\(p_1+q\)] c
+	  -- [fermion, half left, looseness=1.5, momentum=\(q\)] b,
+	c -- [photon, momentum=\(p_1\)] d [particle={\(\beta,Z\)}] ,
+};
+\end{gathered} \qquad
+& =\int\frac{d^dq}{\left( 2\pi \right)^d} \left( -1 \right) \Tr \lbr \frac{ig}{cos\theta_W} \gamma^{\alpha} \left( g_V - g_A \gamma_5 \right) \frac{i \left( \fsl{p}_1+\fsl{q}+m \right)}{\left( p_1+q \right)^2 - m^2} \frac{ig}{cos\theta_W} \gamma^{\beta} \times \right. & \\
+& \times \left. \left( g_V - g_A \gamma_5 \right) \frac{i \left( \fsl{q}+m \right)}{q^2 - m^2} \rbr = & \\
+& =\int\frac{d^dq}{\left( 2\pi \right)^d} \frac{-g^2}{\cos^2\theta_W} \Tr \lbr \gamma^{\alpha} \left( g_V - g_A \gamma_5 \right) \frac{ \left( \fsl{p}_1+\fsl{q}+m \right)}{\left( p_1+q \right)^2 - m^2} \gamma^{\beta} \left( g_V - g_A \gamma_5 \right) \frac{ \left( \fsl{q}+m \right)}{q^2 - m^2} \rbr & \\
+& \equiv \int\frac{d^dq}{\left( 2\pi \right)^d} \frac{\bar{N}}{\bar{D}_1\bar{D}_0} &
+\end{align*}
+
+Additionally to the four gamma matrices we now also have the fifth gamma matrix. Its extension to d dimensions is not as straightforward as with the four gamma matrices where we just have to change the 4-dimensional metric to the d-dimensional metric in the Clifford algebra $\lbr \gamma^{\alpha}, \gamma^{\beta} \rbr = 2 g^{\alpha\beta} $. This is because chirality is a property of four dimensions.\\
+If we still want to impose $\lbr \gamma_5,\gamma^{\mu} \rbr = 0$, then $\Tr\left( \gamma_5 \gamma^{\alpha}\gamma^{\beta}\gamma^{\gamma}\gamma^{\delta} \right) = 0$  for $d \neq 0,2,4$ which clashes with $\Tr\left( \gamma_5 \gamma^{\alpha}\gamma^{\beta}\gamma^{\gamma}\gamma^{\delta} \right) = -4i \epsilon^{\alpha\beta\gamma\delta}$ \cite{Gamma5}. But the identity is essential in the evaluation of the triangle diagram for the Adler-Bell-Jackiw anomaly. The only definition of $\gamma_5$ which is consistent with the chiral anomaly is the definition of 't Hooft and Veltman \cite{HVgamma5}: $\gamma_5 = i/4! \ \epsilon_{\mu_1 \dots \mu_4} \gamma^{\mu_1} \cdots \gamma^{\mu_4}$. This definition implies $ \lbr \gamma_5, \gamma^{\mu} \rbr = 0 $ and $ \left[ \gamma_5, \tilde{\gamma}^{\mu} \right] = 0 $. 
+
+\begin{align*}
+\bar{N} \left( \bar{q} \right) = & - \frac{g^2}{\cos^2\theta_W} \ \Tr  \lbr \bar{\gamma}^{\alpha} \left( g_V - g_A \gamma_5 \right) \left( \bar{\fsl{p}}_1+\bar{\fsl{q}}+m \right) \bar{\gamma}^{\beta} \left( g_V - g_A \gamma_5 \right) \left( \bar{\fsl{q}}+m \right) \rbr = & \\
+&= \frac{-g^2}{\cos^2\theta_W} \Tr \lbr \gamma^{\alpha} \left( g_V - g_A \gamma_5 \right) \left( \fsl{p}_1 + \fsl{q} + m \right) \gamma^{\beta} \left( g_V - g_A \gamma_5 \right) \left( \fsl{q} + m \right) + \gamma^{\alpha} \left( g_V^2 + g_A^2 \right) \tilde{\fsl{q}} \gamma^{\beta} \tilde{\fsl{q}} \rbr \equiv N + \tilde{N} &
+\end{align*}
+Where we used $ \left[ \gamma_5, \tilde{\gamma}^{\mu} \right] = 0 $ and the fact that the gamma matrices will be contracted with external momenta.
+\begin{equation*}
+\tilde{N} = \frac{-g^2}{\cos^2\theta_W} \left( g_V^2 + g_A^2 \right) \left( - \tilde{q}^2 \right) \Tr\left( \gamma^{\alpha}\gamma^{\beta} \right) = \frac{4g^2\tilde{q}^2}{\cos^2\theta_W} \left( g_V^2 + g_A^2 \right) g^{\alpha\beta}
+\end{equation*}
+\begin{align*}
+R_2^{ZZ} & = \frac{1}{\left( 2\pi \right) ^4} \int d^d\bar{q} \frac{\tilde{N}}{\bar{D}_1\bar{D}_0} = \frac{4g^2g^{\alpha\beta}}{\left( 2\pi \right)^4 \cos^2\theta_W} \left( g_V^2 + g_A^2 \right) \int d^d\bar{q} \frac{\tilde{q}^2}{\bar{D}_1\bar{D}_0} = & \\
+& = \frac{4g^2g^{\alpha\beta}}{\left( 2\pi \right)^4 \cos^2\theta_W} \left( g_V^2 + g_A^2 \right) \left( - \frac{i\pi^2}{2} \right) \left( m^2 - \frac{p_1^2}{3} \right) = \frac{-ig^2}{ 8 \pi^2 \cos^2\theta_W} \left( g_V^2 + g_A^2 \right)  \left( m^2 - \frac{p_1^2}{3} \right) g^{\alpha\beta} & \\ \numberthis \label{eqn:R2ZZ}
+\end{align*}
+\\
+
+{\bf Photon/Z-boson mixed self-energy}
+\begin{align*}
+\begin{gathered}
+\feynmandiagram [layered layout, horizontal=b to c] {
+	a [particle={\(\gamma,\alpha\)}] -- [photon, momentum=\(p_1\)] b
+	  -- [fermion, half left, looseness=1.5, momentum=\(p_1+q\)] c
+	  -- [fermion, half left, looseness=1.5, momentum=\(q\)] b,
+	c -- [photon, momentum=\(p_1\)] d [particle={\(\beta,Z\)}] ,
+};
+\end{gathered} \qquad
+& =\int\frac{d^dq}{\left( 2\pi \right)^d} \left( -1 \right) \Tr \lbr \left( - i e Q_f \right) \gamma^{\alpha} \frac{i \left( \fsl{p}_1+\fsl{q}+m \right)}{\left( p_1+q \right)^2 - m^2} \frac{ig}{cos\theta_W} \gamma^{\beta} \times \right. & \\
+& \times \left. \left( g_V - g_A \gamma_5 \right) \frac{i \left( \fsl{q}+m \right)}{q^2 - m^2} \rbr = & \\
+& =\int\frac{d^dq}{\left( 2\pi \right)^d} \frac{eQ_fg}{\cos\theta_W} \Tr \lbr \gamma^{\alpha} \frac{ \left( \fsl{p}_1+\fsl{q}+m \right)}{\left( p_1+q \right)^2 - m^2} \gamma^{\beta} \left( g_V - g_A \gamma_5 \right) \frac{ \left( \fsl{q}+m \right)}{q^2 - m^2} \rbr & \\
+& \equiv \int\frac{d^dq}{\left( 2\pi \right)^d} \frac{\bar{N}}{\bar{D}_1\bar{D}_0} &
+\end{align*}
+
+\begin{align*}
+\bar{N} \left( \bar{q} \right) = & \frac{eQ_fg}{\cos\theta_W} \ \Tr \lbr \bar{\gamma}^{\alpha} \left( \bar{\fsl{p}}_1+\bar{\fsl{q}}+m \right) \bar{\gamma}^{\beta} \left( g_V - g_A \gamma_5 \right) \left( \bar{\fsl{q}}+m \right) \rbr = & \\
+&= \frac{eQ_fg}{\cos\theta_W} \Tr \lbr \gamma^{\alpha} \left( \fsl{p}_1 + \fsl{q} + m \right) \gamma^{\beta} \left( g_V - g_A \gamma_5 \right) \left( \fsl{q} + m \right) + \gamma^{\alpha} \tilde{\fsl{q}} \gamma^{\beta} g_V \tilde{\fsl{q}} \rbr \equiv N + \tilde{N} &
+\end{align*}
+Where we have used $\Tr\left( \gamma^{\alpha}\gamma^{\beta}\gamma_5 \right) = 0$.
+
+\begin{equation*}
+\tilde{N} = \frac{eQ_fg}{cos\theta_W} \Tr\lbr \gamma^{\alpha} \tilde{\fsl{q}} \gamma^{\beta} g_V \tilde{\fsl{q}} \rbr = \frac{-4eQ_fgg_V}{\cos\theta_W} \tilde{q}^2 g^{\alpha\beta}
+\end{equation*}
+
+\begin{align*}
+R_2^{\gamma Z} & = \frac{1}{\left( 2\pi \right)^4} \int d^d \bar{q} \frac{\tilde{N}}{\bar{D}_1\bar{D}_0} = \frac{-4eQ_fgg_V}{\left( 2\pi \right)^4\cos\theta_W} g^{\alpha\beta} \int d^d\bar{q} \frac{\tilde{q}^2}{\bar{D}_1\bar{D}_0} & \\
+& = \frac{-4eQ_fgg_V}{\left( 2\pi \right)^4\cos\theta_W} \left( -\frac{i\pi^2}{2} \right) g^{\alpha\beta} \left( m^2 - \frac{p_1^2}{3} \right) = \frac{ieQ_fgg_V}{8\pi^2\cos\theta_W} g^{\alpha\beta} \left( m^2 - \frac{p_1^2}{3} \right) & \numberthis \label{eqn:R2photonZ}
+\end{align*}
+
+{\bf Gluon self-energy} \\
+Because the gluon (just as the photon) couples to a pure vector current, the calculation for the gluon self-energy $R_2$ is the same as for the photon self-energy $R_2$ replacing the electric charge generator with the colour charge generator. So, from equation \ref{eqn:R2photon} with $e Q_f \rightarrow g_S T^a$ we get
+\begin{equation}
+\label{eqn:R2gluon}
+R_2^{gg} = R_2^{\gamma\gamma} \left( e Q_f \rightarrow g_S T^a \right) = \frac{-ig_S^2}{8\pi^2} \Tr \left( T^a T^b \right) g^{\alpha\beta} \left( 2m^2 -\frac{p_1^2}{3} \right) 
+\end{equation}
+
+\subsection{3-point functions}
+{\bf Gluon-quark vertex}
+\begin{align*}
+\begin{gathered}
+\feynmandiagram [horizontal=i1 to v2] {
+	i1 [particle=\(\mu\)] -- [gluon, momentum=\(p_2-p_1\)] v2,
+	f1 -- [fermion, momentum=\(p_1\)] v1
+	   -- [fermion, momentum=\(p_1+q\)] v2
+	   -- [fermion, momentum=\(p_2+q\)] v3
+	   -- [fermion, momentum=\(p_2\)] f3,
+	v3 -- [boson, momentum=\(q\)] v1, 
+};
+\end{gathered} \qquad
+& = \int\frac{d^dq}{\left( 2\pi \right)^d} \left( -ie Q_q \gamma^{\beta} \right) \frac{i \left( \fsl{p}_1+\fsl{q}+m \right)}{\left( p_1+q \right)^2 - m^2} \left( -ig_S \gamma^{\mu} T^a \right) \frac{i \left( \fsl{p}_2 + \fsl{q}+m \right)}{\left( p_2 + q \right)^2 - m^2} \left( -ie Q_q \gamma^{\alpha} \right) \frac{-ig_{\alpha\beta}}{q^2} = & \\
+& = \int\frac{d^dq}{\left( 2\pi \right)^d} -e^2 Q_q^2 g_S \gamma^{\beta} \frac{ \left( \fsl{p}_1+\fsl{q}+m \right)}{\left( p_1+q \right)^2 - m^2} \gamma^{\mu} T^a \frac{ \left( \fsl{p}_2 + \fsl{q}+m \right) }{\left( p_2 + q \right)^2 - m^2} \gamma_{\beta} \frac{1}{q^2} = & \\
+& \equiv \int\frac{d^dq}{\left( 2\pi \right)^d} \frac{\bar{N}}{\bar{D}_1\bar{D}_2\bar{D}_0} &
+\end{align*}
+
+\begin{align*}
+\bar{N} \left( \bar{q} \right) & = -e^2 Q_q^2 g_S \lbr \bar{\gamma}^{\beta} \left( \bar{\fsl{p}}_1 + \bar{\fsl{q}} + m \right) \bar{\gamma}^{\mu} T^a \left( \bar{\fsl{p}}_2 + \bar{\fsl{q}} + m \right) \bar{\gamma}_{\beta} \rbr = -e^2 Q_q^2 g_S \lbr \gamma^{\beta} \left( \fsl{p}_1 + \fsl{q} + m \right) \gamma^{\mu} T^a \left( \fsl{p}_2 + \fsl{q} + m \right) \gamma_{\beta} + \right. & \\
+& \left. + \gamma^{\beta} \tilde{\fsl{q}} \gamma^{\mu} T^a \tilde{\fsl{q}} \gamma_{\beta} + \tilde{\gamma}^{\beta} \fsl{q} \gamma^{\mu} T^a \fsl{q} \tilde{\gamma}_{\beta} \rbr \equiv N + \tilde{N} &
+\end{align*}
+
+\begin{equation*}
+\tilde{N} = -e^2 Q_q^2 g_S \lbr -\tilde{q}^2 \underbrace{\gamma^{\beta}\gamma^{\mu}\gamma_{\beta}}_{-2\gamma^{\mu}} T^a - \epsilon q_{\alpha}q_{\beta} \gamma^{\alpha}\gamma^{\mu}\gamma^{\beta}  T^a \rbr = -e^2 Q_q^2 g_S \lbr 2\tilde{q}^2 \gamma^{\mu} T^a - \epsilon q_{\alpha}q_{\beta} \gamma^{\alpha}\gamma^{\mu}\gamma^{\beta} T^a \rbr
+\end{equation*}
+
+\begin{align*}
+R_2^{gqq} = & \frac{1}{\left( 2\pi \right)^4} \int d^d \bar{q} \frac{\tilde{N}}{\bar{D}_1\bar{D}_2\bar{D}_0} = \frac{-e^2Q_q^2g_S}{\left( 2\pi \right)^4} \int d^d \bar{q} \frac{1}{\bar{D}_1\bar{D}_2\bar{D}_0} \lbr 2\tilde{q}^2 \gamma^{\mu} T^a - \epsilon q_{\alpha}q_{\beta} \gamma^{\alpha}\gamma^{\mu}\gamma^{\beta} T^a \rbr = & \\
+& = \frac{-e^2Q_q^2g_S}{\left( 2\pi \right)^4} \lbr 2 \left( \frac{-i\pi^2}{2} \right) \gamma^{\mu} T^a - \epsilon \left( \frac{-i\pi^2}{2\epsilon} \right) \underbrace{g_{\alpha\beta} \gamma^{\alpha}\gamma^{\mu}\gamma^{\beta}}_{-2\gamma^{\mu}} T^a \rbr = \frac{-e^2 Q_q^2 g_S}{16 \pi^4} \left( \frac{-i\pi^2}{2} \right) \lbr 2\gamma^{\mu} T^a + 2\gamma^{\mu} T^a \rbr = & \\
+& = \frac{ie^2 Q_q^2 g_S}{8 \pi^2} \gamma^{\mu} T^a & \numberthis \label{eqn:R2gluonqq}
+\end{align*}
+
+
+{\bf Z-fermion vertex}
+\begin{align*}
+\begin{gathered}
+\feynmandiagram [horizontal=i1 to v2] {
+	i1 [particle={\(Z,\mu\)}] -- [photon, momentum=\(p_2-p_1\)] v2,
+	f1 -- [fermion, momentum=\(p_1\)] v1
+	   -- [fermion, momentum=\(p_1+q\)] v2
+	   -- [fermion, momentum=\(p_2+q\)] v3
+	   -- [fermion, momentum=\(p_2\)] f3,
+	v3 -- [boson, momentum=\(q\)] v1, 
+};
+\end{gathered} \qquad
+& = \int\frac{d^dq}{\left( 2\pi \right)^d} \left( -ie Q_f \gamma^{\beta} \right) \frac{i \left( \fsl{p}_1+\fsl{q}+m \right)}{\left( p_1+q \right)^2 - m^2} \frac{ig}{\cos\theta_W} \gamma^{\mu} \left( g_V - g_A \gamma_5 \right) \frac{i \left( \fsl{p}_2 + \fsl{q}+m \right)}{\left( p_2 + q \right)^2 - m^2} \times & \\
+& \times \left( -ie Q_f \gamma^{\alpha} \right) \frac{-ig_{\alpha\beta}}{q^2} = & \\
+& = \int\frac{d^dq}{\left( 2\pi \right)^d} \frac{e^2 Q_f^2g}{\cos\theta_W} \gamma^{\beta} \frac{ \left( \fsl{p}_1+\fsl{q}+m \right)}{\left( p_1+q \right)^2 - m^2} \gamma^{\mu} \left( g_V - g_A \gamma_5 \right) \frac{ \left( \fsl{p}_2 + \fsl{q}+m \right) }{\left( p_2 + q \right)^2 - m^2} \gamma_{\beta} \frac{1}{q^2} = & \\
+& \equiv \int\frac{d^dq}{\left( 2\pi \right)^d} \frac{\bar{N}}{\bar{D}_1\bar{D}_2\bar{D}_0} &
+\end{align*}
+
+\begin{align*}
+\bar{N} \left( \bar{q} \right) & = \frac{e^2Q_f^2g}{\cos\theta_W} \lbr \bar{\gamma}^{\beta} \left( \bar{\fsl{p}}_1 + \bar{\fsl{q}} + m \right) \bar{\gamma}^{\mu} \left( g_V - g_A \gamma_5 \right) \left( \bar{\fsl{p}}_2 + \bar{\fsl{q}} + m \right) \bar{\gamma}_{\beta} \rbr = \frac{e^2Q_f^2g}{\cos\theta_W} \lbr \gamma^{\beta} \left( \fsl{p}_1 + \fsl{q} + m \right) \gamma^{\mu} \left( g_V - g_A \gamma_5 \right) \times \right. & \\
+& \left. \times \left( \fsl{p}_2 + \fsl{q} + m \right) \gamma_{\beta} + \tilde{\gamma}^{\beta} \left( \fsl{p}_1 + \fsl{q} + m \right) \gamma^{\mu} \left( g_V - g_A \gamma_5 \right) \left( \fsl{p}_2 + \fsl{q} + m \right) \tilde{\gamma}_{\beta} + \left( \gamma^{\beta} + \tilde{\gamma}^{\beta} \right) \tilde{\fsl{q}} \gamma^{\mu} \left( g_V - g_A \gamma_5 \right) \tilde{\fsl{q}} \left( \gamma_{\beta} + \tilde{\gamma}_{\beta} \right) \rbr = & \\
+& \equiv N + \tilde{N} &
+\end{align*}
+
+\begin{align*}
+\tilde{N} & = \frac{e^2Q_f^2g}{\cos\theta_W} \lbr \left( \fsl{p}_1 + \fsl{q} - m \right) \tilde{\gamma}^{\beta} \gamma^{\mu} \tilde{\gamma}_{\beta} \left( g_V - g_A \gamma_5 \right) \left( \fsl{p}_2 + \fsl{q} - m \right) + \gamma^{\beta} \tilde{\fsl{q}} \gamma^{\mu} \left( g_V - g_A \gamma_5 \right) \tilde{\fsl{q}} \gamma_{\beta} + \tilde{\gamma}^{\beta} \tilde{\fsl{q}} \gamma^{\mu} \left( g_V - g_A \gamma_5 \right) \tilde{\fsl{q}} \tilde{\gamma}_{\beta}   \rbr = & \\
+& = \frac{e^2Q_f^2g}{\cos\theta_W} \lbr -\epsilon \left( \fsl{p}_1 + \fsl{q} - m \right) \gamma^{\mu} \left( g_V - g_A \gamma_5 \right) \left( \fsl{p}_2 + \fsl{q} - m \right) - \tilde{q}^2 \gamma^{\beta}\gamma^{\mu}\gamma_{\beta} \left( g_V + g_A \gamma_5 \right) - \tilde{q}^2 \left( -\epsilon \gamma^{\mu} \right) \left( g_V - g_A \gamma_5 \right) \rbr = & \\
+& = \frac{e^2Q_f^2g}{\cos\theta_W} \lbr -\epsilon \left( \fsl{p}_1 + \fsl{q} - m \right) \gamma^{\mu} \left( g_V - g_A \gamma_5 \right) \left( \fsl{p}_2 + \fsl{q} - m \right) + \tilde{q}^2 \left( 2 \gamma^{\mu} \left( g_V + g_A \gamma_5 \right) + \epsilon \gamma^{\mu} \left( g_V - g_A \gamma_5 \right) \right) \rbr = &
+\end{align*}
+
+\begin{align*}
+R_2^{Zff} & = \frac{1}{\left( 2\pi \right)^4} \int d^d \bar{q} \frac{\tilde{N}}{\bar{D}_1\bar{D}_2\bar{D}_0} = \frac{e^2Q_f^2g}{\left( 2\pi \right)^4 \cos\theta_W} \int d^d \bar{q} \frac{1}{\bar{D}_1\bar{D}_2\bar{D}_0} \lbr -\epsilon \fsl{q} \gamma^{\mu} \left( g_V - g_A \gamma_5 \right) \fsl{q} + \tilde{q}^2 \left( 2 \gamma^{\mu} \left( g_V + g_A \gamma_5 \right) + \right. \right. & \\
+& \left. \left. +  \epsilon \gamma^{\mu} \left( g_V - g_A \gamma_5 \right) \right) \rbr = \frac{e^2Q_f^2g}{\cos\theta_W} \lbr -\epsilon \left( -\frac{i\pi^2}{2\epsilon} \right) g_{\alpha\beta} \gamma^{\alpha}\gamma^{\mu}\gamma^{\beta} \left( g_V + g_A \gamma_5 \right) + 2 \left( - \frac{i\pi^2}{2} \right) \gamma^{\mu}  \left( g_V + g_A \gamma_5 \right) \rbr = & \\
+& = \frac{e^2Q_f^2g}{\cos\theta_W} \left( - \frac{i\pi^2}{2} \right) \gamma^{\mu} \lbr 2 \left( g_V + g_A \gamma_5 \right) + 2 \left( g_V + g_A \gamma_5 \right) \rbr = \frac{-ie^2Q_f^2g}{8\pi^2\cos\theta_W} \gamma^{\mu} \left( g_V + g_A \gamma_5 \right)& \numberthis \label{eqn:R2Zff}
+\end{align*}
+where we used that scalar 3-point integrals do not contribute to $R_2$. The last term in the integral is of order $\epsilon$ so it will not contribute in the limit $\epsilon \rightarrow 0$
+
+{\bf Higgs-fermion Yukawa vertex}
+\begin{align*}
+\begin{gathered}
+\feynmandiagram [horizontal=i1 to v2] {
+	i1 [particle=\(H\)] -- [scalar, momentum=\(p_2-p_1\)] v2,
+	f1 -- [fermion, momentum=\(p_1\)] v1
+	   -- [fermion, momentum=\(p_1+q\)] v2
+	   -- [fermion, momentum=\(p_2+q\)] v3
+	   -- [fermion, momentum=\(p_2\)] f3,
+	v3 -- [boson, momentum=\(q\)] v1, 
+};
+\end{gathered} \qquad
+& = \int\frac{d^dq}{\left( 2\pi \right)^d} \left( -ie Q_f \gamma^{\beta} \right) \frac{i \left( \fsl{p}_1+\fsl{q}+m \right)}{\left( p_1+q \right)^2 - m^2} \left( -\frac{ig}{2}\frac{m}{m_W} \right) \frac{i \left( \fsl{p}_2 + \fsl{q}+m \right)}{\left( p_2 + q \right)^2 - m^2} \left( -ie Q_f \gamma^{\alpha} \right) \frac{-ig_{\alpha\beta}}{q^2} = & \\
+& = \int\frac{d^dq}{\left( 2\pi \right)^d} \frac{-e^2Q_f^2gm}{2m_W} \gamma^{\beta} \frac{ \left( \fsl{p}_1+\fsl{q}+m \right)}{\left( p_1+q \right)^2 - m^2} \gamma^{\mu} \frac{ \left( \fsl{p}_2 + \fsl{q}+m \right) }{\left( p_2 + q \right)^2 - m^2} \gamma_{\beta} \frac{1}{q^2} = & \\
+& \equiv \int\frac{d^dq}{\left( 2\pi \right)^d} \frac{\bar{N}}{\bar{D}_1\bar{D}_2\bar{D}_0} &
+\end{align*}
+
+\begin{align*}
+\bar{N} \left( \bar{q} \right) & = \frac{e^2Q_f^2gm}{2m_W} \bar{\gamma}^{\beta} \left( \bar{\fsl{p}}_1 + \bar{\fsl{q}} + m \right) \left( \bar{\fsl{p}}_2 + \bar{\fsl{q}} + m \right) \bar{\gamma}_{\beta} = & \\
+& = \frac{e^2Q_f^2gm}{2m_W} \lbr \gamma^{\beta} \left( \fsl{p}_1 + \fsl{q} + m \right) \left( \fsl{p}_2 + \fsl{q} + m \right) \gamma_{\beta} + \tilde{\gamma}^{\beta} \left( \fsl{p}_1 + \fsl{q} + m \right) \left( \fsl{p}_2 + \fsl{q} + m \right) \tilde{\gamma}_{\beta} + \gamma^{\beta} \tilde{\fsl{q}} \tilde{\fsl{q}} \gamma_{\beta} \rbr \equiv N + \tilde{N} &
+\end{align*}
+
+\begin{equation*}
+\tilde{N} = -\frac{e^2Q_f^2gm}{2m_W} \lbr \tilde{\gamma}^{\beta} \left( \fsl{p}_1 + \fsl{q} + m \right) \left( \fsl{p}_2 + \fsl{q} + m \right) \tilde{\gamma}_{\beta} + \gamma^{\beta} \tilde{\fsl{q}} \tilde{\fsl{q}} \gamma_{\beta} \rbr = -\frac{e^2Q_f^2gm}{2m_W} \lbr \tilde{\gamma}^{\beta}\tilde{\gamma}_{\beta} \fsl{q}\fsl{q} + \tilde{\fsl{q}} \tilde{\fsl{q}} \gamma^{\beta}\gamma_{\beta} \rbr 
+\end{equation*}
+
+\begin{align*}
+R_2 & = \frac{1}{\left( 2\pi \right)^4} \int d^d \bar{q} \frac{\tilde{N}}{\bar{D}_1\bar{D}_0\bar{D}_2} = \frac{1}{\left( 2\pi \right)^4} \int d^d \bar{q} \frac{1}{\bar{D}_1\bar{D}_0\bar{D}_2} \left(-\frac{e^2Q_f^2gm}{2m_W} \right) \lbr \tilde{\gamma}^{\beta}\tilde{\gamma}_{\beta} \fsl{q}\fsl{q} + \tilde{\fsl{q}} \tilde{\fsl{q}} \gamma^{\beta}\gamma_{\beta} \rbr  = & \\
+& -\frac{e^2Q_f^2gm}{2m_W} \lbr \epsilon \left( -\frac{i\pi^2}{2\epsilon} \right) \gamma^{\alpha} \gamma^{\beta} g_{\alpha\beta} \fsl{q}\fsl{q} + \tilde{\fsl{q}} \tilde{\fsl{q}} \gamma^{\beta}\gamma_{\beta} + \left( - \frac{i\pi^2}{2} \right) 4 \rbr = \frac{-e^2Q_f^2gm}{\left( 2\pi \right)^4 2m_W} \left( - \frac{i\pi^2}{2} \right) 8 = \frac{ie^2Q_f^2gm}{8\pi^2m_W} &
+\end{align*}

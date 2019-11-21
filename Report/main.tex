@@ -1,0 +1,80 @@
+\documentclass{article}
+
+
+\usepackage{arxiv}
+
+\usepackage[utf8]{luainputenc}	% allow utf-8 input with LuaLaTeX
+\usepackage[T1]{fontenc}    	% use 8-bit T1 fonts
+\usepackage{palatino}			% use palatino font
+\usepackage{hyperref}       	% hyperlinks
+\usepackage{url}            	% simple URL typesetting
+\usepackage{booktabs}       	% professional-quality tables
+\usepackage{amsfonts}       	% blackboard math symbols
+\usepackage{amsthm}
+\usepackage{nicefrac}       	% compact symbols for 1/2, etc.
+\usepackage{microtype}      	% microtypography
+\usepackage{amsmath}
+\usepackage[compat=1.1.0]{tikz-feynman}
+\usepackage{tikz}
+\usepackage{slashed}
+\usepackage{mathtools}
+\usepackage{dsfont}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage[onehalfspacing]{setspace}
+
+
+
+\numberwithin{equation}{section} % numbers equations by section
+
+\newcommand{\Tr}{\mathrm{Tr}}
+\newcommand{\fsl}{\slashed}
+\newcommand{\lbr}{\left\lbrace}
+\newcommand{\rbr}{\right\rbrace}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=0.5pt] (char) {#1};}}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+
+\title{Contribution of QED to Rational Terms in 1-loop Feynman Diagrams in the Standard Model}
+
+
+
+
+\author{
+  Jonathan Kley \\
+  Department of Physics\\
+  Technical University of Munich\\
+  James-Franck-Str. 1, 85748 Garching \\
+  \texttt{jonathan.kley@tum.de} \\
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The abstract goes here.
+\end{abstract}
+
+
+% keywords can be removed
+\keywords{QFT \and 1-loop Feynman Diagrams \and Rational Terms \and More}
+
+\newpage
+\tableofcontents
+\newpage
+
+\include{Sections/Introduction}
+\include{Sections/pureQED}
+\include{Sections/QED2SM}
+\include{Sections/pureQEDrenorm}
+\include{Sections/QED2SMrenorm}
+\include{Sections/Appendices}
+
+
+\bibliographystyle{unsrt}  
+\bibliography{references}
+
+
+\end{document}
