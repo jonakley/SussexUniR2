@@ -1,9 +1,33 @@
-% Chapter 1
-
 \section{Introduction}
 \label{sec:Introduction} 
 
 The introduction goes here.
+
+\begin{equation}
+\mathcal{M} = \sum_i d_i \mathrm{Box}_i + \sum_i c_i \mathrm{Triangle}_i + \sum_i b_i \mathrm{Bubble}_i + \sum_i a_i \mathrm{Tadpole}_i + R
+\end{equation}
+
+\begin{equation}
+R = R_1 + R_2
+\end{equation}
+where $R_2$ is the $\epsilon$-dimensional contribution of dimensional regularization to the amplitude which is just a rational combination of Lorentz tensors and parameters of the theory, i.e. the couplings or masses of the particles in the theory.
+
+
+We can decompose any m-point 1-loop function $\bar{A}\bar{q})$ in a numerator $\bar{N}( \bar{q})$ and denominators $\bar{D}_i$
+\begin{equation}
+\label{eqn:amp}
+\bar{A} (\bar{q}) = \frac{\bar{N}(\bar{q})}{\bar{D}_0\bar{D}_1\cdots\bar{D}_{m-1}}, \qquad \bar{D}_i = \left( \bar{q} + \bar{p}_i \right)^2 - m_i^2, p_0 \neq 0
+\end{equation}
+where $\bar{q}$ is the $d$-dimensional loop momentum and $m_i$ is the mass of the particle corresponding to the propagator with the numerator $D_i$. The $d$-dimensional numerator function $\bar{N}(\bar{q})$ can be decomposed in a 4-dimensional and an $\epsilon$-dimensional part 
+\begin{equation}
+\bar{N}( \bar{q}) = N (q) + \tilde{N} (\tilde{q}^2,q,\epsilon)
+\end{equation}
+where only $\tilde{N} (\tilde{q}^2,q,\epsilon)$ is interesting to us because it appears in the definitions of rational terms of the form $R_2$ which are defined as
+\begin{equation}
+R_2 \equiv \frac{1}{\left( 2\pi \right)^4} \int d^d \bar{q} \frac{\tilde{N} ( \tilde{q}^2,q,\epsilon)}{\bar{D}_0\bar{D}_1\cdots\bar{D}_{m-1}}
+\end{equation}
+which is the $\epsilon$-dimensional contribution to the amplitude in eqn. \ref{eqn:amp} integrated over the $d$-dimensional loop momentum $\bar{q}$. \\
+To simplify our calculations later, we can establish a few identities for the manipulation of $d$-dimensional momenta.
 
 e.g. in reference \cite{R2QCD} and \cite{R2QED}.
 

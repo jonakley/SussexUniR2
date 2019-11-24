@@ -17,11 +17,11 @@
 
 From now on bared quantities are $d$-dimensional, the quantities with a tilde $\epsilon$-dimensional and the normal momenta and gamma matrices 4-dimensional. 
 \begin{equation*}
-\bar{N} \left( \bar{q} \right) = - e^2 \ \mathrm{Tr} \lbr \bar{\gamma}^{\alpha} \left( \bar{\fsl{p}}_1 + \bar{\fsl{q}} + m \right) \bar{\gamma}^{\beta} \left( \bar{\fsl{q}} + m \right) \rbr = - e^2 \ \mathrm{Tr} \lbr \gamma^{\alpha} \left( \fsl{p}_1 + \fsl{q} + m \right) \gamma^{\beta} \left( \fsl{q} + m \right) + \gamma^{\alpha} \tilde{\fsl{q}} \gamma^{\beta} \tilde{\fsl{q}} \rbr \equiv N + \tilde{N}
+\bar{N} (\bar{q}) = - e^2 \ \mathrm{Tr} \lbr \bar{\gamma}^{\alpha} \left( \bar{\fsl{p}}_1 + \bar{\fsl{q}} + m \right) \bar{\gamma}^{\beta} \left( \bar{\fsl{q}} + m \right) \rbr = - e^2 \ \mathrm{Tr} \lbr \gamma^{\alpha} \left( \fsl{p}_1 + \fsl{q} + m \right) \gamma^{\beta} \left( \fsl{q} + m \right) + \gamma^{\alpha} \tilde{\fsl{q}} \gamma^{\beta} \tilde{\fsl{q}} \rbr \equiv N + \tilde{N}
 \end{equation*}
 
 \begin{equation*}
-\tilde{N} = -e^2 \ \mathrm{Tr} \lbr \gamma^{\alpha} \tilde{\fsl{q}} \gamma^{\beta} \tilde{\fsl{q}} \rbr \overset{\left\lbrace \gamma^{\mu} , \tilde{\gamma}^{\nu} \right\rbrace = 0}{=} 4 e^2 \tilde{q}^2 g^{\alpha\beta}
+\tilde{N} = -e^2 \ \mathrm{Tr} \lbr \gamma^{\alpha} \tilde{\fsl{q}} \gamma^{\beta} \tilde{\fsl{q}} \rbr \overset{\lbr \gamma^{\mu} , \tilde{\gamma}^{\nu} \rbr = 0}{=} 4 e^2 \tilde{q}^2 g^{\alpha\beta}
 \end{equation*}
 
 \begin{equation}
@@ -45,7 +45,7 @@ R_2^{\gamma\gamma} = \frac{1}{\left( 2\pi \right) ^4} \int d^d\bar{q} \frac{\til
 \end{align*}
 
 \begin{equation*}
-\bar{N} \left( \bar{q} \right) = \left( -e^2 \right) \bar{\gamma}^{\alpha} \left( \bar{\fsl{p}}_1 + \bar{\fsl{q}} + m \right) \bar{\gamma}_{\alpha} = -e^2 \lbr \gamma^{\alpha} \left( \bar{\fsl{p}}_1 + \bar{\fsl{q}} + m \right) \gamma_{\alpha} + \tilde{\gamma}^{\alpha} \left( \bar{\fsl{p}}_1 + \bar{\fsl{q}} + m \right) \tilde{\gamma}_{\alpha} + \gamma^{\alpha} \tilde{\fsl{q}} \gamma_{\alpha} + \tilde{\gamma}^{\alpha} \tilde{\fsl{q}} \tilde{\gamma}_{\alpha} \rbr \equiv N + \tilde{N}
+\bar{N} (\bar{q}) = \left( -e^2 \right) \bar{\gamma}^{\alpha} \left( \bar{\fsl{p}}_1 + \bar{\fsl{q}} + m \right) \bar{\gamma}_{\alpha} = -e^2 \lbr \gamma^{\alpha} \left( \bar{\fsl{p}}_1 + \bar{\fsl{q}} + m \right) \gamma_{\alpha} + \tilde{\gamma}^{\alpha} \left( \bar{\fsl{p}}_1 + \bar{\fsl{q}} + m \right) \tilde{\gamma}_{\alpha} + \gamma^{\alpha} \tilde{\fsl{q}} \gamma_{\alpha} + \tilde{\gamma}^{\alpha} \tilde{\fsl{q}} \tilde{\gamma}_{\alpha} \rbr \equiv N + \tilde{N}
 \end{equation*}
 
 \begin{equation*}
@@ -74,7 +74,7 @@ R_2^{\mathrm{ee}} & = \frac{1}{\left( 2\pi \right) ^4} \int d^d\bar{q} \frac{\ti
 \end{align*}
 
 \begin{align*}
-\bar{N} \left( \bar{q} \right) & = e^3 \lbr \bar{\gamma}^{\beta} \left( \bar{\fsl{p}}_1 + \bar{\fsl{q}} + m \right) \bar{\gamma}^{\mu} \left( \bar{\fsl{p}}_2 + \bar{\fsl{q}} + m \right) \bar{\gamma}_{\beta} \rbr = e^3 \lbr \gamma^{\beta} \left( \fsl{p}_1 + \fsl{q} + m \right) \gamma^{\mu} \left( \fsl{p}_2 + \fsl{q} + m \right) \gamma_{\beta} + \right. & \\
+\bar{N} (\bar{q}) & = e^3 \lbr \bar{\gamma}^{\beta} \left( \bar{\fsl{p}}_1 + \bar{\fsl{q}} + m \right) \bar{\gamma}^{\mu} \left( \bar{\fsl{p}}_2 + \bar{\fsl{q}} + m \right) \bar{\gamma}_{\beta} \rbr = e^3 \lbr \gamma^{\beta} \left( \fsl{p}_1 + \fsl{q} + m \right) \gamma^{\mu} \left( \fsl{p}_2 + \fsl{q} + m \right) \gamma_{\beta} + \right. & \\
 & \left. + \tilde{\gamma}^{\beta} \left( \fsl{p}_1 + \fsl{q} + m \right) \gamma^{\mu} \left( \fsl{p}_2 + \fsl{q} + m \right) \tilde{\gamma}_{\beta} + \underbrace{\gamma^{\beta} \tilde{\fsl{q}} \gamma^{\mu} \tilde{\fsl{q}} \gamma_{\beta}}_{\equiv \ \circled{1}} + \underbrace{\tilde{\gamma}^{\beta} \tilde{\fsl{q}} \gamma^{\mu} \tilde{\fsl{q}} \tilde{\gamma}_{\beta}}_{\equiv \ \circled{2}}  \rbr \equiv N + \tilde{N} &
 \end{align*}
 \begin{equation*}
@@ -93,11 +93,96 @@ R_2^{\gamma\mathrm{ee}} = & \frac{1}{\left( 2\pi \right) ^4} \int d^d\bar{q} \fr
 & = \frac{e^3}{\left( 2\pi \right) ^4} \frac{i \pi^2}{2} \lbr \gamma^{\alpha}\gamma^{\mu}\gamma_{\alpha} - 2\gamma^{\mu} + O(\epsilon) \rbr = \frac{-ie^3}{8\pi^2} \gamma^{\mu} & \numberthis \label{eqn:R2photonee}
 \end{align*}
 
-All other possible 3-pt. functions do not contribute to $R_2$ in QED. For example, (do triangle diagram)
+There is one more 3-point function at the 1-loop level which is allowed by the Feynman rules: the 3-point function with only photons as external particles. But it does not contribute to $R_2$ which we will show now. Because of the symmetry of the 3-point function there are 2 contributing diagrams
+\begin{align*}
+\begin{gathered}
+\feynmandiagram [small, horizontal=i1 to v] {
+	i1 [particle=\alpha] -- [photon, momentum=\(-p_1-p_2\)] v [crossed dot],
+	i2 [particle=\beta] -- [photon, momentum=\(p_1\)] v,
+	i3 [particle=\gamma] -- [photon, momentum=\(p_2\)] v,
+};
+\end{gathered}
+\quad = \quad  
+\begin{gathered}
+\feynmandiagram [horizontal=i1 to v1] {
+	i1 [particle=\alpha] -- [photon, momentum=\(-p_1-p_2\)] v1,
+	i3 [particle=\gamma] -- [photon, momentum=\(p_2\)] v3,
+	i2 [particle=\beta] -- [photon, momentum=\(p_1\)] v2,
+	v3 -- [fermion, momentum'=\(q\)] v2
+	   -- [fermion, momentum'=\(p_1+q\)] v1
+	   -- [fermion, momentum'=\(q-p_2\)] v3,
+};
+\end{gathered}
+\quad + \quad
+\begin{gathered}
+\feynmandiagram [horizontal=i1 to v1] {
+	i1 [particle=\alpha] -- [photon, momentum=\(-p_1-p_2\)] v1,
+	i3 [particle=\gamma] -- [photon, momentum=\(p_2\)] v3,
+	i2 [particle=\beta] -- [photon, momentum=\(p_1\)] v2,
+	v2 -- [fermion, momentum=\(q\)] v3
+	   -- [fermion, momentum=\(p_2+q\)] v1
+	   -- [fermion, momentum=\(q-p_1\)] v2,
+};
+\end{gathered}
+\end{align*}
+
+We only calculate the first diagram and then symmetrize the result with $p_1 \leftrightarrow p_2$, $\beta \leftrightarrow \gamma$. Evaluating the first diagram gives
+\begin{align*}
+\begin{gathered}
+\feynmandiagram [horizontal=i1 to v1] {
+	i1 [particle=\alpha] -- [photon, momentum=\(-p_1-p_2\)] v1,
+	i3 [particle=\gamma] -- [photon, momentum=\(p_2\)] v3,
+	i2 [particle=\beta] -- [photon, momentum=\(p_1\)] v2,
+	v3 -- [fermion, momentum'=\(q\)] v2
+	   -- [fermion, momentum'=\(p_1+q\)] v1
+	   -- [fermion, momentum'=\(q-p_2\)] v3,
+};
+\end{gathered}
+\qquad
+& =\int\frac{d^dq}{\left( 2\pi \right)^d} \Tr \lbr ie\gamma^{\beta} \frac{i \left( \fsl{q} + m \right)}{q^2 - m^2} ie \gamma^{\gamma} \frac{i \left( \fsl{q} - \fsl{p}_2 + m \right)}{\left( q- p_2 \right) -m^2} ie \gamma^{\alpha} \frac{i \left( \fsl{q} + \fsl{p}_1 + m \right)}{\left( q + p_1 \right) -m^2} \rbr =  & \\
+& = \int\frac{d^dq}{\left( 2\pi \right)^d} e^3 \Tr \lbr \gamma^{\beta} \frac{\left( \fsl{q} + m \right)}{q^2 - m^2} \gamma^{\gamma} \frac{\left( \fsl{q} - \fsl{p}_2 + m \right)}{\left( q- p_2 \right) -m^2} \gamma^{\alpha} \frac{\left( \fsl{q} + \fsl{p}_1 + m \right)}{\left( q + p_1 \right) -m^2} \rbr = & \\
+& \equiv \int\frac{d^dq}{\left( 2\pi \right)^d} \frac{\bar{N}}{\bar{D}_1\bar{D}_2\bar{D}_0} &
+\end{align*}
+
+\begin{align*}
+\bar{N} (\bar{q}) & = e^3 \Tr \lbr \bar{\gamma}^{\beta} \left( \bar{\fsl{q}} + m \right) \bar{\gamma}^{\gamma} \left( \bar{\fsl{q}} - \bar{\fsl{p}}_2 + m \right) \bar{\gamma}^{\alpha} \left( \bar{\fsl{q}} + \bar{\fsl{p}}_1 + m \right) \rbr = & \\
+& = e^3 \Tr \lbr \gamma^{\beta} \left( \fsl{q} + m \right) \gamma^{\gamma} \left( \fsl{q} - \fsl{p}_2 + m \right) \gamma^{\alpha} \left( \fsl{q} + \fsl{p}_1 + m \right) +  \gamma^{\beta} \left( \fsl{q} + \tilde{\fsl{q}} + m \right) \gamma^{\gamma} \left( \fsl{q} + \tilde{\fsl{q}} - \fsl{p}_2 + m \right) \gamma^{\alpha} \left( \fsl{q} + \tilde{\fsl{q}} + \fsl{p}_1 + m \right) \rbr = & \\
+& \equiv N + \tilde{N} &
+\end{align*}
+
+\begin{align*}
+\tilde{N} & = e^3 \Tr \lbr \gamma^{\beta} \left( \fsl{q} + \tilde{\fsl{q}} + m \right) \gamma^{\gamma} \left( \fsl{q} + \tilde{\fsl{q}} - \fsl{p}_2 + m \right) \gamma^{\alpha} \left( \fsl{q} + \tilde{\fsl{q}} + \fsl{p}_1 + m \right) \rbr = & \\
+& = e^3 \Tr \lbr \gamma^{\beta} \fsl{q} \gamma^{\gamma} \tilde{\fsl{q}} \gamma^{\alpha} \tilde{\fsl{q}} + \gamma^{\beta} \tilde{\fsl{q}} \gamma^{\gamma} \fsl{q} \gamma^{\alpha} \tilde{\fsl{q}} + \gamma^{\beta} \tilde{\fsl{q}} \gamma^{\gamma} \tilde{\fsl{q}} \gamma^{\alpha} \fsl{q} + \gamma^{\beta} \tilde{\fsl{q}} \gamma^{\gamma} \left( - \fsl{p}_2 \right) \gamma^{\alpha} \tilde{\fsl{q}} + \gamma^{\beta} \tilde{\fsl{q}} \gamma^{\gamma} \tilde{\fsl{q}} \gamma^{\alpha} \fsl{p}_1 \rbr = & \\
+& = - 4e^3 \tilde{q}^2 \lbr q_{\mu} \left[ \left( g^{\beta\mu}g^{\gamma\alpha} - g^{\beta\gamma}g^{\mu\alpha} + g^{\beta\alpha}g^{\mu\gamma} \right) + \left( g^{\beta\gamma}g^{\alpha\mu} - g^{\beta\mu}g^{\gamma\alpha} + g^{\beta\alpha}g^{\mu\gamma} \right) + \left( g^{\beta\gamma}g^{\mu\alpha} - g^{\beta\alpha}g^{\mu\gamma} + g^{\beta\mu}g^{\alpha\gamma} \right) \right] + \right. & \\ 
+& \left. + p_{1\mu} \left( g^{\beta\gamma}g^{\alpha\mu} - g^{\beta\alpha}g^{\gamma\mu} + g^{\beta\mu}g^{\alpha\gamma} \right) - p_{2\mu} \left( g^{\beta\gamma}g^{\mu\alpha} - g^{\beta\mu}g^{\alpha\gamma} + g^{\alpha\beta}g^{\gamma\mu} \right) \rbr = & \\
+& = -4e^3 \tilde{q}^2 \lbr q^{\beta}g^{\alpha\gamma} + q^{\gamma}g^{\alpha\beta} + q^{\alpha}g^{\beta\gamma} + p_1^{\alpha}g^{\beta\gamma} - p_1^{\gamma}g^{\alpha\beta} + p_1^{\beta}g^{\alpha\gamma} - p_2^{\alpha}g^{\beta\gamma} + p_2^{\beta}g^{\alpha\gamma} - p_2^{\gamma}g^{\alpha\beta} \rbr &
+\end{align*}
+
+This gives for the $R_2$ contribution of the first diagram
+\begin{align*}
+R_2^1 & = \frac{1}{\left( 2\pi \right)^4} \int d^d\bar{q} \frac{\tilde{N}}{\bar{D}_1\bar{D}_{-2}\bar{D}_0} = & \\
+& = \frac{-4e^3}{\left( 2\pi \right)^4} \int d^d \bar{q} \frac{1}{\bar{D}_1\bar{D}_{-2}\bar{D}_0} \lbr \tilde{q}^2q^{\beta}g^{\alpha\gamma} + \tilde{q}^2q^{\gamma}g^{\alpha\beta} + \tilde{q}^2q^{\alpha}g^{\beta\gamma} + \tilde{q}^2 \left[ \left( p_1 - p_2 \right)^{\alpha} g^{\beta\gamma} + \left( p_1 + p_2 \right)^{\beta} g^{\alpha\gamma} - \left( p_1 + p_2 \right)^{\gamma} g^{\alpha\beta} \right] \rbr = & \\
+& = \frac{-4e^3}{\left( 2\pi \right)^4} \lbr \frac{i\pi^2}{6} \left[ \left( p_1-p_2 \right)^{\beta}g^{\alpha\gamma} + \left( p_1-p_2 \right)^{\gamma}g^{\alpha\beta} + \left( p_1-p_2 \right)^{\alpha}g^{\beta\gamma} \right] - \frac{i\pi^2}{2} \left[ \left( p_1-p_2 \right)^{\alpha} g^{\beta\gamma} + \left( p_1+p_2 \right)^{\beta} g^{\alpha\gamma} + \right. \right. & \\
+& \left. \left. - \left( p_1+p_2 \right)^{\gamma} g^{\alpha\beta} \right] \rbr = & \\
+& = \frac{-4e^3}{\left( 2\pi \right)^4} \lbr g^{\alpha\beta} \left[ \frac{i\pi^2}{6} \left( p_1-p_2 \right)^{\gamma} + \frac{i\pi^2}{2} \left( p_1+p_2 \right)^{\gamma} \right] + g^{\beta\gamma} \left[ \frac{i\pi^2}{6} \left( p_1-p_2 \right)^{\alpha} - \frac{i\pi^2}{2} \left( p_1-p_2 \right)^{\alpha} \right] + \right. & \\
+& \left. + g^{\alpha\gamma} \left[ \frac{i\pi^2}{6} \left( p_1-p_2 \right)^{\beta} - \frac{i\pi^2}{2} \left( p_1+p_2 \right)^{\beta} \right] \rbr &
+\end{align*}
+
+\begin{align*}
+R_2^2 & = R_1^2(p_1 \leftrightarrow p_2, \ \beta \leftrightarrow \gamma) = & \\
+& = \frac{-4e^3}{\left( 2\pi \right)^4} \lbr g^{\alpha\gamma} \left[ \frac{i\pi^2}{6} \left( p_2-p_1 \right)^{\beta} + \frac{i\pi^2}{2} \left( p_2+p_1 \right)^{\beta} \right] + g^{\beta\gamma} \left[ \frac{i\pi^2}{6} \left( p_2-p_1 \right)^{\alpha} - \frac{i\pi^2}{2} \left( p_2-p_1 \right)^{\alpha} \right] + \right. & \\
+& \left. + g^{\alpha\beta} \left[ \frac{i\pi^2}{6} \left( p_2-p_1 \right)^{\gamma} - \frac{i\pi^2}{2} \left( p_2+p_1 \right)^{\gamma} \right] \rbr = & \\
+& = \frac{-4e^3}{\left( 2\pi \right)^4} \lbr -g^{\alpha\beta} \left[ \frac{i\pi^2}{6} \left( p_1-p_2 \right)^{\gamma} + \frac{i\pi^2}{2} \left( p_1+p_2 \right)^{\gamma} \right] - g^{\beta\gamma} \left[ \frac{i\pi^2}{6} \left( p_1-p_2 \right)^{\alpha} - \frac{i\pi^2}{2} \left( p_1-p_2 \right)^{\alpha} \right] + \right. & \\
+& \left. - g^{\alpha\gamma} \left[ \frac{i\pi^2}{6} \left( p_1-p_2 \right)^{\beta} - \frac{i\pi^2}{2} \left( p_1+p_2 \right)^{\beta} \right] \rbr = -R_2^1 &
+\end{align*}
+
+\begin{equation}
+R_2^{3\gamma} = R_2^1 + R_2^2 = R_2^1 - R_2^1 = 0
+\end{equation}
 
 \subsection{4-point function}
 For the 4-point function we have to be more careful. The 1PI contribution at the 1-loop level consists of several diagrams. They are obtained by symmetrizing the external momenta of the diagram as follows
- \begin{align*}
+\begin{align*}
 \begin{gathered}
 \feynmandiagram [small, horizontal=i1 to i2] {
 	i4 [particle=\delta] -- [photon, momentum=\(p_2\)] v [crossed dot],
@@ -141,7 +226,7 @@ We only calculate one of the diagrams and do the symmetrizing with the result of
 \end{align*}
 
 \begin{align*}
-\bar{N} \left( \bar{q} \right) & = -e^4 \mathrm{Tr} \lbr \bar{\gamma}^{\alpha} \left( \bar{\fsl{p}}_1 + \bar{\fsl{q}} + m \right) \bar{\gamma}^{\beta} \left( \bar{\fsl{q}} +  \bar{\fsl{p}}_1 + \bar{\fsl{p}}_3 + m \right) \bar{\gamma}^{\gamma} \left( \bar{\fsl{q}} - \bar{\fsl{p}}_2 + m \right) \bar{\gamma}^{\delta} \left( \bar{\fsl{q}} + m \right) \rbr = & \\
+\bar{N} (\bar{q}) & = -e^4 \mathrm{Tr} \lbr \bar{\gamma}^{\alpha} \left( \bar{\fsl{p}}_1 + \bar{\fsl{q}} + m \right) \bar{\gamma}^{\beta} \left( \bar{\fsl{q}} +  \bar{\fsl{p}}_1 + \bar{\fsl{p}}_3 + m \right) \bar{\gamma}^{\gamma} \left( \bar{\fsl{q}} - \bar{\fsl{p}}_2 + m \right) \bar{\gamma}^{\delta} \left( \bar{\fsl{q}} + m \right) \rbr = & \\
 & = -e^4 \mathrm{Tr} \lbr \gamma^{\alpha} \left( \fsl{p}_1 + \fsl{q} + m \right) \gamma^{\beta} \left( \fsl{q} +  \fsl{p}_1 + \fsl{p}_3 + m \right) \gamma^{\gamma} \left( \fsl{q} - \fsl{p}_2 + m \right) \gamma^{\delta} \left( \fsl{q} + m \right) + \right. &  \\
 &  \left. + \gamma^{\alpha} \tilde{\fsl{q}} \gamma^{\beta} \tilde{\fsl{q}} \gamma^{\gamma} \tilde{\fsl{q}} \gamma^{\delta} \tilde{\fsl{q}} + \gamma^{\alpha} \tilde{\fsl{q}} \gamma^{\beta} \tilde{\fsl{q}} \gamma^{\gamma} \fsl{q} \gamma^{\delta} \fsl{q}  + \gamma^{\alpha} \fsl{q} \gamma^{\beta} \tilde{\fsl{q}} \gamma^{\gamma} \tilde{\fsl{q}} \gamma^{\delta} \fsl{q} + \gamma^{\alpha} \fsl{q} \gamma^{\beta} \fsl{q} \gamma^{\gamma} \tilde{\fsl{q}} \gamma^{\delta} \tilde{\fsl{q}} + \gamma^{\alpha} \tilde{\fsl{q}} \gamma^{\beta} \fsl{q} \gamma^{\gamma} \fsl{q} \gamma^{\delta} \tilde{\fsl{q}} + \right. & \\
 & \left. + \gamma^{\alpha} \tilde{\fsl{q}} \gamma^{\beta} \fsl{q} \gamma^{\gamma} \tilde{\fsl{q}} \gamma^{\delta} \fsl{q} + \gamma^{\alpha} \fsl{q} \gamma^{\beta} \tilde{\fsl{q}} \gamma^{\gamma} \fsl{q} \gamma^{\delta} \tilde{\fsl{q}} \rbr \equiv N + \tilde{N} &
@@ -172,7 +257,7 @@ R_2 = & \frac{1}{\left( 2\pi \right) ^4} \int d^d\bar{q} \frac{\tilde{N}}{\bar{D
 \end{align*}
 
 \begin{align*}
-R_2^{4\gamma} = & 2 \left( R_2 + R_2 \left( \alpha \leftrightarrow \delta \right) + R_2 \left( \alpha \leftrightarrow \beta \right) \right) = \frac{2ie^4}{24 \pi^2} \lbr \left( 3 g^{\alpha\beta}g^{\gamma\delta} - 5 g^{\alpha\gamma}g^{\beta\delta} + 3 g^{\beta\gamma}g^{\alpha\delta} \right) + \left( 3 g^{\beta\delta}g^{\alpha\gamma} - 5 g^{\gamma\delta}g^{\alpha\beta} + 3 g^{\beta\gamma}g^{\alpha\delta} \right) + \right. & \\
+R_2^{4\gamma} = & 2 \left[ R_2 + R_2 \left( \alpha \leftrightarrow \delta \right) + R_2 \left( \alpha \leftrightarrow \beta \right) \right] = \frac{2ie^4}{24 \pi^2} \lbr \left( 3 g^{\alpha\beta}g^{\gamma\delta} - 5 g^{\alpha\gamma}g^{\beta\delta} + 3 g^{\beta\gamma}g^{\alpha\delta} \right) + \left( 3 g^{\beta\delta}g^{\alpha\gamma} - 5 g^{\gamma\delta}g^{\alpha\beta} + 3 g^{\beta\gamma}g^{\alpha\delta} \right) + \right. & \\
 & \left. + \left( 3 g^{\alpha\beta}g^{\gamma\delta} - 5 g^{\beta\gamma}g^{\alpha\delta} + 3 g^{\alpha\gamma}g^{\beta\delta} \right) \rbr = \frac{ie^4}{12 \pi^2} \left( g^{\alpha\beta}g^{\gamma\delta} + g^{\alpha\gamma}g^{\beta\delta} + g^{\beta\gamma}g^{\alpha\delta} \right) & \numberthis \label{eqn:R24photon}
 \end{align*}
 
