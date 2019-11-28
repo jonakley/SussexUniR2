@@ -57,7 +57,7 @@ R_2^{\mathrm{ee}} & = \frac{1}{\left( 2\pi \right) ^4} \int d^d\bar{q} \frac{\ti
 \end{align*}
 
 
-\subsection{3-point function}
+\subsection{3-point functions}
 \begin{align*}
 \begin{gathered}
 \feynmandiagram [horizontal=i1 to v2] {
@@ -239,7 +239,7 @@ Where we have used that the trace of an odd number of Dirac matrices is zero. Us
 & = -e^4 \mathrm{Tr} \lbr \tilde{q}^4 \gamma^{\alpha} \gamma^{\beta} \gamma^{\gamma} \gamma^{\delta} - \tilde{q}^2 \left( \gamma^{\alpha} \gamma^{\beta} \gamma^{\gamma} \fsl{q} \gamma^{\delta} \fsl{q} + \gamma^{\alpha} \fsl{q} \gamma^{\beta} \gamma^{\gamma} \gamma^{\delta} \fsl{q} + \gamma^{\alpha} \fsl{q} \gamma^{\beta} \fsl{q} \gamma^{\gamma} \gamma^{\delta} + \gamma^{\alpha} \gamma^{\beta} \fsl{q} \gamma^{\gamma} \fsl{q} \gamma^{\delta} + \right. \right. & \\
 & \left. \left. + \gamma^{\alpha} \gamma^{\beta} \fsl{q} \gamma^{\gamma} \gamma^{\delta} \fsl{q} + \gamma^{\alpha} \fsl{q} \gamma^{\beta} \gamma^{\gamma} \fsl{q} \gamma^{\delta} \right) \rbr \equiv N + \tilde{N} &
 \end{align*}
-Since this expression involves the trace over up to 6 Dirac matrices, the calculation is very cumbersome. Wcane can evaluate this expression with the help of the Mathematica package FeynCalc \cite{FeynCalc,FeynCalc2} 
+Since this expression involves the trace over up to 6 Dirac matrices, the calculation is very cumbersome. We can evaluate this expression with the help of the Mathematica package FeynCalc \cite{FeynCalc,FeynCalc2} 
 \begin{figure}[h!]
   \begin{center}
     \includegraphics[width=1.0\textwidth]{Figures/Trace_4ptfct_Mathematica}
@@ -261,4 +261,4 @@ R_2^{4\gamma} = & 2 \left[ R_2 + R_2 \left( \alpha \leftrightarrow \delta \right
 & \left. + \left( 3 g^{\alpha\beta}g^{\gamma\delta} - 5 g^{\beta\gamma}g^{\alpha\delta} + 3 g^{\alpha\gamma}g^{\beta\delta} \right) \rbr = \frac{ie^4}{12 \pi^2} \left( g^{\alpha\beta}g^{\gamma\delta} + g^{\alpha\gamma}g^{\beta\delta} + g^{\beta\gamma}g^{\alpha\delta} \right) & \numberthis \label{eqn:R24photon}
 \end{align*}
 
-All of the other 4-point functions vanish as well.
+Like the other 3-point function all of the other 4-point functions which are permitted by the Feynman rules vanish. We will not show this here because the calculations for the 4-point functions are quite lengthy.
