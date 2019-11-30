@@ -1,4 +1,84 @@
 \section{QED Contribution to the Standard Model Renormalization}
 \label{sec:SMrenorm}
 \subsection{2-point functions}
+{\bf Photon/Z-boson mixed self-energy} \\
+\begin{align*}
+\begin{gathered}
+\feynmandiagram [layered layout, horizontal=b to c] {
+	a [particle={\(Z,\alpha\)}] -- [photon, momentum=\(p\)] b
+	  -- [fermion, half left, looseness=1.5, momentum=\(p+q\)] c
+	  -- [fermion, half left, looseness=1.5, momentum=\(q\)] b,
+	c -- [photon, momentum=\(p\)] d [particle={\(\beta,\gamma\)}] ,
+};
+\end{gathered}
+& = \int\frac{d^4q}{\left( 2\pi \right)^4} \left( -1 \right) \Tr \lbr \left( -ie Q_f \right) \gamma^{\alpha} \frac{i \left( \fsl{p}+\fsl{q}+m \right)}{\left( p+q \right)^2 - m^2} i \frac{g}{\cos\theta_W} \gamma^{\beta} \left( g_V - g_A \gamma_5 \right) \frac{i \left( \fsl{q}+m \right)}{q^2 - m^2} \rbr \equiv \mathcal{A} &
+\end{align*}
+Let's work on the trace so we can express the numerator of the 2-point function in terms of scalar integrals.
+\begin{align*}
+& \Tr \lbr \gamma^{\alpha} \left( \fsl{p} + \fsl{q} + m \right) \gamma^{\beta} \left( g_V - g_A \gamma_5 \right) \left( \fsl{q} + m \right) \rbr = g_V \Tr \lbr \gamma^{\alpha} \left( \fsl{p} + \fsl{q} \right) \gamma^{\beta} \fsl{q} + m^2 \gamma^{\alpha}\gamma^{\beta} \rbr - g_A \Tr \lbr \gamma^{\alpha} \left( \fsl{p} + \fsl{q} \right) \gamma^{\beta} \gamma_5 \fsl{q} \rbr = & \\
+& = 4 g_V \lbr \left( p+q \right)_{\mu} q_{\nu} \left( g^{\alpha\mu}g^{\beta\nu} - g^{\alpha\beta}g^{\mu\nu} + g^{\alpha\nu}g^{\beta\mu} \right) + m^2 g^{\alpha\beta} \rbr - 4i g_A \left( p+q \right)_{\mu} q_{\nu} \epsilon^{\alpha\mu\beta\nu} = & \\
+& = 4 \lbr g_V \left[ \left( p+q \right)^{\alpha}q^{\beta} - g^{\alpha\beta} \left( p+q \right) \cdot q + q^{\alpha} \left( p+q \right)^{\beta} + m^2 g^{\alpha\beta} \right] - i g_A \epsilon^{\alpha\mu\beta\nu} p_{\mu}q_{\nu} \rbr &
+\end{align*}
+Where we used that a symmetric tensor contracted with an antisymmetric tensor vanishes.
+
+\begin{align*}
+\mathcal{A} & = \frac{4Q_feg}{\cos\theta_W} \int \frac{d^4q}{\left( 2\pi \right)^4} \frac{g_V \left( \left( p+q \right)^{\alpha}q^{\beta} - g^{\alpha\beta} \left( p+q \right) \cdot q + q^{\alpha} \left( p+q \right)^{\beta} + m^2 g^{\alpha\beta} \right) - i g_A \epsilon^{\alpha\mu\beta\nu} p_{\mu}q_{\nu}}{\left( \left( p+q \right)^2 -m^2 \right) \left( q^2 - m^2 \right)} = & \\
+& = \frac{4Q_feg}{\cos\theta_W} \frac{i\pi^2}{\left( 2\pi \right)^4} \lbr -ig_A \epsilon^{\alpha\mu\beta\nu}p_{\mu}B_1 p_{\nu} + g_V \left[ B_1 p^{\alpha}p^{\beta} + B_{00}g^{\alpha\beta} + B_{11} p^{\alpha}p^{\beta} - g^{\alpha\beta} \left( B_1 p^2 + 4 B_{00} + B_{11} p^2 \right) + \right. \right. & \\
+& \left. \left. + B_1 p^{\alpha}p^{\beta} + B_{00} g^{\alpha\beta} + B_{11} p^{\alpha}p^{\beta} + B_0 m^2 g^{\alpha\beta} \right]\rbr = & \\
+& = \frac{iQ_fegg_V}{4\pi^2\cos\theta_W} \lbr 2 p^{\alpha}p^{\beta} \left( B_1 + B_{11} \right) + g^{\alpha\beta} \left( m^2 B_0 - 2 B_{00} -p^2 \left( B_1 + B_{11} \right) \right) \rbr &
+\end{align*}
+
+{\bf Z-Boson self-energy} \\
+\begin{align*}
+\begin{gathered}
+\feynmandiagram [layered layout, horizontal=b to c] {
+	a [particle={\(Z,\alpha\)}] -- [photon, momentum=\(p\)] b
+	  -- [fermion, half left, looseness=1.5, momentum=\(p+q\)] c
+	  -- [fermion, half left, looseness=1.5, momentum=\(q\)] b,
+	c -- [photon, momentum=\(p\)] d [particle={\(\beta,Z\)}] ,
+};
+\end{gathered}
+& = \int\frac{d^4q}{\left( 2\pi \right)^4} \left( -1 \right) \Tr \lbr \frac{ig}{\cos\theta_W} \gamma^{\alpha} \left( g_V - g_A \gamma_5 \right) \frac{i \left( \fsl{p}+\fsl{q}+m \right)}{\left( p+q \right)^2 - m^2} \frac{ig}{\cos\theta_W} \gamma^{\beta} \times \right. & \\ 
+& \left. \times \left( g_V - g_A \gamma_5 \right) \frac{i \left( \fsl{q}+m \right)}{q^2 - m^2} \rbr \equiv \mathcal{A} &
+\end{align*}
+Let's work on the trace so we can express the numerator of the 2-point function in terms of scalar integrals.
+
+\begin{align*}
+& \Tr \lbr \gamma^{\alpha} \left( g_V - g_A \gamma_5 \right) \left( \fsl{p}+\fsl{q}+m \right) \gamma^{\beta} \left( g_V - g_A \gamma_5 \right) \left( \fsl{q}+m \right) \rbr = \Tr \lbr \gamma^{\alpha} \left( g_V - g_A \gamma_5 \right)^2 \left( \fsl{p}+\fsl{q}-m \right) \gamma^{\beta} \left( \fsl{q}+m \right) \rbr = & \\
+& = \left( g_V^2 + g_A^2 \right) \Tr \lbr \gamma^{\alpha} \left( \fsl{p} + \fsl{q} - m \right) \gamma^{\beta} \left( \fsl{q} + m \right) \rbr = \left( g_V^2 + g_A^2 \right) \Tr \lbr \gamma^{\alpha} \left( \fsl{p} + \fsl{q} \right) \gamma^{\beta} \fsl{q} - m^2 \gamma^{\alpha}\gamma^{\beta} \rbr = & \\
+& = \left( g_V^2 + g_A^2 \right) \lbr \left( p+q \right)_{\mu} q_{\nu} 4 \left( g^{\alpha\mu}g^{\beta\nu} - g^{\alpha\beta}g^{\mu\nu} + g^{\alpha\nu}g^{\beta\mu} \right) - 4m^2 g^{\alpha\beta} \rbr = & \\
+& = 4 \left( g_V^2 + g_A^2 \right) \lbr \left( p+q \right)^{\alpha}q^{\beta} - g^{\alpha\beta} \left p+q \right) \cdot q + q^{\alpha} \left( p+q \right)^{\beta} - m^2 g^{\alpha\beta} \rbr &
+\end{align*}
+
+\begin{align*}
+\mathcal{A} & = \int \frac{d^4q}{\left( 2\pi \right)^4} \frac{4g^2\left(g_V^2 + g_A^2 \right)}{\cos^2\theta_W} \frac{\left( p+q \right)^{\alpha}q^{\beta} - g^{\alpha\beta} \left p+q \right) \cdot q + q^{\alpha} \left( p+q \right)^{\beta} - m^2 g^{\alpha\beta}}{\left( \left( p+q \right)^2 -m^2 \right) \left( q^2 - m^2 \right)} = & \\
+& = \frac{4g^2\left(g_V^2 + g_A^2 \right)}{\cos^2\theta_W} \int \frac{d^4q}{\left( 2\pi \right)^4} \frac{p^{\alpha}q^{\beta}+q^{\alpha}p^{\beta}+2q^{\alpha}q^{\beta} - g^{\alpha\beta} \left( m^2 + q \cdot p + q^2 \right)}{\left( \left( p+q \right)^2 -m^2 \right) \left( q^2 - m^2 \right)} = & \\
+& = \frac{4g^2\left(g_V^2 + g_A^2 \right)}{\cos^2\theta_W} \frac{i\pi^2}{\left( 2\pi \right)^4} \lbr 2 p^{\alpha}p^{\beta} B_1 + 2 \left( B_{00} g^{\alpha\beta} + B_{11} p^{\alpha}p^{\beta} \right) - g^{\alpha\beta} \left( m^2 B_0 + B_1 p^2 + 4 B_{00} + B_{11} p^2 \right) \rbr = & \\
+& = \frac{ig^2\left(g_V^2 + g_A^2 \right)}{4\pi^2\cos^2\theta_W} \lbr p^{\alpha}p^{\beta} 2 \left( B_1 + B_{11} \right) - g^{\alpha\beta} \left( m^2 B_0 + 2 B_{00} + p^2 \left( B_1 + B_{11} \right) \right) \rbr
+\end{align*}
+
+{\bf Gluon self-energy} \\
+\begin{align*}
+&
+\begin{gathered}
+\feynmandiagram [layered layout, horizontal=b to c] {
+	a [particle=\(\alpha\)] -- [gluon, momentum=\(p\)] b
+	  -- [fermion, half left, looseness=1.5, momentum=\(p+q\)] c
+	  -- [fermion, half left, looseness=1.5, momentum=\(q\)] b,
+	c -- [gluon, momentum=\(p\)] d [particle=\(\beta\)] ,
+};
+\end{gathered}
+=
+\begin{gathered}
+\feynmandiagram [layered layout, horizontal=b to c] {
+	a [particle=\(\alpha\)] -- [photon, momentum=\(p\)] b
+	  -- [fermion, half left, looseness=1.5, momentum=\(p+q\)] c
+	  -- [fermion, half left, looseness=1.5, momentum=\(q\)] b,
+	c -- [photon, momentum=\(p\)] d [particle=\(\beta\)] ,
+};
+\end{gathered}
+\left( eQ_q \rightarrow g_S T^a \right) = & \\
+& = -\frac{ig_S^2\Tr\left( T^a T^b\right)}{4\pi^2} \lbr 2 p^{\alpha} p^{\beta} \left( B_1 + B_{11} \right) + g^{\alpha\beta} \left( m^2 B_0 - 2 B_{00} - p^2 \left( B_1 + B_{11} \right) \right) \rbr &
+\end{align*}
+
 
