@@ -26,10 +26,31 @@ where only $\tilde{N} (\tilde{q}^2,q,\epsilon)$ is interesting to us because it 
 \begin{equation}
 R_2 \equiv \frac{1}{\left( 2\pi \right)^4} \int d^d \bar{q} \frac{\tilde{N} ( \tilde{q}^2,q,\epsilon)}{\bar{D}_0\bar{D}_1\cdots\bar{D}_{m-1}}
 \end{equation}
-which is the $\epsilon$-dimensional contribution to the amplitude in eqn. \ref{eqn:amp} integrated over the $d$-dimensional loop momentum $\bar{q}$. \\
-To simplify our calculations later, we can establish a few identities for the manipulation of $d$-dimensional momenta.
+which is the $\epsilon$-dimensional contribution to the amplitude in eqn. \ref{eqn:amp} integrated over the $d$-dimensional loop momentum $\bar{q}$. It can be obtained by splitting the $d$-dimensional Lorentz tensors appearing in the amplitude into a 4-dimensional and an $\epsilon$-dimensional part
+\begin{equation}
+\bar{A}^{\mu_1\dots\mu_n} = A^{\mu_1\dots\mu_n} + \tilde{A}^{\mu_1\dots\mu_n}.
+\end{equation}
+To simplify our calculations later, we can establish a few identities for the manipulation of $d$-dimensional momenta. If we contract a $d$-dimensional object with an observable Lorentz tensor (like the momentum of an external particle) only the 4-dimensional part survives, e.g. for a loop momentum $\bar{q}^{\mu}$ and an external momentum $p^{\mu}$
+\begin{equation}
+\bar{q}\cdot p = q \cdot p.
+\end{equation}
+Thus, if an amplitude transforms with indices $\mu_1,\dots,\mu_n$ under a Lorentz transformation, the tensors in the amplitude bearing these indices will only appear as 4-dimensional.
 
 e.g. in reference \cite{R2QCD} and \cite{R2QED}.
+
+Since, we want to perform calculations in QED which contains a fermion, we have to extend the Clifford algebra $\lbr \gamma^{\mu},\gamma^{\nu} \rbr = 2g^{\mu\nu} \mathds{1}_4$ to $d$ dimensions. This is straightforward by promoting $\gamma^{\mu} \rightarrow \bar{\gamma}^{\mu}$ and extending the Minkowski metric to d dimensions by adding additional -1 on the diagonal for the extra spatial dimensions. We have
+\begin{equation}
+\lbr \bar{\gamma}^{\mu},\bar{\gamma}^{\nu} \rbr = 2\bar{g}^{\mu\nu} \mathds{1}_d
+\end{equation}
+If we want to preserve the Clifford algebra separately in 4 and $\epsilon$ dimensions this implies
+\begin{equation}
+\lbr \gamma^{\mu},\tilde{\gamma}^{\nu} \rbr = 0
+\end{equation}
+As opposed to QED the Standard Model is a chiral theory, i.e. it couples differently to left- and right-handed currents. This means that also axial-vector currents appear in the theory which are formulated with the fifth gamma matrix. The extension of $\gamma_5$ to $d$ dimensions is not as straightforward as with the four gamma matrices. This is because chirality is a property of four dimensions.\\
+If we also want to impose $\lbr \gamma_5,\gamma^{\mu} \rbr = 0$ for $d \neq 4$, then $\Tr\left( \gamma_5 \gamma^{\alpha}\gamma^{\beta}\gamma^{\gamma}\gamma^{\delta} \right) = 0$  for $d \neq 0,2,4$ which clashes with $\Tr\left( \gamma_5 \gamma^{\alpha}\gamma^{\beta}\gamma^{\gamma}\gamma^{\delta} \right) = -4i \epsilon^{\alpha\beta\gamma\delta}$ \cite{Gamma5}. But the identity is essential in the evaluation of the triangle diagram for the Adler-Bell-Jackiw anomaly. The only definition of $\gamma_5$ which is consistent with the chiral anomaly is the definition of 't Hooft and Veltman \cite{HVgamma5}: $\gamma_5 = i/4! \ \epsilon_{\mu_1 \dots \mu_4} \gamma^{\mu_1} \cdots \gamma^{\mu_4}$. This definition implies
+\begin{equation}
+\lbr \gamma_5, \gamma^{\mu} \rbr = 0  \text{ and }  \left[ \gamma_5, \tilde{\gamma}^{\mu} \right] = 0.
+\end{equation} 
 
 
 

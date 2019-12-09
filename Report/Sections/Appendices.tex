@@ -2,22 +2,23 @@
 {\bf\Large Appendices} \\
 \section{Important Integrals}
 \label{app:Integrals}
-In the calculation of $R_2$ the same integrals appear over and over. The most important ones are \cite{R2QCD} \\
+In the calculation of $R_2$ we have to evaluate 2-,3- and 4-point functions. They can be reduced to a set of integrals which are knwon in a general form. The integrals we need are \cite{R2QCD} \\
 
-{\bf 2-point integrals} \\
+{\bf 2-point integrals} 
 \begin{align}
 \int  d^d \bar{q} \frac{\tilde{q}^2}{\bar{D}_i\bar{D}_j} & =  -\frac{i\pi^2}{2} \left[ m_i^2 + m_j^2 - \frac{\left( p_i - p_j \right)^2}{3} \right] + O(\epsilon) & \\
 \mathrm{P.P.} \left( \int  d^d \bar{q} \frac{1}{\bar{D}_i\bar{D}_j} \right) & = -2\frac{i\pi^2}{\epsilon} & \\
 \mathrm{P.P.} \left( \int  d^d \bar{q} \frac{q_{\mu}}{\bar{D}_i\bar{D}_j} \right) & =  \frac{i\pi^2}{\epsilon} \left( p_i + p_j \right)_{\mu} & 
-\end{align}
-{\bf 3-point integrals} \\
+\end{align}\\
+
+{\bf 3-point integrals} 
 \begin{align}
 \int  d^d \bar{q} \frac{\tilde{q}^2}{\bar{D}_i\bar{D}_j\bar{D}_k} & =  -\frac{i\pi^2}{2} + O(\epsilon) & \\
 \int  d^d \bar{q} \frac{\tilde{q}^2q_{\mu}}{\bar{D}_i\bar{D}_j\bar{D}_k} & = \frac{i\pi^2}{6} \left( p_i + p_j + p_k \right)_{\mu} + O(\epsilon) & \\
 \mathrm{P.P.} \left( \int  d^d \bar{q} \frac{q_{\mu}q_{\nu}}{\bar{D}_i\bar{D}_j\bar{D}_k} \right) & =  -\frac{i\pi^2}{2\epsilon} g_{\mu\nu} & 
-\end{align}
+\end{align}\\
 
-{\bf 4-point integrals} \\
+{\bf 4-point integrals} 
 \begin{align}
 \int  d^d \bar{q} \frac{\tilde{q}^4}{\bar{D}_i\bar{D}_j\bar{D}_k\bar{D}_l} & =  -\frac{i\pi^2}{6} + O(\epsilon) & \\
 \int  d^d \bar{q} \frac{\tilde{q}^2q_{\mu}q_{\nu}}{\bar{D}_i\bar{D}_j\bar{D}_k\bar{D}_l} & =  -\frac{i\pi^2}{12} g_{\mu\nu} + O(\epsilon) & \\
@@ -26,7 +27,7 @@ In the calculation of $R_2$ the same integrals appear over and over. The most im
 
 \section{Traceology}
 \label{app:Traceology}
-The following dentities for Dirac matrices are very useful when calculating Feynman diagrams in QED
+In a theory with fermions the Dirac matrices appear as the generators of the spinor representation of the Poincaré algebra. The following identities for Dirac matrices are very useful when evaluating Feynman diagrams
 \begin{itemize}
 \item[1.] $\mathrm{Tr} \left( \gamma^{\alpha} \gamma^{\beta} \right) = dg^{\alpha\beta}$
 \item[2.] $\mathrm{Tr} \left( \gamma^{\alpha}\gamma^{\beta}\gamma^{\gamma}\gamma^{\delta} \right) = d \left( g^{\alpha\beta}g^{\gamma\delta} - g^{\alpha\gamma}g^{\beta\delta} + g^{\alpha\delta}g^{\beta\gamma} \right)$
@@ -37,7 +38,7 @@ The following dentities for Dirac matrices are very useful when calculating Feyn
 \end{itemize}
 
 
-Dirac matrices obey Clifford algebra $\lbr \gamma^{\mu}, \gamma^{\nu} \rbr = 2 g^{\mu\nu} \mathds{1}_d$ with $g^{\mu\nu}$ the Minkowski metric in $d$ dimensions
+The Dirac matrices obey the Clifford algebra $\lbr \gamma^{\mu}, \gamma^{\nu} \rbr = 2 g^{\mu\nu} \mathds{1}_d$ with $g^{\mu\nu}$ the Minkowski metric in $d$ dimensions
 \begin{equation*}
  g^{\mu\nu} = 
 \begin{cases}
@@ -106,7 +107,7 @@ A classical Lagrangian permits symmetries which can be implemented by Lie groups
 \begin{equation*}
 j^{\mu a} = \frac{\partial \mathcal{L}}{\partial \left( \partial_{\mu} \phi \right)} \frac{\partial \delta\phi}{\partial \alpha_a}
 \end{equation*} 
-The left- and right-handed part of the currents $j^{\mu a}_{L/R}$ are
+The left- and right-handed part $j^{\mu a}_{L/R}$ of a fermionic current are
 \begin{equation*}
 j^{\mu a}_L = \bar{\psi}_L \gamma^{\mu} T^a \psi_L = \left( P_L \psi \right)^{\dagger} \gamma^0 \gamma^{\mu} T^a P_L \psi \overset{P_L^{\dagger}=P_L}{=} \psi^{\dagger} P_L \gamma^0 \gamma^{\mu} T^a P_L \psi = \bar{\psi} \gamma^{\mu} T^a P_L^2 \psi \overset{P_L^2 = P_L}{=} \bar{\psi} \gamma^{\mu} T^a P_L \psi
 \end{equation*}
@@ -127,7 +128,7 @@ Now we can couple the currents to vector fields to obtain interactions. E.g., th
 \end{equation*}
 In general, we can couple any linear combination of currents to a vector field as long as the combination is Lorentz and gauge invariant. E.g., the neutral current in the electroweak theory is a superposition of a vector and an axialvector current
 \begin{equation*}
-\mathcal{L}_{coupl}^{NC} = g Z_{\mu} \left( g_v j^{\mu} - g_A j^{\mu}_5 \right)
+\mathcal{L}_{coupl}^{NC} = g Z_{\mu} \left( g_V j^{\mu} - g_A j^{\mu}_5 \right)
 \end{equation*}
 We can use the above relations to express this coupling in terms of right- and left-handed currents
 \begin{align*}

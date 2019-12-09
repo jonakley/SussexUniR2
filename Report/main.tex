@@ -34,6 +34,7 @@
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
             \node[shape=circle,draw,inner sep=0.5pt] (char) {#1};}}
 \newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
 
 
 \title{Contribution of QED to Rational Terms in 1-loop Feynman Diagrams in the Standard Model}
@@ -68,8 +69,7 @@ The abstract goes here.
 \include{Sections/Introduction}
 \include{Sections/pureQED}
 \include{Sections/QED2SM}
-\include{Sections/pureQEDrenorm}
-\include{Sections/QED2SMrenorm}
+\include{Sections/Renormalization}
 \include{Sections/Appendices}
 
 

@@ -1,0 +1,272 @@
+\section{Perturbative Renormalization in Terms of Scalar Integrals}
+Explain how to express renormalization constants in terms of scalar integrals.
+
+We start from the QED Lagrangian 
+\begin{equation}
+\mathcal{L} = - \frac{1}{4} F_{\mu\nu}^0 F^{\mu\nu}_0 + \bar{\psi}_0 \left( i \fsl{\partial} -m_0 \right) \psi_0 - e_0 \bar{\psi}_0 \fsl{A}_0 \psi_0
+\end{equation}
+where $F^{\mu\nu}_0 = \partial^{\mu}A^{\nu}_0 - \partial^{\nu}A^{\mu}_0$. Now, we reinterpret the fields and parameters in the Lagrangian as "bare" fields and parameters which are given by the actual "renormalized" quantities times a renormalization constant
+\begin{align*}
+& \psi_0 = \sqrt{Z_2} \psi & \\
+& A^{\mu}_0 = \sqrt{Z_3} A^{\mu} & \\
+& m_0 = Z_m m & \\ 
+& e_0 = Z_e e \mu^{-\frac{\epsilon}{2}} & \numberthis \label{eqn:RenormCon}
+\end{align*}
+The renormalization constants $Z_i$ absorb the divergences which appear in loop calculations. We can split them as $Z_i = 1 + \delta_i$ to extract the renormalized Lagrangian which is divergence free and the so called counter-term Lagrangian which absorbs the divergences
+\begin{align*}
+\mathcal{L} & = - \frac{1}{4} Z_3 F_{\mu\nu} F^{\mu\nu} + i Z_2 \bar{\psi} \fsl{\partial} \psi - Z_m Z_2 m \bar{\psi} \psi - e Z_1 \bar{\psi} \fsl{A} \psi = & \\
+& = - \frac{1}{4} F_{\mu\nu} F^{\mu\nu} + \bar{\psi} \left( i \fsl{\partial} - m \right) \psi - e \bar{\psi} \fsl{A} \psi - \frac{1}{4} \delta_3 F_{\mu\nu} F^{\mu\nu} + i \delta_2 \bar{\psi} \fsl{\partial} \psi - \left( \delta_m + \delta_2 \right) m \bar{\psi} \psi - e \delta_1 \bar{\psi} \fsl{A} \psi \equiv \mathcal{L}_{ren} + \mathcal{L}_{ct} & \numberthis
+\end{align*}
+where $Z_1 = Z_e Z_2 \sqrt{Z_3} \mu^{-\frac{\epsilon}{2}}$. \\
+The counter term Lagrangians gives the following new Feynman rules
+\begin{align*}
+\begin{gathered}
+\feynmandiagram [layered layout, horizontal=a to c] {
+	a [particle=\(\alpha\)] -- [photon, momentum=\(p\)] b [crossed dot] -- [photon] c [particle=\(\beta\)],
+};
+\end{gathered}
+& = i \left( p^{\alpha}p^{\beta} - g^{\alpha\beta}p^2 \right) \delta_3 & \\
+\begin{gathered}
+\feynmandiagram [layered layout, horizontal=a to c] {
+	a -- [fermion, momentum=\(p\)] b [crossed dot] -- [fermion] c,
+};
+\end{gathered}
+& = i \left( \fsl{p} \delta_2 - \delta_m \right) & \\
+\begin{gathered}
+\feynmandiagram [layered layout, horizontal=a to b] {
+	a[particle=\(\alpha\)] -- [photon] b [crossed dot] -- [fermion] c, b -- [fermion] d,
+};
+\end{gathered}
+& = -ie \gamma^{\mu} \delta_1 & \numberthis
+\end{align*}
+We can use these new Feynman rules to calculate the $Z_i$ in order to be able to make predictions with perturbative calculations. These renormalization conditions can be obtained by calculating the dressed propagators and requiring that the propagators have a pole at the physical mass. \\
+Let's start with the electron propagator. The dressed propagator is given by a sum of so called 1-particle irreducible insertions (i.e. insertions of subdiagrams which do not fall apart when one of the internal lines is cut) as follows
+\begin{align*}
+\begin{gathered}
+\feynmandiagram [small, layered layout, horizontal=a to c] {
+	a -- [fermion] b [blob] -- [fermion] c,
+};
+\end{gathered}
+=
+\begin{gathered}
+\feynmandiagram [small, layered layout, horizontal=a to b] {
+	a -- [fermion] b ,
+};
+\end{gathered}
++
+\begin{gathered}
+\feynmandiagram [small, layered layout, horizontal=a to c] {
+	a -- [fermion] b [empty dot,scale=5] -- [fermion] c,
+};
+\end{gathered}
++
+\begin{gathered}
+\feynmandiagram [small, layered layout, horizontal=a to d] {
+	a -- [fermion] b [empty dot,scale=5] -- [fermion] c [empty dot,scale=5] -- [fermion] d,
+};
+\end{gathered}
++ \dots
+\end{align*} 
+where the empty circles on the right represent renormalized 1-PI interactions and the appropriate counter terms. This gives
+\begin{equation}
+iS_0(\fsl{p}) = iS(\fsl{p}) + iS(\fsl{p}) i\Sigma'(\fsl{p}) iS(\fsl{p}) + iS(\fsl{p}) i\Sigma'(\fsl{p}) iS(\fsl{p}) i\Sigma'(\fsl{p}) iS(\fsl{p}) + \dots
+\end{equation}
+where $i\Sigma'(\fsl{p}) = i\Sigma(\fsl{p}) + i \left( \delta_2 \fsl{p} - \left( \delta_2 + \delta_m \right) m \right)$, $iS_0 = \frac{i}{\fsl{p} - m_0}$ and $iS = \frac{i}{\fsl{p} - m}$. Now we can sum the geometric series in $i\Sigma'(\fsl{p})$ which yields
+\begin{equation}
+\frac{i}{\fsl{p}-m_0} = \frac{i}{\fsl{p} - m + \left( \Sigma(\fsl{p}) + \delta_2 \fsl{p} - \left( \delta_2 + \delta_m \right) m \right)}
+\end{equation}
+By requiring the dressed propagator to have a pole at the physical mass $\fsl{p} = m_{\mathrm{phys}} = m$ we obtain 
+\begin{equation}
+m - m + \Sigma(m) + \delta_2 m - \left( \delta_2 + \delta_m \right) m = 0
+\end{equation}
+\begin{equation}
+\Rightarrow \delta_m = \frac{1}{m} \Sigma(m)
+\end{equation}
+We also want the propagator to have a residue of unity at the pole. This gives the the renormalization condition for the electron field
+\begin{align*}
+\mathrm{Res}_{\fsl{p} = m} \left( S(\fsl{p}) \right) & = \mathrm{Res}_{\fsl{p} = m} \left( \frac{1}{\fsl{p} - m + \left( \Sigma(\fsl{p}) + \delta_2 \fsl{p} - \left( \delta_2 + \delta_m \right) m \right)} \right) = & \\
+& = \lim_{\fsl{p} \rightarrow m} \frac{\fsl{p} - m}{\fsl{p} - m + \left( \Sigma(\fsl{p}) + \delta_2 \fsl{p} - \left( \delta_2 + \delta_m \right) m \right)} \overset{\mathrm{L'H}}{=} \lim_{\fsl{p} \rightarrow m} \frac{1}{1 + \frac{d\Sigma}{d\fsl{p}} + \delta_2} \overset{\mathrm{!}}{=} 1 &
+\end{align*}
+\begin{equation}
+\Rightarrow \delta_2 = - \frac{d\Sigma(\fsl{p})}{d\fsl{p}} \biggr\rvert_{\fsl{p} = m}
+\end{equation}
+$Z_1$ and $Z_2$ are related by symmetry, so we do not have to evaluate the electron-photon 3-point function. It was first shown by Ward in 1950 that $Z_1 = Z_2$ \cite{WardId}.
+The only remaining renormalization constant from equations \ref{eqn:RenormCon} is $Z_3$. It can be obtained from the dressed photon propagator in the same way we obtained the electron field renormalization from the electron propagator. The dressed photon operator is given by
+\begin{align*}
+\begin{gathered}
+\feynmandiagram [small, layered layout, horizontal=a to c] {
+	a -- [photon] b [blob] -- [photon] c,
+};
+\end{gathered}
+=
+\begin{gathered}
+\feynmandiagram [small, layered layout, horizontal=a to b] {
+	a -- [photon] b,
+};
+\end{gathered}
++
+\begin{gathered}
+\feynmandiagram [small, layered layout, horizontal=a to c] {
+	a -- [photon] b [empty dot,scale=5] -- [photon] c,
+};
+\end{gathered}
++
+\begin{gathered}
+\feynmandiagram [small, layered layout, horizontal=a to d] {
+	a -- [photon] b [empty dot,scale=5] -- [photon] c [empty dot,scale=5] -- [photon] d,
+};
+\end{gathered}
++ \dots
+\end{align*} 
+where the empty circles are again insertions of 1-Pi diagrams and the appropriate counter term. So, we have
+\begin{equation}
+\label{eqn:PhotonProp}
+iS^{\alpha\beta}_0(p^2) = iS^{\alpha\beta}(p^2) + \left[iS(p^2) i\Pi'(p^2) iS(p^2)\right]^{\alpha\beta} + \left[iS(p^2) i\Pi'(\fsl{p}) iS(p^2) i\Pi'(p^2) iS(p^2)\right]^{\alpha\beta} + \dots
+\end{equation}
+with $iS^{\alpha\beta}_0 = \frac{-i}{p^2}\left( g^{\alpha\beta} - \frac{p^{\alpha}p^{\beta}}{p^2} \right) = iS^{\alpha\beta}$. Due to gauge invariance and the respective Ward identity we must have $\Pi^{\alpha\beta} = \left( p^{\alpha}p^{\beta} - p^2 g^{\alpha\beta} \right) \Pi(p^2)$, since the Ward identity demands $p_{\alpha}\Pi^{\alpha\beta} = 0 = \left( p^2 p^{\beta} - p^2 p^{\beta} \right) \Pi(p^2)$ \checkmark. \\
+In equation \ref{eqn:PhotonProp} $i\Pi'^{\alpha\beta}(p^2) = i\Pi^{\alpha\beta}(p^2) + i \delta_3 \left( p^{\alpha}p^{\beta} - g^{\alpha\beta}p^2 \right)$.\\
+Now we can sum the geometric series in $i\Pi'(p^2)$ which yields
+\begin{equation}
+\frac{-i}{p^2}\left( g^{\alpha\beta} - \frac{p^{\alpha}p^{\beta}}{p^2} \right) = \left( g^{\alpha\beta} - \frac{p^{\alpha}p^{\beta}}{p^2} \right) \frac{-i}{p^2 \left( 1 + \Pi(p^2) + \delta_3 \right)}
+\end{equation}
+By requiring the propagator to have a pole at the physical photon mass $p^2=0$ we get
+\begin{equation}
+\delta_3 = - \Pi(0)
+\end{equation}
+The renormalization procedure for the whole Standard Model is obviously a lot more involved, since there are a lot more fields and parameters in the theory. But it still follows the same lines as for the simpler QED case. The whole derivation for the renormalization conditions of the electroweak part of the Standard Model can be found in \cite{SMrenorm}. We will use the results from there and calculate the needed self-energies.
+\subsection{Pure QED Renormalization}
+\label{sec:QEDren}
+We now have to calculate the self-energy of the photon and the electron to evaluate the renormalization constants. Since our goal is to automate 1-loop calculations in QED and their contributions to the Standard Model it is convenient to express the results in terms of scalar integrals (see Appendix \ref{app:Integrals}) which can be easily implemented.\\
+{\bf Photon self-energy} \\
+\begin{align*}
+\begin{gathered}
+\feynmandiagram [layered layout, horizontal=b to c] {
+	a [particle=\(\alpha\)] -- [photon, momentum=\(p\)] b
+	  -- [fermion, half left, looseness=1.5, momentum=\(p+q\)] c
+	  -- [fermion, half left, looseness=1.5, momentum=\(q\)] b,
+	c -- [photon, momentum=\(p\)] d [particle=\(\beta\)] ,
+};
+\end{gathered}
+& =\int\frac{d^4q}{\left( 2\pi \right)^4} \left( -1 \right) \mathrm{Tr} \lbr ie \gamma^{\alpha} \frac{i \left( \fsl{p}+\fsl{q}+m \right)}{\left( p+q \right)^2 - m^2} ie \gamma^{\beta} \frac{i \left( \fsl{q}+m \right)}{q^2 - m^2} \rbr \equiv i\Pi^{\alpha\beta}(p^2) &
+\end{align*}
+Let's work on the trace so we can express the numerator of the 2-point function in terms of scalar integrals.
+\begin{align*}
+& \Tr \lbr \gamma^{\alpha} \left( \fsl{p} + \fsl{q} + m \right) \gamma^{\beta} \left( \fsl{q} + m \right) \rbr = \Tr \lbr m^2 \gamma^{\alpha}\gamma^{\beta} + \gamma^{\alpha} \left( \fsl{p} + \fsl{q} \right) \gamma^{\beta} \fsl{q} \rbr = & \\
+& = 4 \lbr m^2 g^{\alpha\beta} + \left( p+q \right)_{\mu} q_{\nu} \left( g^{\alpha\mu}g^{\beta\nu} - g^{\alpha\beta}g^{\mu\nu} + g^{\alpha\nu}g^{\beta\mu} \right) \rbr = & \\
+& = 4 \left( m^2 g^{\alpha\beta} + \left( p+q \right)^{\alpha} q^{\beta} - g^{\alpha\beta} \left( p+q \right) \cdot q + g^{\alpha} \left( p+q \right)^{\beta} \right) &
+\end{align*}
+
+\begin{align*}
+i\Pi^{\alpha\beta}(p^2) & = -4e^2 \int \frac{d^4q}{\left( 2\pi \right)^4} \frac{m^2g^{\alpha\beta} + p^{\alpha}q^{\beta} + q^{\alpha}p^{\beta} + 2 q^{\alpha}q^{\beta} - g^{\alpha\beta} p \cdot q - g^{\alpha\beta} q^2 }{\left( \left( p+q \right)^2 - m^2 \right) \left( q^2 - m^2 \right)} = & \\
+& = -\frac{4ie^2}{16\pi^2} \lbr m^2 B_0 g^{\alpha\beta} + 2 p^{\alpha\beta} B_1 + 2 \left( B_{11} p^{\alpha}p^{\beta} + B_{00} g^{\alpha\beta} \right) - g^{\alpha\beta} B_1 p^2 - g^{\alpha\beta} \left( 4 B_{00} + B_{11} p^2 \right) \rbr = & \\ 
+& = -\frac{ie^2}{4\pi^2} \lbr g^{\alpha\beta} \left( m^2 B_0 - B_1 p^2 + B_{11} p^2 - 2 B_{00} \right) + 2 p^{\alpha} p^{\beta} \left( B_1 + B_{11} \right) \rbr &
+\end{align*}
+The arguments of the scalar integrals are suppressed to keep the notation compact. They are the same for all B-functions: $B_i = B_i (p^2,m^2,m^2)$. \\
+The expression can be further simplified using identities between the scalar integrals.\\
+{\bf Electron self-energy} \\
+\begin{align*}
+\begin{gathered}
+\feynmandiagram [layered layout, horizontal=b to c] {
+	a -- [fermion, momentum=\(p\)] b,
+	c -- [photon, half left, looseness=1.5, momentum=\(q\)] b,
+	b -- [fermion, momentum=\(p+q\)] c,
+	c -- [fermion, momentum=\(p\)] d,
+};
+\end{gathered}
+& =\int\frac{d^4q}{\left( 2\pi \right)^4} ie \gamma^{\alpha} \frac{i \left( \fsl{p} +\fsl{q}+m \right)}{\left( p+q \right)^2 - m^2} ie \gamma^{\beta} \frac{-i g_{\alpha\beta}}{q^2} =\int\frac{d^4q}{\left( 2\pi \right)^4} \left( -e^2 \right) \gamma^{\alpha} \frac{\left( \fsl{p}+\fsl{q}+m \right)}{\left( p+q \right)^2 - m^2} \gamma_{\alpha} \frac{1}{q^2} \equiv i\Sigma(\fsl{p}) &
+\end{align*}
+With a bit of gamma-matrix algebra the numerator can be written as
+\begin{align*}
+\gamma^{\beta} \left( \fsl{p} + \fsl{q} + m \right) \gamma_{\beta} = \left( p+q \right)_{\alpha} \gamma^{\beta}\gamma^{\alpha}\gamma_{\beta} + m \gamma^{\beta}\gamma_{\beta} = 4m - 2 \left( \fsl{p} + \fsl{q} \right)
+\end{align*}
+
+\begin{align*}
+i\Sigma(\fsl{p}) & = -e^2 \int \frac{d^4q}{\left( 2\pi \right)^4} \frac{4m - 2 \left( \fsl{p} + \fsl{q} \right)}{\left( \left( p+q \right)^2 - m^2 \right)q^2} = & \\
+& = - \frac{ie^2}{16\pi^2} \left[ 4m B_0 - 2\fsl{p} \left( B_0 + B_1 \right) \right] = \frac{-ie^2}{8\pi^2} \left( 2m B_0 - \fsl{p} \left( B_0+B_1 \right) \right) &
+\end{align*}
+Where the arguments of the B-functions are suppressed again. They are $B_i = B_i(p^2,0,m^2)$
+
+\subsection{QED Contribution to the Standard Model Renormalization}
+\label{sec:SMrenorm}
+{\bf Photon/Z-boson mixed self-energy} \\
+\begin{align*}
+\begin{gathered}
+\feynmandiagram [layered layout, horizontal=b to c] {
+	a [particle={\(Z,\alpha\)}] -- [photon, momentum=\(p\)] b
+	  -- [fermion, half left, looseness=1.5, momentum=\(p+q\)] c
+	  -- [fermion, half left, looseness=1.5, momentum=\(q\)] b,
+	c -- [photon, momentum=\(p\)] d [particle={\(\beta,\gamma\)}] ,
+};
+\end{gathered}
+& = \int\frac{d^4q}{\left( 2\pi \right)^4} \left( -1 \right) \Tr \lbr \left( -ie Q_f \right) \gamma^{\alpha} \frac{i \left( \fsl{p}+\fsl{q}+m \right)}{\left( p+q \right)^2 - m^2} i \frac{g}{\cos\theta_W} \gamma^{\beta} \left( g_V - g_A \gamma_5 \right) \frac{i \left( \fsl{q}+m \right)}{q^2 - m^2} \rbr \equiv \mathcal{A} &
+\end{align*}
+Let's work on the trace so we can express the numerator of the 2-point function in terms of scalar integrals.
+\begin{align*}
+& \Tr \lbr \gamma^{\alpha} \left( \fsl{p} + \fsl{q} + m \right) \gamma^{\beta} \left( g_V - g_A \gamma_5 \right) \left( \fsl{q} + m \right) \rbr = g_V \Tr \lbr \gamma^{\alpha} \left( \fsl{p} + \fsl{q} \right) \gamma^{\beta} \fsl{q} + m^2 \gamma^{\alpha}\gamma^{\beta} \rbr - g_A \Tr \lbr \gamma^{\alpha} \left( \fsl{p} + \fsl{q} \right) \gamma^{\beta} \gamma_5 \fsl{q} \rbr = & \\
+& = 4 g_V \lbr \left( p+q \right)_{\mu} q_{\nu} \left( g^{\alpha\mu}g^{\beta\nu} - g^{\alpha\beta}g^{\mu\nu} + g^{\alpha\nu}g^{\beta\mu} \right) + m^2 g^{\alpha\beta} \rbr - 4i g_A \left( p+q \right)_{\mu} q_{\nu} \epsilon^{\alpha\mu\beta\nu} = & \\
+& = 4 \lbr g_V \left[ \left( p+q \right)^{\alpha}q^{\beta} - g^{\alpha\beta} \left( p+q \right) \cdot q + q^{\alpha} \left( p+q \right)^{\beta} + m^2 g^{\alpha\beta} \right] - i g_A \epsilon^{\alpha\mu\beta\nu} p_{\mu}q_{\nu} \rbr &
+\end{align*}
+Where we used that a symmetric tensor contracted with an antisymmetric tensor vanishes.
+
+\begin{align*}
+\mathcal{A} & = \frac{4Q_feg}{\cos\theta_W} \int \frac{d^4q}{\left( 2\pi \right)^4} \frac{g_V \left( \left( p+q \right)^{\alpha}q^{\beta} - g^{\alpha\beta} \left( p+q \right) \cdot q + q^{\alpha} \left( p+q \right)^{\beta} + m^2 g^{\alpha\beta} \right) - i g_A \epsilon^{\alpha\mu\beta\nu} p_{\mu}q_{\nu}}{\left( \left( p+q \right)^2 -m^2 \right) \left( q^2 - m^2 \right)} = & \\
+& = \frac{4Q_feg}{\cos\theta_W} \frac{i\pi^2}{\left( 2\pi \right)^4} \lbr -ig_A \epsilon^{\alpha\mu\beta\nu}p_{\mu}B_1 p_{\nu} + g_V \left[ B_1 p^{\alpha}p^{\beta} + B_{00}g^{\alpha\beta} + B_{11} p^{\alpha}p^{\beta} - g^{\alpha\beta} \left( B_1 p^2 + 4 B_{00} + B_{11} p^2 \right) + \right. \right. & \\
+& \left. \left. + B_1 p^{\alpha}p^{\beta} + B_{00} g^{\alpha\beta} + B_{11} p^{\alpha}p^{\beta} + B_0 m^2 g^{\alpha\beta} \right]\rbr = & \\
+& = \frac{iQ_fegg_V}{4\pi^2\cos\theta_W} \lbr 2 p^{\alpha}p^{\beta} \left( B_1 + B_{11} \right) + g^{\alpha\beta} \left( m^2 B_0 - 2 B_{00} -p^2 \left( B_1 + B_{11} \right) \right) \rbr &
+\end{align*}
+
+{\bf Z-Boson self-energy} \\
+\begin{align*}
+\begin{gathered}
+\feynmandiagram [layered layout, horizontal=b to c] {
+	a [particle={\(Z,\alpha\)}] -- [photon, momentum=\(p\)] b
+	  -- [fermion, half left, looseness=1.5, momentum=\(p+q\)] c
+	  -- [fermion, half left, looseness=1.5, momentum=\(q\)] b,
+	c -- [photon, momentum=\(p\)] d [particle={\(\beta,Z\)}] ,
+};
+\end{gathered}
+& = \int\frac{d^4q}{\left( 2\pi \right)^4} \left( -1 \right) \Tr \lbr \frac{ig}{\cos\theta_W} \gamma^{\alpha} \left( g_V - g_A \gamma_5 \right) \frac{i \left( \fsl{p}+\fsl{q}+m \right)}{\left( p+q \right)^2 - m^2} \frac{ig}{\cos\theta_W} \gamma^{\beta} \times \right. & \\ 
+& \left. \times \left( g_V - g_A \gamma_5 \right) \frac{i \left( \fsl{q}+m \right)}{q^2 - m^2} \rbr \equiv \mathcal{A} &
+\end{align*}
+Let's work on the trace so we can express the numerator of the 2-point function in terms of scalar integrals.
+
+\begin{align*}
+& \Tr \lbr \gamma^{\alpha} \left( g_V - g_A \gamma_5 \right) \left( \fsl{p}+\fsl{q}+m \right) \gamma^{\beta} \left( g_V - g_A \gamma_5 \right) \left( \fsl{q}+m \right) \rbr = \Tr \lbr \gamma^{\alpha} \left( g_V - g_A \gamma_5 \right)^2 \left( \fsl{p}+\fsl{q}-m \right) \gamma^{\beta} \left( \fsl{q}+m \right) \rbr = & \\
+& = \left( g_V^2 + g_A^2 \right) \Tr \lbr \gamma^{\alpha} \left( \fsl{p} + \fsl{q} - m \right) \gamma^{\beta} \left( \fsl{q} + m \right) \rbr = \left( g_V^2 + g_A^2 \right) \Tr \lbr \gamma^{\alpha} \left( \fsl{p} + \fsl{q} \right) \gamma^{\beta} \fsl{q} - m^2 \gamma^{\alpha}\gamma^{\beta} \rbr = & \\
+& = \left( g_V^2 + g_A^2 \right) \lbr \left( p+q \right)_{\mu} q_{\nu} 4 \left( g^{\alpha\mu}g^{\beta\nu} - g^{\alpha\beta}g^{\mu\nu} + g^{\alpha\nu}g^{\beta\mu} \right) - 4m^2 g^{\alpha\beta} \rbr = & \\
+& = 4 \left( g_V^2 + g_A^2 \right) \lbr \left( p+q \right)^{\alpha}q^{\beta} - g^{\alpha\beta} \left( p+q \right) \cdot q + q^{\alpha} \left( p+q \right)^{\beta} - m^2 g^{\alpha\beta} \rbr &
+\end{align*}
+
+\begin{align*}
+\mathcal{A} & = \int \frac{d^4q}{\left( 2\pi \right)^4} \frac{4g^2\left(g_V^2 + g_A^2 \right)}{\cos^2\theta_W} \frac{\left( p+q \right)^{\alpha}q^{\beta} - g^{\alpha\beta} \left( p+q \right) \cdot q + q^{\alpha} \left( p+q \right)^{\beta} - m^2 g^{\alpha\beta}}{\left( \left( p+q \right)^2 -m^2 \right) \left( q^2 - m^2 \right)} = & \\
+& = \frac{4g^2\left(g_V^2 + g_A^2 \right)}{\cos^2\theta_W} \int \frac{d^4q}{\left( 2\pi \right)^4} \frac{p^{\alpha}q^{\beta}+q^{\alpha}p^{\beta}+2q^{\alpha}q^{\beta} - g^{\alpha\beta} \left( m^2 + q \cdot p + q^2 \right)}{\left( \left( p+q \right)^2 -m^2 \right) \left( q^2 - m^2 \right)} = & \\
+& = \frac{4g^2\left(g_V^2 + g_A^2 \right)}{\cos^2\theta_W} \frac{i\pi^2}{\left( 2\pi \right)^4} \lbr 2 p^{\alpha}p^{\beta} B_1 + 2 \left( B_{00} g^{\alpha\beta} + B_{11} p^{\alpha}p^{\beta} \right) - g^{\alpha\beta} \left( m^2 B_0 + B_1 p^2 + 4 B_{00} + B_{11} p^2 \right) \rbr = & \\
+& = \frac{ig^2\left(g_V^2 + g_A^2 \right)}{4\pi^2\cos^2\theta_W} \lbr p^{\alpha}p^{\beta} 2 \left( B_1 + B_{11} \right) - g^{\alpha\beta} \left( m^2 B_0 + 2 B_{00} + p^2 \left( B_1 + B_{11} \right) \right) \rbr
+\end{align*}
+
+{\bf Gluon self-energy} \\
+\begin{align*}
+&
+\begin{gathered}
+\feynmandiagram [layered layout, horizontal=b to c] {
+	a [particle=\(\alpha\)] -- [gluon, momentum=\(p\)] b
+	  -- [fermion, half left, looseness=1.5, momentum=\(p+q\)] c
+	  -- [fermion, half left, looseness=1.5, momentum=\(q\)] b,
+	c -- [gluon, momentum=\(p\)] d [particle=\(\beta\)] ,
+};
+\end{gathered}
+=
+\begin{gathered}
+\feynmandiagram [layered layout, horizontal=b to c] {
+	a [particle=\(\alpha\)] -- [photon, momentum=\(p\)] b
+	  -- [fermion, half left, looseness=1.5, momentum=\(p+q\)] c
+	  -- [fermion, half left, looseness=1.5, momentum=\(q\)] b,
+	c -- [photon, momentum=\(p\)] d [particle=\(\beta\)] ,
+};
+\end{gathered}
+\left( eQ_q \rightarrow g_S T^a \right) = & \\
+& = -\frac{ig_S^2\Tr\left( T^a T^b\right)}{4\pi^2} \lbr 2 p^{\alpha} p^{\beta} \left( B_1 + B_{11} \right) + g^{\alpha\beta} \left( m^2 B_0 - 2 B_{00} - p^2 \left( B_1 + B_{11} \right) \right) \rbr &
+\end{align*}
+
+
+
