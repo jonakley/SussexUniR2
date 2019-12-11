@@ -1,16 +1,16 @@
-\section{Introduction}
+\section{Introduction\footnote{The whole introduction is based on \cite{R2QCD,R2QED}.}}
 \label{sec:Introduction} 
-In the early 2000s a lot of effort has been put into automating loop calculations in order to keep up with the increasing accuracy of high precision measurements. Early attempts were mostly based on Passarino-Veltman tensor reduction while newer developments changed their focus to unitarity arguments. Instead of performing the whole tensor reduction process, now the problem is substituted by finding the coefficients of the scalar integrals appearing in the 1-loop amplitudes. This is possible because the basis of scalar integrals is know in terms of boxes, triangles, bubbles and tadpoles. This leads to a master formula for any one-loop amplitude
+In the early 2000s a lot of effort has been put into automating loop calculations in order to keep up with the increasing accuracy of high precision measurements. Early attempts were mostly based on Passarino-Veltman tensor reduction while newer developments changed their focus to unitarity arguments. Instead of performing the whole tensor reduction process, now the problem is substituted by finding the coefficients of the scalar integrals appearing in the 1-loop amplitudes. This is possible because the basis of scalar integrals is know in terms of boxes, triangles, bubbles and tadpoles. This leads to a master formula for any one-loop amplitude 
 \begin{equation}
 \label{eqn:mastereqn}
 \mathcal{M} = \sum_i d_i \mathrm{Box}_i + \sum_i c_i \mathrm{Triangle}_i + \sum_i b_i \mathrm{Bubble}_i + \sum_i a_i \mathrm{Tadpole}_i + R
 \end{equation}
-The first attempts to extract the coefficients in equation \ref{eqn:mastereqn} failed at providing a procedure to find all of them. Finally, the OPP method was brought forward which was able to completely determine the coefficients. But with the OPP method a new class of terms arise which are denoted by R in equation \ref{eqn:mastereqn}. They can be split into two categories
+The first attempts to extract the coefficients in equation \ref{eqn:mastereqn} failed at providing a systematic procedure to completely determine them. Finally, the OPP method was brought forward which makes it possible to find all of the coefficients for a given theory. But with the OPP method a new class of terms arise (denoted by $R$ in equation \ref{eqn:mastereqn}) which are not the coefficient of one of the four types of diagrams. They can be split into two categories
 \begin{equation}
 R = R_1 + R_2
 \end{equation}
 where $R_1$ can be computed alongside the coefficients of the scalar integrals in OPP. \\
- $R_2$ on the other hand is the $\epsilon$-dimensional contribution of dimensional regularization to the amplitude. Any m-point 1-loop function $\bar{A}\bar{q})$ can be decomposed in a numerator $\bar{N}( \bar{q})$ and denominators $\bar{D}_i$
+$R_2$ on the other hand is the $\epsilon$-dimensional contribution of dimensional regularization to the amplitude. Any m-point 1-loop function $\bar{A}\bar{q})$ can be decomposed in a numerator $\bar{N}( \bar{q})$ and denominators $\bar{D}_i$
 \begin{equation}
 \label{eqn:amp}
 \bar{A} (\bar{q}) = \frac{\bar{N}(\bar{q})}{\bar{D}_0\bar{D}_1\cdots\bar{D}_{m-1}}, \qquad \bar{D}_i = \left( \bar{q} + \bar{p}_i \right)^2 - m_i^2, p_0 \neq 0
@@ -19,27 +19,21 @@ where $\bar{q}$ is the $d$-dimensional loop momentum and $m_i$ is the mass of th
 \begin{equation}
 \bar{N}( \bar{q}) = N (q) + \tilde{N} (\tilde{q}^2,q,\epsilon)
 \end{equation}
-where $\tilde{N} (\tilde{q}^2,q,\epsilon)$ is of biggest interest to us because it gives rise to rational terms of the form $R_2$ which are defined as
+where $\tilde{N} (\tilde{q}^2,q,\epsilon)$ is of interest to us because it makes up the rational terms of the form $R_2$ which are defined as
 \begin{equation}
 R_2 \equiv \frac{1}{\left( 2\pi \right)^4} \int d^d \bar{q} \frac{\tilde{N} ( \tilde{q}^2,q,\epsilon)}{\bar{D}_0\bar{D}_1\cdots\bar{D}_{m-1}}
 \end{equation} 
-
-It is just a rational combination of Lorentz tensors and parameters of the theory, i.e. the couplings or masses of the particles in the theory and has to be computed by brute force. The $R_2$ contribution can be added to the theory by introducing tree-level like Feynman Rules.
-
-
-which is the $\epsilon$-dimensional contribution to the amplitude in eqn. \ref{eqn:amp} integrated over the $d$-dimensional loop momentum $\bar{q}$. It can be obtained by splitting the $d$-dimensional Lorentz tensors appearing in the amplitude into a 4-dimensional and an $\epsilon$-dimensional part
+$R_2$ is just a rational combination of Lorentz tensors and parameters of the theory, i.e. the couplings or masses of the particles in the theory. The $R_2$ contribution can be added to the theory by introducing tree-level like Feynman Rules similarly to counterterms in perturbative renormalization procedures. \\
+To compute $R_2$ we first have to extract the $\epsilon$-dimensional part of the amplitude by splitting the $d$-dimensional Lorentz tensors appearing in the amplitude into a 4-dimensional and an $\epsilon$-dimensional part
 \begin{equation}
 \bar{A}^{\mu_1\dots\mu_n} = A^{\mu_1\dots\mu_n} + \tilde{A}^{\mu_1\dots\mu_n}.
 \end{equation}
-To simplify our calculations later, we can establish a few identities for the manipulation of $d$-dimensional momenta. If we contract a $d$-dimensional object with an observable Lorentz tensor (like the momentum of an external particle) only the 4-dimensional part survives, e.g. for a loop momentum $\bar{q}^{\mu}$ and an external momentum $p^{\mu}$
+To simplify our calculations later, we can establish a few identities for the manipulation of $d$-dimensional Lorentz tensors. If we contract a $d$-dimensional tensor with an observable Lorentz tensor (like the momentum of an external particle) only the 4-dimensional part survives, e.g. for a loop momentum $\bar{q}^{\mu}$ and an external momentum $p^{\mu}$
 \begin{equation}
 \bar{q}\cdot p = q \cdot p.
 \end{equation}
-Thus, if an amplitude transforms with indices $\mu_1,\dots,\mu_n$ under a Lorentz transformation, the tensors in the amplitude bearing these indices will only appear as 4-dimensional.
-
-e.g. in reference \cite{R2QCD} and \cite{R2QED}.
-
-Since, we want to perform calculations in QED which contains a fermion, we have to extend the Clifford algebra $\lbr \gamma^{\mu},\gamma^{\nu} \rbr = 2g^{\mu\nu} \mathds{1}_4$ to $d$ dimensions. This is straightforward by promoting $\gamma^{\mu} \rightarrow \bar{\gamma}^{\mu}$ and extending the Minkowski metric to d dimensions by adding additional -1 on the diagonal for the extra spatial dimensions. We have
+Thus, if an amplitude transforms with indices $\mu_1,\dots,\mu_n$ under a Lorentz transformation, the tensors in the amplitude bearing these indices will only appear as 4-dimensional. \\
+Since, we want to perform calculations in QED which contains a fermion, we have to extend the Clifford algebra $\lbr \gamma^{\mu},\gamma^{\nu} \rbr = 2g^{\mu\nu} \mathds{1}_4$ to $d$ dimensions. This is straightforward by promoting $\gamma^{\mu} \rightarrow \bar{\gamma}^{\mu}$ and extending the Minkowski metric to d dimensions by adding additional -1s on the diagonal for the extra spatial dimensions. We have
 \begin{equation}
 \lbr \bar{\gamma}^{\mu},\bar{\gamma}^{\nu} \rbr = 2\bar{g}^{\mu\nu} \mathds{1}_d
 \end{equation}
@@ -48,7 +42,7 @@ If we want to preserve the Clifford algebra separately in 4 and $\epsilon$ dimen
 \lbr \gamma^{\mu},\tilde{\gamma}^{\nu} \rbr = 0
 \end{equation}
 As opposed to QED the Standard Model is a chiral theory, i.e. it couples differently to left- and right-handed currents. This means that also axial-vector currents appear in the theory which are formulated with the fifth gamma matrix. The extension of $\gamma_5$ to $d$ dimensions is not as straightforward as with the four gamma matrices. This is because chirality is a property of four dimensions.\\
-If we also want to impose $\lbr \gamma_5,\gamma^{\mu} \rbr = 0$ for $d \neq 4$, then $\Tr\left( \gamma_5 \gamma^{\alpha}\gamma^{\beta}\gamma^{\gamma}\gamma^{\delta} \right) = 0$  for $d \neq 0,2,4$ which clashes with $\Tr\left( \gamma_5 \gamma^{\alpha}\gamma^{\beta}\gamma^{\gamma}\gamma^{\delta} \right) = -4i \epsilon^{\alpha\beta\gamma\delta}$ \cite{Gamma5}. But the identity is essential in the evaluation of the triangle diagram for the Adler-Bell-Jackiw anomaly. The only definition of $\gamma_5$ which is consistent with the chiral anomaly is the definition of 't Hooft and Veltman \cite{HVgamma5}: $\gamma_5 = i/4! \ \epsilon_{\mu_1 \dots \mu_4} \gamma^{\mu_1} \cdots \gamma^{\mu_4}$. This definition implies
+If we also want to impose $\lbr \gamma_5,\gamma^{\mu} \rbr = 0$ for $d \neq 4$, then $\Tr\left( \gamma_5 \gamma^{\alpha}\gamma^{\beta}\gamma^{\gamma}\gamma^{\delta} \right) = 0$  for $d \neq 0,2,4$ which clashes with $\Tr\left( \gamma_5 \gamma^{\alpha}\gamma^{\beta}\gamma^{\gamma}\gamma^{\delta} \right) = -4i \epsilon^{\alpha\beta\gamma\delta}$ in four dimensions \cite{Gamma5}. But the identity is essential in the evaluation of the triangle diagram for the Adler-Bell-Jackiw anomaly. The only definition of $\gamma_5$ which is consistent with the chiral anomaly is the definition of 't Hooft and Veltman \cite{HVgamma5}: $\gamma_5 = i/4! \ \epsilon_{\mu_1 \dots \mu_4} \gamma^{\mu_1} \cdots \gamma^{\mu_4}$. This definition implies
 \begin{equation}
 \lbr \gamma_5, \gamma^{\mu} \rbr = 0  \text{ and }  \left[ \gamma_5, \tilde{\gamma}^{\mu} \right] = 0.
 \end{equation} 
