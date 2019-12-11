@@ -22,7 +22,18 @@
 \usepackage{geometry}
 \usepackage{caption}
 \usepackage[onehalfspacing]{setspace}
+\usepackage{titlesec}
 
+% fix wrong title spacing induced by onehalfspacing from setspace package
+\titlespacing*{\section}
+{0pt}{0ex}{0ex}
+\titlespacing*{\subsection}
+{0pt}{0ex}{0ex}
+\titlespacing*{\subsubsection}
+{0pt}{0ex}{0ex}
+
+% define tick
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}  
 
 
 \numberwithin{equation}{section} % numbers equations by section
@@ -33,13 +44,12 @@
 \newcommand{\rbr}{\right\rbrace}
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
             \node[shape=circle,draw,inner sep=0.5pt] (char) {#1};}}
-\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
-\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}} % number equation in unnumbered align/equation environment
+
+
 
 
 \title{Contribution of QED to Rational Terms in 1-loop Feynman Diagrams in the Standard Model}
-
-
 
 
 \author{

@@ -123,8 +123,7 @@ where the empty circles are again insertions of 1-Pi diagrams and the appropriat
 \label{eqn:PhotonProp}
 iS^{\alpha\beta}_0(p^2) = iS^{\alpha\beta}(p^2) + \left[iS(p^2) i\Pi'(p^2) iS(p^2)\right]^{\alpha\beta} + \left[iS(p^2) i\Pi'(\fsl{p}) iS(p^2) i\Pi'(p^2) iS(p^2)\right]^{\alpha\beta} + \dots
 \end{equation}
-with $iS^{\alpha\beta}_0 = \frac{-i}{p^2}\left( g^{\alpha\beta} - \frac{p^{\alpha}p^{\beta}}{p^2} \right) = iS^{\alpha\beta}$. Due to gauge invariance and the respective Ward identity we must have $\Pi^{\alpha\beta} = \left( p^{\alpha}p^{\beta} - p^2 g^{\alpha\beta} \right) \Pi(p^2)$, since the Ward identity demands $p_{\alpha}\Pi^{\alpha\beta} = 0 = \left( p^2 p^{\beta} - p^2 p^{\beta} \right) \Pi(p^2)$ \checkmark. \\
-In equation \ref{eqn:PhotonProp} $i\Pi'^{\alpha\beta}(p^2) = i\Pi^{\alpha\beta}(p^2) + i \delta_3 \left( p^{\alpha}p^{\beta} - g^{\alpha\beta}p^2 \right)$.\\
+with $iS^{\alpha\beta}_0 = \frac{-i}{p^2}\left( g^{\alpha\beta} - \frac{p^{\alpha}p^{\beta}}{p^2} \right) = iS^{\alpha\beta}$ and $i\Pi'^{\alpha\beta} = i\Pi^{\alpha\beta} + i \delta_3 \left( p^{\alpha}p^{\beta} - g^{\alpha\beta}p^2 \right)$. Due to gauge invariance and the respective Ward identity we must have $\Pi^{\alpha\beta} = \left( p^{\alpha}p^{\beta} - p^2 g^{\alpha\beta} \right) \Pi(p^2)$, since the Ward identity demands $p_{\alpha}\Pi^{\alpha\beta} = 0 = \left( p^2 p^{\beta} - p^2 p^{\beta} \right) \Pi(p^2)$ \checkmark. \\
 Now we can sum the geometric series in $i\Pi'(p^2)$ which yields
 \begin{equation}
 \frac{-i}{p^2}\left( g^{\alpha\beta} - \frac{p^{\alpha}p^{\beta}}{p^2} \right) = \left( g^{\alpha\beta} - \frac{p^{\alpha}p^{\beta}}{p^2} \right) \frac{-i}{p^2 \left( 1 + \Pi(p^2) + \delta_3 \right)}
@@ -147,7 +146,7 @@ We now have to calculate the self-energy of the photon and the electron to evalu
 	c -- [photon, momentum=\(p\)] d [particle=\(\beta\)] ,
 };
 \end{gathered}
-& =\int\frac{d^4q}{\left( 2\pi \right)^4} \left( -1 \right) \mathrm{Tr} \lbr ie \gamma^{\alpha} \frac{i \left( \fsl{p}+\fsl{q}+m \right)}{\left( p+q \right)^2 - m^2} ie \gamma^{\beta} \frac{i \left( \fsl{q}+m \right)}{q^2 - m^2} \rbr \equiv i\Pi^{\alpha\beta}(p^2) &
+& =\int\frac{d^4q}{\left( 2\pi \right)^4} \left( -1 \right) \mathrm{Tr} \lbr ie \gamma^{\alpha} \frac{i \left( \fsl{p}+\fsl{q}+m \right)}{\left( p+q \right)^2 - m^2} ie \gamma^{\beta} \frac{i \left( \fsl{q}+m \right)}{q^2 - m^2} \rbr \equiv i\Pi^{\alpha\beta} &
 \end{align*}
 Let's work on the trace so we can express the numerator of the 2-point function in terms of scalar integrals.
 \begin{align*}
@@ -157,7 +156,7 @@ Let's work on the trace so we can express the numerator of the 2-point function 
 \end{align*}
 
 \begin{align*}
-i\Pi^{\alpha\beta}(p^2) & = -4e^2 \int \frac{d^4q}{\left( 2\pi \right)^4} \frac{m^2g^{\alpha\beta} + p^{\alpha}q^{\beta} + q^{\alpha}p^{\beta} + 2 q^{\alpha}q^{\beta} - g^{\alpha\beta} p \cdot q - g^{\alpha\beta} q^2 }{\left( \left( p+q \right)^2 - m^2 \right) \left( q^2 - m^2 \right)} = & \\
+i\Pi^{\alpha\beta} & = -4e^2 \int \frac{d^4q}{\left( 2\pi \right)^4} \frac{m^2g^{\alpha\beta} + p^{\alpha}q^{\beta} + q^{\alpha}p^{\beta} + 2 q^{\alpha}q^{\beta} - g^{\alpha\beta} p \cdot q - g^{\alpha\beta} q^2 }{\left( \left( p+q \right)^2 - m^2 \right) \left( q^2 - m^2 \right)} = & \\
 & = -\frac{4ie^2}{16\pi^2} \lbr m^2 B_0 g^{\alpha\beta} + 2 p^{\alpha\beta} B_1 + 2 \left( B_{11} p^{\alpha}p^{\beta} + B_{00} g^{\alpha\beta} \right) - g^{\alpha\beta} B_1 p^2 - g^{\alpha\beta} \left( 4 B_{00} + B_{11} p^2 \right) \rbr = & \\ 
 & = -\frac{ie^2}{4\pi^2} \lbr g^{\alpha\beta} \left( m^2 B_0 - B_1 p^2 + B_{11} p^2 - 2 B_{00} \right) + 2 p^{\alpha} p^{\beta} \left( B_1 + B_{11} \right) \rbr &
 \end{align*}
@@ -198,7 +197,7 @@ Where the arguments of the B-functions are suppressed again. They are $B_i = B_i
 	c -- [photon, momentum=\(p\)] d [particle={\(\beta,\gamma\)}] ,
 };
 \end{gathered}
-& = \int\frac{d^4q}{\left( 2\pi \right)^4} \left( -1 \right) \Tr \lbr \left( -ie Q_f \right) \gamma^{\alpha} \frac{i \left( \fsl{p}+\fsl{q}+m \right)}{\left( p+q \right)^2 - m^2} i \frac{g}{\cos\theta_W} \gamma^{\beta} \left( g_V - g_A \gamma_5 \right) \frac{i \left( \fsl{q}+m \right)}{q^2 - m^2} \rbr \equiv \mathcal{A} &
+& = \int\frac{d^4q}{\left( 2\pi \right)^4} \left( -1 \right) \Tr \lbr \left( -ie Q_f \right) \gamma^{\alpha} \frac{i \left( \fsl{p}+\fsl{q}+m \right)}{\left( p+q \right)^2 - m^2} i \frac{g}{\cos\theta_W} \gamma^{\beta} \left( g_V - g_A \gamma_5 \right) \frac{i \left( \fsl{q}+m \right)}{q^2 - m^2} \rbr \equiv i\Pi^{\alpha\beta}_{\gamma Z} &
 \end{align*}
 Let's work on the trace so we can express the numerator of the 2-point function in terms of scalar integrals.
 \begin{align*}
@@ -209,7 +208,7 @@ Let's work on the trace so we can express the numerator of the 2-point function 
 Where we used that a symmetric tensor contracted with an antisymmetric tensor vanishes.
 
 \begin{align*}
-\mathcal{A} & = \frac{4Q_feg}{\cos\theta_W} \int \frac{d^4q}{\left( 2\pi \right)^4} \frac{g_V \left( \left( p+q \right)^{\alpha}q^{\beta} - g^{\alpha\beta} \left( p+q \right) \cdot q + q^{\alpha} \left( p+q \right)^{\beta} + m^2 g^{\alpha\beta} \right) - i g_A \epsilon^{\alpha\mu\beta\nu} p_{\mu}q_{\nu}}{\left( \left( p+q \right)^2 -m^2 \right) \left( q^2 - m^2 \right)} = & \\
+i\Pi^{\alpha\beta}_{\gamma Z} & = \frac{4Q_feg}{\cos\theta_W} \int \frac{d^4q}{\left( 2\pi \right)^4} \frac{g_V \left( \left( p+q \right)^{\alpha}q^{\beta} - g^{\alpha\beta} \left( p+q \right) \cdot q + q^{\alpha} \left( p+q \right)^{\beta} + m^2 g^{\alpha\beta} \right) - i g_A \epsilon^{\alpha\mu\beta\nu} p_{\mu}q_{\nu}}{\left( \left( p+q \right)^2 -m^2 \right) \left( q^2 - m^2 \right)} = & \\
 & = \frac{4Q_feg}{\cos\theta_W} \frac{i\pi^2}{\left( 2\pi \right)^4} \lbr -ig_A \epsilon^{\alpha\mu\beta\nu}p_{\mu}B_1 p_{\nu} + g_V \left[ B_1 p^{\alpha}p^{\beta} + B_{00}g^{\alpha\beta} + B_{11} p^{\alpha}p^{\beta} - g^{\alpha\beta} \left( B_1 p^2 + 4 B_{00} + B_{11} p^2 \right) + \right. \right. & \\
 & \left. \left. + B_1 p^{\alpha}p^{\beta} + B_{00} g^{\alpha\beta} + B_{11} p^{\alpha}p^{\beta} + B_0 m^2 g^{\alpha\beta} \right]\rbr = & \\
 & = \frac{iQ_fegg_V}{4\pi^2\cos\theta_W} \lbr 2 p^{\alpha}p^{\beta} \left( B_1 + B_{11} \right) + g^{\alpha\beta} \left( m^2 B_0 - 2 B_{00} -p^2 \left( B_1 + B_{11} \right) \right) \rbr &
@@ -226,7 +225,7 @@ Where we used that a symmetric tensor contracted with an antisymmetric tensor va
 };
 \end{gathered}
 & = \int\frac{d^4q}{\left( 2\pi \right)^4} \left( -1 \right) \Tr \lbr \frac{ig}{\cos\theta_W} \gamma^{\alpha} \left( g_V - g_A \gamma_5 \right) \frac{i \left( \fsl{p}+\fsl{q}+m \right)}{\left( p+q \right)^2 - m^2} \frac{ig}{\cos\theta_W} \gamma^{\beta} \times \right. & \\ 
-& \left. \times \left( g_V - g_A \gamma_5 \right) \frac{i \left( \fsl{q}+m \right)}{q^2 - m^2} \rbr \equiv \mathcal{A} &
+& \left. \times \left( g_V - g_A \gamma_5 \right) \frac{i \left( \fsl{q}+m \right)}{q^2 - m^2} \rbr \equiv i\Pi^{\alpha\beta}_{ZZ} &
 \end{align*}
 Let's work on the trace so we can express the numerator of the 2-point function in terms of scalar integrals.
 
@@ -238,7 +237,7 @@ Let's work on the trace so we can express the numerator of the 2-point function 
 \end{align*}
 
 \begin{align*}
-\mathcal{A} & = \int \frac{d^4q}{\left( 2\pi \right)^4} \frac{4g^2\left(g_V^2 + g_A^2 \right)}{\cos^2\theta_W} \frac{\left( p+q \right)^{\alpha}q^{\beta} - g^{\alpha\beta} \left( p+q \right) \cdot q + q^{\alpha} \left( p+q \right)^{\beta} - m^2 g^{\alpha\beta}}{\left( \left( p+q \right)^2 -m^2 \right) \left( q^2 - m^2 \right)} = & \\
+i\Pi^{\alpha\beta}_{ZZ} & = \int \frac{d^4q}{\left( 2\pi \right)^4} \frac{4g^2\left(g_V^2 + g_A^2 \right)}{\cos^2\theta_W} \frac{\left( p+q \right)^{\alpha}q^{\beta} - g^{\alpha\beta} \left( p+q \right) \cdot q + q^{\alpha} \left( p+q \right)^{\beta} - m^2 g^{\alpha\beta}}{\left( \left( p+q \right)^2 -m^2 \right) \left( q^2 - m^2 \right)} = & \\
 & = \frac{4g^2\left(g_V^2 + g_A^2 \right)}{\cos^2\theta_W} \int \frac{d^4q}{\left( 2\pi \right)^4} \frac{p^{\alpha}q^{\beta}+q^{\alpha}p^{\beta}+2q^{\alpha}q^{\beta} - g^{\alpha\beta} \left( m^2 + q \cdot p + q^2 \right)}{\left( \left( p+q \right)^2 -m^2 \right) \left( q^2 - m^2 \right)} = & \\
 & = \frac{4g^2\left(g_V^2 + g_A^2 \right)}{\cos^2\theta_W} \frac{i\pi^2}{\left( 2\pi \right)^4} \lbr 2 p^{\alpha}p^{\beta} B_1 + 2 \left( B_{00} g^{\alpha\beta} + B_{11} p^{\alpha}p^{\beta} \right) - g^{\alpha\beta} \left( m^2 B_0 + B_1 p^2 + 4 B_{00} + B_{11} p^2 \right) \rbr = & \\
 & = \frac{ig^2\left(g_V^2 + g_A^2 \right)}{4\pi^2\cos^2\theta_W} \lbr p^{\alpha}p^{\beta} 2 \left( B_1 + B_{11} \right) - g^{\alpha\beta} \left( m^2 B_0 + 2 B_{00} + p^2 \left( B_1 + B_{11} \right) \right) \rbr
@@ -246,7 +245,7 @@ Let's work on the trace so we can express the numerator of the 2-point function 
 
 {\bf Gluon self-energy} \\
 \begin{align*}
-&
+& i\Pi^{\alpha\beta}_{gg} = 
 \begin{gathered}
 \feynmandiagram [layered layout, horizontal=b to c] {
 	a [particle=\(\alpha\)] -- [gluon, momentum=\(p\)] b

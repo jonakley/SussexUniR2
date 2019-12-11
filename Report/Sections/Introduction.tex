@@ -1,19 +1,16 @@
 \section{Introduction}
 \label{sec:Introduction} 
-
-The introduction goes here.
-
+In the early 2000s a lot of effort has been put into automating loop calculations in order to keep up with the increasing accuracy of high precision measurements. Early attempts were mostly based on Passarino-Veltman tensor reduction while newer developments changed their focus to unitarity arguments. Instead of performing the whole tensor reduction process, now the problem is substituted by finding the coefficients of the scalar integrals appearing in the 1-loop amplitudes. This is possible because the basis of scalar integrals is know in terms of boxes, triangles, bubbles and tadpoles. This leads to a master formula for any one-loop amplitude
 \begin{equation}
+\label{eqn:mastereqn}
 \mathcal{M} = \sum_i d_i \mathrm{Box}_i + \sum_i c_i \mathrm{Triangle}_i + \sum_i b_i \mathrm{Bubble}_i + \sum_i a_i \mathrm{Tadpole}_i + R
 \end{equation}
-
+The first attempts to extract the coefficients in equation \ref{eqn:mastereqn} failed at providing a procedure to find all of them. Finally, the OPP method was brought forward which was able to completely determine the coefficients. But with the OPP method a new class of terms arise which are denoted by R in equation \ref{eqn:mastereqn}. They can be split into two categories
 \begin{equation}
 R = R_1 + R_2
 \end{equation}
-where $R_2$ is the $\epsilon$-dimensional contribution of dimensional regularization to the amplitude which is just a rational combination of Lorentz tensors and parameters of the theory, i.e. the couplings or masses of the particles in the theory.
-
-
-We can decompose any m-point 1-loop function $\bar{A}\bar{q})$ in a numerator $\bar{N}( \bar{q})$ and denominators $\bar{D}_i$
+where $R_1$ can be computed alongside the coefficients of the scalar integrals in OPP. \\
+ $R_2$ on the other hand is the $\epsilon$-dimensional contribution of dimensional regularization to the amplitude. Any m-point 1-loop function $\bar{A}\bar{q})$ can be decomposed in a numerator $\bar{N}( \bar{q})$ and denominators $\bar{D}_i$
 \begin{equation}
 \label{eqn:amp}
 \bar{A} (\bar{q}) = \frac{\bar{N}(\bar{q})}{\bar{D}_0\bar{D}_1\cdots\bar{D}_{m-1}}, \qquad \bar{D}_i = \left( \bar{q} + \bar{p}_i \right)^2 - m_i^2, p_0 \neq 0
@@ -22,10 +19,14 @@ where $\bar{q}$ is the $d$-dimensional loop momentum and $m_i$ is the mass of th
 \begin{equation}
 \bar{N}( \bar{q}) = N (q) + \tilde{N} (\tilde{q}^2,q,\epsilon)
 \end{equation}
-where only $\tilde{N} (\tilde{q}^2,q,\epsilon)$ is interesting to us because it appears in the definitions of rational terms of the form $R_2$ which are defined as
+where $\tilde{N} (\tilde{q}^2,q,\epsilon)$ is of biggest interest to us because it gives rise to rational terms of the form $R_2$ which are defined as
 \begin{equation}
 R_2 \equiv \frac{1}{\left( 2\pi \right)^4} \int d^d \bar{q} \frac{\tilde{N} ( \tilde{q}^2,q,\epsilon)}{\bar{D}_0\bar{D}_1\cdots\bar{D}_{m-1}}
-\end{equation}
+\end{equation} 
+
+It is just a rational combination of Lorentz tensors and parameters of the theory, i.e. the couplings or masses of the particles in the theory and has to be computed by brute force. The $R_2$ contribution can be added to the theory by introducing tree-level like Feynman Rules.
+
+
 which is the $\epsilon$-dimensional contribution to the amplitude in eqn. \ref{eqn:amp} integrated over the $d$-dimensional loop momentum $\bar{q}$. It can be obtained by splitting the $d$-dimensional Lorentz tensors appearing in the amplitude into a 4-dimensional and an $\epsilon$-dimensional part
 \begin{equation}
 \bar{A}^{\mu_1\dots\mu_n} = A^{\mu_1\dots\mu_n} + \tilde{A}^{\mu_1\dots\mu_n}.
