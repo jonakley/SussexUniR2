@@ -17,16 +17,17 @@ $R_2$ on the other hand is the $\epsilon$-dimensional contribution of dimensiona
 \end{equation}
 where $\bar{q}$ is the $d$-dimensional loop momentum and $m_i$ is the mass of the particle corresponding to the propagator with the numerator $D_i$. The $d$-dimensional numerator function $\bar{N}(\bar{q})$ can be split in a 4-dimensional and an $\epsilon$-dimensional part 
 \begin{equation}
-\bar{N}( \bar{q}) = N (q) + \tilde{N} (\tilde{q}^2,q,\epsilon)
+\bar{N}( \bar{q}) = N (q) + \wtilde{N} (\wtilde{q}^2,q,\epsilon)
 \end{equation}
-where $\tilde{N} (\tilde{q}^2,q,\epsilon)$ is of interest to us because it makes up the rational terms of the form $R_2$ which are defined as
+where $\wtilde{N} (\wtilde{q}^2,q,\epsilon)$ is of interest to us because it makes up the rational terms of the form $R_2$ which are defined as
 \begin{equation}
-R_2 \equiv \frac{1}{\left( 2\pi \right)^4} \int d^d \bar{q} \frac{\tilde{N} ( \tilde{q}^2,q,\epsilon)}{\bar{D}_0\bar{D}_1\cdots\bar{D}_{m-1}}
+\label{eqn:R2}
+R_2 \equiv \frac{1}{\left( 2\pi \right)^4} \int d^d \bar{q} \frac{\wtilde{N} ( \wtilde{q}^2,q,\epsilon)}{\bar{D}_0\bar{D}_1\cdots\bar{D}_{m-1}}
 \end{equation} 
 $R_2$ is just a rational combination of Lorentz tensors and parameters of the theory, i.e. the couplings or masses of the particles in the theory. The $R_2$ contribution can be added to the theory by introducing tree-level like Feynman Rules similarly to counterterms in perturbative renormalization procedures. \\
 To compute $R_2$ we first have to extract the $\epsilon$-dimensional part of the amplitude by splitting the $d$-dimensional Lorentz tensors appearing in the amplitude into a 4-dimensional and an $\epsilon$-dimensional part
 \begin{equation}
-\bar{A}^{\mu_1\dots\mu_n} = A^{\mu_1\dots\mu_n} + \tilde{A}^{\mu_1\dots\mu_n}.
+\bar{A}^{\mu_1\dots\mu_n} = A^{\mu_1\dots\mu_n} + \wtilde{A}^{\mu_1\dots\mu_n}.
 \end{equation}
 To simplify our calculations later, we can establish a few identities for the manipulation of $d$-dimensional Lorentz tensors. If we contract a $d$-dimensional tensor with an observable Lorentz tensor (like the momentum of an external particle) only the 4-dimensional part survives, e.g. for a loop momentum $\bar{q}^{\mu}$ and an external momentum $p^{\mu}$
 \begin{equation}
@@ -39,12 +40,12 @@ Since, we want to perform calculations in QED which contains a fermion, we have 
 \end{equation}
 If we want to preserve the Clifford algebra separately in 4 and $\epsilon$ dimensions this implies
 \begin{equation}
-\lbr \gamma^{\mu},\tilde{\gamma}^{\nu} \rbr = 0
+\lbr \gamma^{\mu},\wtilde{\gamma}^{\nu} \rbr = 0
 \end{equation}
 As opposed to QED the Standard Model is a chiral theory, i.e. it couples differently to left- and right-handed currents. This means that also axial-vector currents appear in the theory which are formulated with the fifth gamma matrix. The extension of $\gamma_5$ to $d$ dimensions is not as straightforward as with the four gamma matrices. This is because chirality is a property of four dimensions.\\
 If we also want to impose $\lbr \gamma_5,\gamma^{\mu} \rbr = 0$ for $d \neq 4$, then $\Tr\left( \gamma_5 \gamma^{\alpha}\gamma^{\beta}\gamma^{\gamma}\gamma^{\delta} \right) = 0$  for $d \neq 0,2,4$ which clashes with $\Tr\left( \gamma_5 \gamma^{\alpha}\gamma^{\beta}\gamma^{\gamma}\gamma^{\delta} \right) = -4i \epsilon^{\alpha\beta\gamma\delta}$ in four dimensions \cite{Gamma5}. But the identity is essential in the evaluation of the triangle diagram for the Adler-Bell-Jackiw anomaly. The only definition of $\gamma_5$ which is consistent with the chiral anomaly is the definition of 't Hooft and Veltman \cite{HVgamma5}: $\gamma_5 = i/4! \ \epsilon_{\mu_1 \dots \mu_4} \gamma^{\mu_1} \cdots \gamma^{\mu_4}$. This definition implies
 \begin{equation}
-\lbr \gamma_5, \gamma^{\mu} \rbr = 0  \text{ and }  \left[ \gamma_5, \tilde{\gamma}^{\mu} \right] = 0.
+\lbr \gamma_5, \gamma^{\mu} \rbr = 0  \text{ and }  \left[ \gamma_5, \wtilde{\gamma}^{\mu} \right] = 0.
 \end{equation} 
 
 
