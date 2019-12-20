@@ -71,7 +71,7 @@ where the empty circles on the right represent renormalized 1-PI interactions an
 \begin{equation}
 iS_0(\fsl{p}) = iS(\fsl{p}) + iS(\fsl{p}) i\Sigma'(\fsl{p}) iS(\fsl{p}) + iS(\fsl{p}) i\Sigma'(\fsl{p}) iS(\fsl{p}) i\Sigma'(\fsl{p}) iS(\fsl{p}) + \dots
 \end{equation}
-where $i\Sigma'(\fsl{p}) = i\Sigma(\fsl{p}) + i \left( \delta_2 \fsl{p} - \left( \delta_2 + \delta_m \right) m \right)$, $iS_0 = \frac{i}{\fsl{p} - m_0}$ and $iS = \frac{i}{\fsl{p} - m}$. Now we can sum the geometric series in $i\Sigma'(\fsl{p})$ which yields
+where $i\Sigma'(\fsl{p}) = i\Sigma(\fsl{p}) + i \left( \delta_2 \fsl{p} - \left( \delta_2 + \delta_m \right) m \right)$, $iS_0 = \frac{i}{\fsl{p} - m_0}$ and $iS = \frac{i}{\fsl{p} - m}$. Now we can sum the geometric series in $i\Sigma'(\fsl{p})iS(\fsl{p})$ which yields
 \begin{equation}
 \frac{i}{\fsl{p}-m_0} = \frac{i}{\fsl{p} - m + \left( \Sigma(\fsl{p}) + \delta_2 \fsl{p} - \left( \delta_2 + \delta_m \right) m \right)}
 \end{equation}
@@ -82,7 +82,7 @@ m - m + \Sigma(m) + \delta_2 m - \left( \delta_2 + \delta_m \right) m = 0
 \begin{equation}
 \Rightarrow \delta_m = \frac{1}{m} \Sigma(m)
 \end{equation}
-We also want the propagator to have a residue of unity at the pole. This gives the the renormalization condition for the electron field
+We also want the propagator to have a residue of unity at the pole. This gives the renormalization condition for the electron field
 \begin{align*}
 \mathrm{Res}_{\fsl{p} = m} \left( S(\fsl{p}) \right) & = \mathrm{Res}_{\fsl{p} = m} \left( \frac{1}{\fsl{p} - m + \left( \Sigma(\fsl{p}) + \delta_2 \fsl{p} - \left( \delta_2 + \delta_m \right) m \right)} \right) = & \\
 & = \lim_{\fsl{p} \rightarrow m} \frac{\fsl{p} - m}{\fsl{p} - m + \left( \Sigma(\fsl{p}) + \delta_2 \fsl{p} - \left( \delta_2 + \delta_m \right) m \right)} \overset{\mathrm{L'H}}{=} \lim_{\fsl{p} \rightarrow m} \frac{1}{1 + \frac{d\Sigma}{d\fsl{p}} + \delta_2} \overset{\mathrm{!}}{=} 1 &
@@ -91,7 +91,7 @@ We also want the propagator to have a residue of unity at the pole. This gives t
 \Rightarrow \delta_2 = - \frac{d\Sigma(\fsl{p})}{d\fsl{p}} \biggr\rvert_{\fsl{p} = m}
 \end{equation}
 $Z_1$ and $Z_2$ are related by symmetry, so we do not have to evaluate the electron-photon 3-point function. It was first shown by Ward in 1950 that $Z_1 = Z_2$ \cite{WardId}.
-The only remaining renormalization constant from equations \ref{eqn:RenormCon} is $Z_3$. It can be obtained from the dressed photon propagator in the same way we obtained the electron field renormalization from the electron propagator. The dressed photon operator is given by
+The only remaining renormalization constant from equations \ref{eqn:RenormCon} is therefore $Z_3$. It can be obtained from the dressed photon propagator in the same way we obtained the electron field renormalization from the electron propagator. The dressed photon operator is given by
 \begin{align*}
 \begin{gathered}
 \feynmandiagram [small, layered layout, horizontal=a to c] {
@@ -124,7 +124,7 @@ where the empty circles are again insertions of 1-Pi diagrams and the appropriat
 iS^{\alpha\beta}_0(p^2) = iS^{\alpha\beta}(p^2) + \left[iS(p^2) i\Pi'(p^2) iS(p^2)\right]^{\alpha\beta} + \left[iS(p^2) i\Pi'(\fsl{p}) iS(p^2) i\Pi'(p^2) iS(p^2)\right]^{\alpha\beta} + \dots
 \end{equation}
 with $iS^{\alpha\beta}_0 = \frac{-i}{p^2}\left( g^{\alpha\beta} - \frac{p^{\alpha}p^{\beta}}{p^2} \right) = iS^{\alpha\beta}$ and $i\Pi'^{\alpha\beta} = i\Pi^{\alpha\beta} + i \delta_3 \left( p^{\alpha}p^{\beta} - g^{\alpha\beta}p^2 \right)$. Due to gauge invariance and the respective Ward identity we must have $\Pi^{\alpha\beta} = \left( p^{\alpha}p^{\beta} - p^2 g^{\alpha\beta} \right) \Pi(p^2)$, since the Ward identity demands $p_{\alpha}\Pi^{\alpha\beta} = 0 = \left( p^2 p^{\beta} - p^2 p^{\beta} \right) \Pi(p^2)$ \checkmark. \\
-Now we can sum the geometric series in $i\Pi'(p^2)$ which yields
+Now we can sum the geometric series in $i\Pi'(p^2)iS(p^2)$ which yields
 \begin{equation}
 \frac{-i}{p^2}\left( g^{\alpha\beta} - \frac{p^{\alpha}p^{\beta}}{p^2} \right) = \left( g^{\alpha\beta} - \frac{p^{\alpha}p^{\beta}}{p^2} \right) \frac{-i}{p^2 \left( 1 + \Pi(p^2) + \delta_3 \right)}
 \end{equation}
@@ -132,8 +132,8 @@ By requiring the propagator to have a pole at the physical photon mass $p^2=0$ w
 \begin{equation}
 \delta_3 = - \Pi(0)
 \end{equation}
-The renormalization procedure for the whole Standard Model is obviously a lot more involved, since there are a lot more fields and parameters in the theory. But it still follows the same lines as for the simpler QED case. The whole derivation for the renormalization conditions of the electroweak part of the Standard Model can be found in \cite{SMrenorm}. We will use the results from there and calculate the needed self-energies.
-\subsection{Pure QED Renormalization}
+The renormalization procedure for the whole Standard Model is obviously a lot more involved, since there are a lot more fields and parameters in the theory. But it still follows the same lines as for the simpler QED case. The whole derivation for the renormalization conditions of the electroweak part of the Standard Model can be found in \cite{SMrenorm}. We will use the results from there and calculate the needed self-energies in section \ref{sec:SMrenorm}.
+\subsection{Renormalization of Pure QED}
 \label{sec:QEDren}
 We now have to calculate the self-energy of the photon and the electron to evaluate the renormalization constants. Since our goal is to automate 1-loop calculations in QED and their contributions to the Standard Model it is convenient to express the results in terms of scalar integrals (see Appendix \ref{app:Integrals}) which can be easily implemented.\\
 {\bf Photon self-energy} \\
@@ -185,7 +185,7 @@ i\Sigma(\fsl{p}) & = -e^2 \int \frac{d^4q}{\left( 2\pi \right)^4} \frac{4m - 2 \
 \end{align*}
 Where the arguments of the B-functions are suppressed again. They are $B_i = B_i(p^2,0,m^2)$
 
-\subsection{QED Contribution to the Standard Model Renormalization}
+\subsection{QED Contribution to the Renormalization of the Standard Model}
 \label{sec:SMrenorm}
 {\bf Photon/Z-boson mixed self-energy} \\
 \begin{align*}
