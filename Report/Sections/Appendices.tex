@@ -1,43 +1,123 @@
 \appendix
 {\bf\Large Appendices} \\
+\section{Feynman Rules}
+\label{sec:FeynmanRules}
+In this appendix all of the Feynman rules which were used for the calculations are listed. The Feynman rules are given for the whole Standard Model, but the pure QED Feynman rules can be obtained by taking $Q_f \rightarrow Q_e = -1$ and $m_f \rightarrow m_e$. \\
+
+{\bf Propagator}
+\begin{equation*}
+\begin{gathered}
+\feynmandiagram [horizontal=a to b] {
+	a -- [fermion,momentum=\(p\)] b ,
+};
+\end{gathered}
+= \frac{i\left( \fsl{p} + m_f \right)}{p^2 - m_f^2+i\epsilon} \qquad\qquad\qquad
+\begin{gathered}
+\feynmandiagram [horizontal=a to b] {
+	a [particle=\alpha] -- [photon,momentum=\(p\)] b [particle=\beta],
+};
+\end{gathered}
+= \frac{-ig^{\alpha\beta}}{p^2+i\epsilon} \qquad\text{in 't Hooft-Feynman gauge}
+\end{equation*}\\
+
+{\bf Interactions}\\
+\begin{equation*}
+\begin{gathered}
+\feynmandiagram [horizontal=a to b] {
+	a -- [scalar] b ,
+	c -- [fermion] b -- [fermion] d,
+};
+\end{gathered}
+= \frac{-ig}{2}\frac{m_f}{m_W} \qquad\qquad\qquad\qquad\qquad
+\begin{gathered}
+\feynmandiagram [horizontal=a to b] {
+	a [particle={\gamma,\alpha}] -- [photon] b ,
+	c -- [fermion] b -- [fermion] d,
+};
+\end{gathered}
+= -ieQ_f\gamma^{\alpha}
+\end{equation*}
+\begin{equation*}
+\begin{gathered}
+\feynmandiagram [horizontal=a to b] {
+	a [particle={Z,\alpha}] -- [photon] b ,
+	c -- [fermion] b -- [fermion] d,
+};
+\end{gathered}
+= \frac{ig}{\cos\theta_W}\gamma^{\alpha} \left(g_V-g_A \gamma_5\right) \qquad\qquad\qquad
+\begin{gathered}
+\feynmandiagram [horizontal=a to b] {
+	a [particle={a,\alpha}] -- [gluon] b ,
+	c [particle=i] -- [fermion] b -- [fermion] d [particle=j],
+};
+\end{gathered}
+= ig_S T^a_{ij}\gamma^{\alpha}
+\end{equation*}
+
+
 \section{Important Integrals}
 \label{app:Integrals}
 In the calculation of $R_2$ we have to evaluate 2-,3- and 4-point functions. They can be reduced to a set of integrals which are knwon in a general form. The integrals we need are \cite{R2QCD} \\
 
-{\bf 2-point integrals} 
-\begin{align}
-\int  d^d \bar{q} \frac{\tilde{q}^2}{\bar{D}_i\bar{D}_j} & =  -\frac{i\pi^2}{2} \left[ m_i^2 + m_j^2 - \frac{\left( p_i - p_j \right)^2}{3} \right] + O(\epsilon) & \\
-\mathrm{P.P.} \left( \int  d^d \bar{q} \frac{1}{\bar{D}_i\bar{D}_j} \right) & = -2\frac{i\pi^2}{\epsilon} & \\
-\mathrm{P.P.} \left( \int  d^d \bar{q} \frac{q_{\mu}}{\bar{D}_i\bar{D}_j} \right) & =  \frac{i\pi^2}{\epsilon} \left( p_i + p_j \right)_{\mu} & 
-\end{align}\\
+{\bf 2-point integrals}
+\begin{equation}
+\label{eqn:2ptintq2} 
+\int  d^d \bar{q} \frac{\tilde{q}^2}{\bar{D}_i\bar{D}_j} =  -\frac{i\pi^2}{2} \left[ m_i^2 + m_j^2 - \frac{\left( p_i - p_j \right)^2}{3} \right] + O(\epsilon)
+\end{equation}
+\begin{equation}
+\label{eqn:2ptintsca} 
+\mathrm{P.P.} \left( \int  d^d \bar{q} \frac{1}{\bar{D}_i\bar{D}_j} \right) = -2\frac{i\pi^2}{\epsilon}
+\end{equation}
+\begin{equation}
+\label{eqn:2ptintq} 
+\mathrm{P.P.} \left( \int  d^d \bar{q} \frac{q_{\mu}}{\bar{D}_i\bar{D}_j} \right) =  \frac{i\pi^2}{\epsilon} \left( p_i + p_j \right)_{\mu}
+\end{equation}\\
 
 {\bf 3-point integrals} 
-\begin{align}
-\int  d^d \bar{q} \frac{\tilde{q}^2}{\bar{D}_i\bar{D}_j\bar{D}_k} & =  -\frac{i\pi^2}{2} + O(\epsilon) & \\
-\int  d^d \bar{q} \frac{\tilde{q}^2q_{\mu}}{\bar{D}_i\bar{D}_j\bar{D}_k} & = \frac{i\pi^2}{6} \left( p_i + p_j + p_k \right)_{\mu} + O(\epsilon) & \\
-\mathrm{P.P.} \left( \int  d^d \bar{q} \frac{q_{\mu}q_{\nu}}{\bar{D}_i\bar{D}_j\bar{D}_k} \right) & =  -\frac{i\pi^2}{2\epsilon} g_{\mu\nu} & 
-\end{align}\\
+\begin{equation}
+\label{eqn:3ptintq2}
+\int  d^d \bar{q} \frac{\tilde{q}^2}{\bar{D}_i\bar{D}_j\bar{D}_k} = -\frac{i\pi^2}{2} + O(\epsilon)
+\end{equation}
+\begin{equation}
+\label{eqn:3ptintq3}
+\int  d^d \bar{q} \frac{\tilde{q}^2q_{\mu}}{\bar{D}_i\bar{D}_j\bar{D}_k} = \frac{i\pi^2}{6} \left( p_i + p_j + p_k \right)_{\mu} + O(\epsilon)
+\end{equation}
+\begin{equation}
+\label{eqn:3ptintq2vec}
+\mathrm{P.P.} \left( \int  d^d \bar{q} \frac{q_{\mu}q_{\nu}}{\bar{D}_i\bar{D}_j\bar{D}_k} \right) =  -\frac{i\pi^2}{2\epsilon} g_{\mu\nu}
+\end{equation}\\
 
 {\bf 4-point integrals} 
-\begin{align}
-\int  d^d \bar{q} \frac{\tilde{q}^4}{\bar{D}_i\bar{D}_j\bar{D}_k\bar{D}_l} & =  -\frac{i\pi^2}{6} + O(\epsilon) & \\
-\int  d^d \bar{q} \frac{\tilde{q}^2q_{\mu}q_{\nu}}{\bar{D}_i\bar{D}_j\bar{D}_k\bar{D}_l} & =  -\frac{i\pi^2}{12} g_{\mu\nu} + O(\epsilon) & \\
-\int  d^d \bar{q} \frac{\tilde{q}^2 q^2}{\bar{D}_i\bar{D}_j\bar{D}_k\bar{D}_l} & =  -\frac{i\pi^2}{3} + O(\epsilon) &  
-\end{align}
+\begin{equation}
+\label{eqn:4ptintq4}
+\int  d^d \bar{q} \frac{\tilde{q}^4}{\bar{D}_i\bar{D}_j\bar{D}_k\bar{D}_l} =  -\frac{i\pi^2}{6} + O(\epsilon)
+\end{equation}
+\begin{equation}
+\label{eqn:4ptintvec}
+\int  d^d \bar{q} \frac{\tilde{q}^2q_{\mu}q_{\nu}}{\bar{D}_i\bar{D}_j\bar{D}_k\bar{D}_l} =  -\frac{i\pi^2}{12} g_{\mu\nu} + O(\epsilon)
+\end{equation}
+\begin{equation}
+\label{eqn:4ptintq2q2}
+\int  d^d \bar{q} \frac{\tilde{q}^2 q^2}{\bar{D}_i\bar{D}_j\bar{D}_k\bar{D}_l} =  -\frac{i\pi^2}{3} + O(\epsilon) 
+\end{equation}
 
 \section{Traceology}
 \label{app:Traceology}
 In a theory with fermions the Dirac matrices appear as the generators of the spinor representation of the Poincaré algebra. The following identities for Dirac matrices are very useful when evaluating Feynman diagrams
 \begin{itemize}
-\item[1.] $\mathrm{Tr} \left( \gamma^{\alpha} \gamma^{\beta} \right) = dg^{\alpha\beta}$
-\item[2.] $\mathrm{Tr} \left( \gamma^{\alpha}\gamma^{\beta}\gamma^{\gamma}\gamma^{\delta} \right) = d \left( g^{\alpha\beta}g^{\gamma\delta} - g^{\alpha\gamma}g^{\beta\delta} + g^{\alpha\delta}g^{\beta\gamma} \right)$
-\item[3.] $\gamma^{\alpha}\gamma_{\alpha} = d$
-\item[4.] $\gamma^{\alpha}\gamma^{\beta}\gamma_{\alpha} = \left( 2-d \right) \gamma^{\beta}$
-\item[$\ldots$] $\ldots$
-\item[n.]$\fsl{a}\fsl{b} = a \cdot b$
+\item[1.] $\Tr \left( \gamma^{\alpha} \gamma^{\beta} \right) = dg^{\alpha\beta}$ \numberitem\label{eqn:Tr2g}
+
+\item[2.] $\Tr \left( \gamma^{\alpha}\gamma^{\beta}\gamma^{\gamma}\gamma^{\delta} \right) = d \left( g^{\alpha\beta}g^{\gamma\delta} - g^{\alpha\gamma}g^{\beta\delta} + g^{\alpha\delta}g^{\beta\gamma} \right)$ \numberitem\label{eqn:Tr4g}
+
+\item[3.] $\gamma^{\alpha}\gamma_{\alpha} = d$ \numberitem\label{eqn:2g}
+
+\item[4.] $\gamma^{\alpha}\gamma^{\beta}\gamma_{\alpha} = \left( 2-d \right) \gamma^{\beta}$ \numberitem\label{eqn:3g}
+
+\item[5.] $\gamma^{\alpha}\gamma^{\beta}\gamma^{\gamma}\gamma_{\alpha} = d\gamma^{\beta}\gamma^{\gamma} + 2 \left[ \gamma^{\gamma}, \gamma^{\beta} \right]$ \numberitem\label{eqn:4g}
+
+\item[6.] $\fsl{a}\fsl{b} = a \cdot b$ \numberitem\label{eqn:fsldot}
+
 \end{itemize}
-
-
 The Dirac matrices obey the Clifford algebra $\lbr \gamma^{\mu}, \gamma^{\nu} \rbr = 2 g^{\mu\nu} \mathds{1}_d$ with $g^{\mu\nu}$ the Minkowski metric in $d$ dimensions
 \begin{equation*}
  g^{\mu\nu} = 
@@ -90,7 +170,14 @@ The Dirac matrices obey the Clifford algebra $\lbr \gamma^{\mu}, \gamma^{\nu} \r
 \end{equation*}
 \end{proof}
 
-n. $\fsl{a}\fsl{b} = a \cdot b$
+5. $\gamma^{\alpha}\gamma^{\beta}\gamma^{\gamma}\gamma_{\alpha} = d\gamma^{\beta}\gamma^{\gamma} + 2 \left[ \gamma^{\gamma}, \gamma^{\beta} \right]$
+\begin{proof}
+\begin{equation*}
+\gamma^{\alpha}\gamma^{\beta}\gamma^{\gamma}\gamma_{\alpha} = \left( 2g^{\alpha\beta} - \gamma^{\beta}\gamma^{\alpha} \right) \gamma^{\gamma}\gamma_{\alpha} \overset{4.}{=} 2 \left( \gamma^{\gamma}\gamma^{\beta} - \gamma^{\beta}\gamma^{\gamma} \right) + d\gamma^{\beta}\gamma^{\gamma} = d\gamma^{\beta}\gamma^{\gamma} + 2 \left[ \gamma^{\gamma}, \gamma^{\beta} \right]		
+\end{equation*}
+\end{proof}
+
+6. $\fsl{a}\fsl{b} = a \cdot b$
 \begin{proof}
 \begin{equation*}
 \fsl{a} \fsl{b} = a_{\alpha} b_{\beta} \gamma^{\alpha}\gamma^{\beta} = a_{\alpha} b_{\beta} \left( 2 g^{\alpha\beta} - \gamma^{\beta}\gamma^{\alpha} \right) = 2 a \cdot b - \fsl{a}\fsl{b}
@@ -142,4 +229,3 @@ This gives the following relation between the (axial-)vector and the left-/right
 &g_L = g_V + g_A &\\
 &g_R = g_V - g_A &
 \end{align*}
-
