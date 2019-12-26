@@ -22,7 +22,7 @@ Where we defined the numerator and denominator functions in the last step. Now w
 \begin{equation*}
 \bar{N} (\bar{q}) = - e^2 \ \mathrm{Tr} \lbr \bar{\gamma}^{\alpha} \left( \bar{\fsl{p}}_1 + \bar{\fsl{q}} + m \right) \bar{\gamma}^{\beta} \left( \bar{\fsl{q}} + m \right) \rbr = - e^2 \ \mathrm{Tr} \lbr \gamma^{\alpha} \left( \fsl{p}_1 + \fsl{q} + m \right) \gamma^{\beta} \left( \fsl{q} + m \right) + \gamma^{\alpha} \wtilde{\fsl{q}} \gamma^{\beta} \wtilde{\fsl{q}} \rbr \equiv N + \wtilde{N}
 \end{equation*}
-Here, the first term is the 4-dimensional numerator which also appears in normal loop calculations and the second term is the $\epsilon$-dimensional part which we need for the calculation of $R_2$.\\
+Here, the first term is the 4-dimensional numerator which also appears in normal loop calculations and the second term is the $\epsilon$-dimensional part which we need for the calculation of $R_2$. We have used that the gamma matrices are contracted with external momenta and therefore only the 4-dimensional part of the gamma matrices survives. \\
 We can now evaluate the trace and get
 \begin{equation*}
 \wtilde{N} = -e^2 \ \mathrm{Tr} \lbr \gamma^{\alpha} \wtilde{\fsl{q}} \gamma^{\beta} \wtilde{\fsl{q}} \rbr = 4 e^2 \wtilde{q}^2 g^{\alpha\beta}
@@ -50,7 +50,7 @@ The other 2-point function in QED is the electron 2-point function which is give
 \end{align*}
 Now we extract again the $\epsilon$-dimensional part from the numerator function we defined in the last step. We get
 \begin{equation*}
-\bar{N} (\bar{q}) = \left( -e^2 \right) \bar{\gamma}^{\alpha} \left( \bar{\fsl{p}}_1 + \bar{\fsl{q}} + m \right) \bar{\gamma}_{\alpha} = -e^2 \lbr \gamma^{\alpha} \left( \bar{\fsl{p}}_1 + \bar{\fsl{q}} + m \right) \gamma_{\alpha} + \wtilde{\gamma}^{\alpha} \left( \bar{\fsl{p}}_1 + \bar{\fsl{q}} + m \right) \wtilde{\gamma}_{\alpha} + \gamma^{\alpha} \wtilde{\fsl{q}} \gamma_{\alpha} + \wtilde{\gamma}^{\alpha} \wtilde{\fsl{q}} \wtilde{\gamma}_{\alpha} \rbr \equiv N + \wtilde{N}
+\bar{N} (\bar{q}) = -e^2 \bar{\gamma}^{\alpha} \left( \bar{\fsl{p}}_1 + \bar{\fsl{q}} + m \right) \bar{\gamma}_{\alpha} = -e^2 \lbr \gamma^{\alpha} \left( \bar{\fsl{p}}_1 + \bar{\fsl{q}} + m \right) \gamma_{\alpha} + \wtilde{\gamma}^{\alpha} \left( \bar{\fsl{p}}_1 + \bar{\fsl{q}} + m \right) \wtilde{\gamma}_{\alpha} + \gamma^{\alpha} \wtilde{\fsl{q}} \gamma_{\alpha} + \wtilde{\gamma}^{\alpha} \wtilde{\fsl{q}} \wtilde{\gamma}_{\alpha} \rbr \equiv N + \wtilde{N}
 \end{equation*}
 Here, the first term is again the normal 4-dimensional numerator and the rest the $\epsilon$-dimensional part we are interested in. It can be simplified further
 \begin{equation*}
@@ -85,7 +85,7 @@ We get for $\bar{N}$
 \bar{N} (\bar{q}) & = e^3 \lbr \bar{\gamma}^{\beta} \left( \bar{\fsl{p}}_1 + \bar{\fsl{q}} + m \right) \bar{\gamma}^{\mu} \left( \bar{\fsl{p}}_2 + \bar{\fsl{q}} + m \right) \bar{\gamma}_{\beta} \rbr = e^3 \lbr \gamma^{\beta} \left( \fsl{p}_1 + \fsl{q} + m \right) \gamma^{\mu} \left( \fsl{p}_2 + \fsl{q} + m \right) \gamma_{\beta} + \right. & \\
 & \left. + \wtilde{\gamma}^{\beta} \left( \fsl{p}_1 + \fsl{q} + m \right) \gamma^{\mu} \left( \fsl{p}_2 + \fsl{q} + m \right) \wtilde{\gamma}_{\beta} + \underbrace{\gamma^{\beta} \wtilde{\fsl{q}} \gamma^{\mu} \wtilde{\fsl{q}} \gamma_{\beta}}_{\equiv \ \circled{1}} + \underbrace{\wtilde{\gamma}^{\beta} \wtilde{\fsl{q}} \gamma^{\mu} \wtilde{\fsl{q}} \wtilde{\gamma}_{\beta}}_{\equiv \ \circled{2}}  \rbr \equiv N + \wtilde{N} &
 \end{align*}
-Where the last 3 terms define $\wtilde{N}$. Let us work on $\circled{1}$ and $\circled{2}$ separately. Using the fact that 4-dimensional and $\epsilon$-dimensional gamma matrices anticommute and equations \ref{eqn:3g} and \ref{eqn:fsldot} we get
+Where we have used that the gamma matrices are contracted with external momenta and therefore only the 4-dimensional part survives. The last 3 terms define $\wtilde{N}$. Let us work on $\circled{1}$ and $\circled{2}$ separately. Using the fact that 4-dimensional and $\epsilon$-dimensional gamma matrices anticommute and equations \ref{eqn:3g} and \ref{eqn:fsldot} we get
 \begin{equation*}
 \circled{1} = \wtilde{q}_{\rho}\wtilde{q}_{\sigma} \gamma^{\beta} \wtilde{\gamma}^{\rho} \gamma^{\mu} \wtilde{\gamma}^{\sigma} \gamma_{\beta} = \wtilde{q}_{\rho}\wtilde{q}_{\sigma} \left( -1 \right)^3 \wtilde{\gamma}^{\rho} \wtilde{\gamma}^{\sigma} \gamma^{\beta} \gamma^{\mu} \gamma_{\beta} = 2\wtilde{\fsl{q}}\wtilde{\fsl{q}}\gamma^{\mu} = 2 \wtilde{q}^2 \gamma^{\mu}
 \end{equation*}
@@ -94,7 +94,7 @@ And for the other term
 \circled{2} = \wtilde{q}_{\rho}\wtilde{q}_{\sigma} \wtilde{\gamma}^{\beta} \wtilde{\gamma}^{\rho} \gamma^{\mu} \wtilde{\gamma}^{\sigma} \wtilde{\gamma}_{\beta} = \wtilde{q}_{\rho}\wtilde{q}_{\sigma} \left( -1 \right)^2 \gamma^{\mu} \wtilde{\gamma}^{\beta} \wtilde{\gamma}^{\rho} \wtilde{\gamma}^{\sigma} \wtilde{\gamma}_{\beta} = \wtilde{q}_{\rho}\wtilde{q}_{\sigma} \gamma^{\mu} \left( \epsilon \wtilde{\gamma}^{\rho}\wtilde{\gamma}^{\sigma} + 2 \left[ \wtilde{\gamma}^{\rho}, \wtilde{\gamma}^{\sigma} \right] \right) = \epsilon \wtilde{q}^2 \gamma^{\mu}
 \end{equation*}
 where we have used that the 4- and $\epsilon$-dimensional gamma matrices anticommute and equation \ref{eqn:4g} for $d=\epsilon$. And in the last step we used equation \ref{eqn:fsldot} which also implies $\left[ \wtilde{\fsl{q}}, \wtilde{\fsl{q}} \right] = 0$.\\
-Hence, after summing all of the terms we have
+Hence, after summing all the terms we have
 \begin{equation*}
 \wtilde{N} = - e^3 \epsilon \left( \fsl{p}_1 + \fsl{q} - m \right) \gamma^{\mu} \left( \fsl{p}_2 + \fsl{q} - m \right) + \left( 2 + \epsilon \right) \wtilde{q}^2 \gamma^{\mu}
 \end{equation*}
@@ -104,7 +104,7 @@ R_2^{\gamma\mathrm{ee}} = & \frac{1}{\left( 2\pi \right) ^4} \int d^d\bar{q} \fr
 & = \frac{e^3}{\left( 2\pi \right) ^4} \int d^d\bar{q} \frac{1}{\bar{D}_0 \bar{D}_1 \bar{D}_2} \lbr -\epsilon \fsl{q}\gamma^{\mu}\fsl{q} + \left( 2 + \epsilon \right) \wtilde{q}^2 \gamma^{\mu} \rbr = \frac{e^3}{\left( 2\pi \right) ^4} \lbr -\epsilon \gamma^{\alpha}\gamma^{\mu}\gamma^{\beta} \left( \frac{-i\pi^2}{2\epsilon} g_{\alpha\beta} \right) + \frac{-i\pi^2}{2} \left(2 + \epsilon \right) \gamma^{\mu} \rbr = & \\
 & = \frac{e^3}{\left( 2\pi \right) ^4} \frac{i \pi^2}{2} \lbr \gamma^{\alpha}\gamma^{\mu}\gamma_{\alpha} - 2\gamma^{\mu} + O(\epsilon) \rbr = \frac{-ie^3}{8\pi^2} \gamma^{\mu} & \numberthis \label{eqn:R2photonee}
 \end{align*}
-Where we used the 3-point integrals \ref{eqn:3ptintq2} and \ref{eqn:3ptintq2vec} and in the last step equation \ref{eqn:3g}\\
+Where we used the 3-point integrals \ref{eqn:3ptintq2} and \ref{eqn:3ptintq2vec} and in the last step equation \ref{eqn:3g}.\\
 As already mentioned, there is one more 3-point function at the 1-loop level which is permitted by the Feynman rules: the 3-point function with only photons as external particles. But it does not contribute to $R_2$ which we will show now. Because of the symmetry of the 3-point function there are 2 contributing diagrams
 \begin{align*}
 \begin{gathered}
@@ -161,7 +161,7 @@ From here we can again extract the $d$-dimensional numerator
 & = e^3 \Tr \lbr \gamma^{\beta} \left( \fsl{q} + m \right) \gamma^{\gamma} \left( \fsl{q} - \fsl{p}_2 + m \right) \gamma^{\alpha} \left( \fsl{q} + \fsl{p}_1 + m \right) +  \gamma^{\beta} \left( \fsl{q} + \wtilde{\fsl{q}} + m \right) \gamma^{\gamma} \left( \fsl{q} + \wtilde{\fsl{q}} - \fsl{p}_2 + m \right) \gamma^{\alpha} \left( \fsl{q} + \wtilde{\fsl{q}} + \fsl{p}_1 + m \right) \rbr = & \\
 & \equiv N + \wtilde{N} &
 \end{align*}
-The last term is $\wtilde{N}$ which can be further simplified as follows
+We used again that the gamma matrices are contracted with external momenta. The second term is $\wtilde{N}$ which can be further simplified as follows
 \begin{align*}
 \wtilde{N} & = e^3 \Tr \lbr \gamma^{\beta} \left( \fsl{q} + \wtilde{\fsl{q}} + m \right) \gamma^{\gamma} \left( \fsl{q} + \wtilde{\fsl{q}} - \fsl{p}_2 + m \right) \gamma^{\alpha} \left( \fsl{q} + \wtilde{\fsl{q}} + \fsl{p}_1 + m \right) \rbr = & \\
 & = e^3 \Tr \lbr \gamma^{\beta} \fsl{q} \gamma^{\gamma} \wtilde{\fsl{q}} \gamma^{\alpha} \wtilde{\fsl{q}} + \gamma^{\beta} \wtilde{\fsl{q}} \gamma^{\gamma} \fsl{q} \gamma^{\alpha} \wtilde{\fsl{q}} + \gamma^{\beta} \wtilde{\fsl{q}} \gamma^{\gamma} \wtilde{\fsl{q}} \gamma^{\alpha} \fsl{q} + \gamma^{\beta} \wtilde{\fsl{q}} \gamma^{\gamma} \left( - \fsl{p}_2 \right) \gamma^{\alpha} \wtilde{\fsl{q}} + \gamma^{\beta} \wtilde{\fsl{q}} \gamma^{\gamma} \wtilde{\fsl{q}} \gamma^{\alpha} \fsl{p}_1 \rbr = & \\
@@ -180,7 +180,7 @@ R_2^1 & = \frac{1}{\left( 2\pi \right)^4} \int d^d\bar{q} \frac{\wtilde{N}}{\bar
 & \left. + g^{\alpha\gamma} \left[ \frac{i\pi^2}{6} \left( p_1-p_2 \right)^{\beta} - \frac{i\pi^2}{2} \left( p_1+p_2 \right)^{\beta} \right] \rbr &
 \end{align*}
 Here we have used the 3-point integrals \ref{eqn:3ptintq2} and \ref{eqn:3ptintq3}.\\
-To obtain the contribution of the second diagram we can simply exchange $p_1 \leftrightarrow p_2$, $\beta \leftrightarrow \gamma$ in the result of the first diagram. This yields
+To obtain the contribution of the second diagram we can simply exchange $p_1 \leftrightarrow p_2$, $\beta \leftrightarrow \gamma$ in the result of the first diagram.
 \begin{align*}
 R_2^2 & = R_2^1(p_1 \leftrightarrow p_2, \ \beta \leftrightarrow \gamma) = & \\
 & = \frac{-4e^3}{\left( 2\pi \right)^4} \lbr g^{\alpha\gamma} \left[ \frac{i\pi^2}{6} \left( p_2-p_1 \right)^{\beta} + \frac{i\pi^2}{2} \left( p_2+p_1 \right)^{\beta} \right] + g^{\beta\gamma} \left[ \frac{i\pi^2}{6} \left( p_2-p_1 \right)^{\alpha} - \frac{i\pi^2}{2} \left( p_2-p_1 \right)^{\alpha} \right] + \right. & \\
@@ -188,7 +188,7 @@ R_2^2 & = R_2^1(p_1 \leftrightarrow p_2, \ \beta \leftrightarrow \gamma) = & \\
 & = \frac{-4e^3}{\left( 2\pi \right)^4} \lbr -g^{\alpha\beta} \left[ \frac{i\pi^2}{6} \left( p_1-p_2 \right)^{\gamma} + \frac{i\pi^2}{2} \left( p_1+p_2 \right)^{\gamma} \right] - g^{\beta\gamma} \left[ \frac{i\pi^2}{6} \left( p_1-p_2 \right)^{\alpha} - \frac{i\pi^2}{2} \left( p_1-p_2 \right)^{\alpha} \right] + \right. & \\
 & \left. - g^{\alpha\gamma} \left[ \frac{i\pi^2}{6} \left( p_1-p_2 \right)^{\beta} - \frac{i\pi^2}{2} \left( p_1+p_2 \right)^{\beta} \right] \rbr = -R_2^1 &
 \end{align*}
-Now we add up both diagrams to get the full contribution of the photon triangle diagram. We get
+Now we add up both terms to get the full contribution of the photon triangle diagram. We get
 \begin{equation}
 R_2^{3\gamma} = R_2^1 + R_2^2 = R_2^1 - R_2^1 = 0
 \end{equation}
@@ -244,7 +244,7 @@ where $D_{13} = \left( p_3 + p_1 +q \right) ^2 -m^2$. From this we get for the $
 &  \left. + \gamma^{\alpha} \wtilde{\fsl{q}} \gamma^{\beta} \wtilde{\fsl{q}} \gamma^{\gamma} \wtilde{\fsl{q}} \gamma^{\delta} \wtilde{\fsl{q}} + \gamma^{\alpha} \wtilde{\fsl{q}} \gamma^{\beta} \wtilde{\fsl{q}} \gamma^{\gamma} \fsl{q} \gamma^{\delta} \fsl{q}  + \gamma^{\alpha} \fsl{q} \gamma^{\beta} \wtilde{\fsl{q}} \gamma^{\gamma} \wtilde{\fsl{q}} \gamma^{\delta} \fsl{q} + \gamma^{\alpha} \fsl{q} \gamma^{\beta} \fsl{q} \gamma^{\gamma} \wtilde{\fsl{q}} \gamma^{\delta} \wtilde{\fsl{q}} + \gamma^{\alpha} \wtilde{\fsl{q}} \gamma^{\beta} \fsl{q} \gamma^{\gamma} \fsl{q} \gamma^{\delta} \wtilde{\fsl{q}} + \right. & \\
 & \left. + \gamma^{\alpha} \wtilde{\fsl{q}} \gamma^{\beta} \fsl{q} \gamma^{\gamma} \wtilde{\fsl{q}} \gamma^{\delta} \fsl{q} + \gamma^{\alpha} \fsl{q} \gamma^{\beta} \wtilde{\fsl{q}} \gamma^{\gamma} \fsl{q} \gamma^{\delta} \wtilde{\fsl{q}} \rbr \equiv N + \wtilde{N} &
 \end{align*}
-Where all of the terms besides the first one define $\wtilde{N}$. Furthermore, we have used that the trace of an odd number of Dirac matrices is zero. Using the fact that 4- and $\epsilon$-dimensional gamma matrices commute as well as equation \ref{eqn:fsldot}, $\wtilde{N}$ can be further simplified to
+Where all of the terms besides the first one define $\wtilde{N}$. Furthermore, we have used that the gamma matrices are contracted with external momenta and that the trace of an odd number of Dirac matrices is zero. Using the fact that 4- and $\epsilon$-dimensional gamma matrices commute as well as equation \ref{eqn:fsldot}, $\wtilde{N}$ can be further simplified to
 \begin{align*}
 \wtilde{N} = & -e^4 \mathrm{Tr} \lbr \left( -1 \right)^{10} \wtilde{q}^4 \gamma^{\alpha} \gamma^{\beta} \gamma^{\gamma} \gamma^{\delta} + \wtilde{q}^2 \left[ \left( -1 \right) ^3  \gamma^{\alpha} \gamma^{\beta} \gamma^{\gamma} \fsl{q} \gamma^{\delta} \fsl{q}  + \left( -1 \right)^7 \gamma^{\alpha} \fsl{q} \gamma^{\beta} \gamma^{\gamma} \gamma^{\delta} \fsl{q} + \left( -1 \right)^{11} \gamma^{\alpha} \fsl{q} \gamma^{\beta} \fsl{q} \gamma^{\gamma} \gamma^{\delta} + \right. \right. & \\
 & \left. \left. + \left( -1 \right)^7 \gamma^{\alpha} \gamma^{\beta} \fsl{q} \gamma^{\gamma} \fsl{q} \gamma^{\delta} + \left( -1 \right)^5 \gamma^{\alpha} \gamma^{\beta} \fsl{q} \gamma^{\gamma} \gamma^{\delta} \fsl{q} + \left( -1 \right)^9 \gamma^{\alpha} \fsl{q} \gamma^{\beta} \gamma^{\gamma} \fsl{q} \gamma^{\delta} \right] \rbr = & \\
