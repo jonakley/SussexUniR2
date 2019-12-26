@@ -2,7 +2,8 @@
 \label{sec:QED2SM}
 As already mentioned above, the Standard Model is a chiral theory which will make the calculations more complicated. What is also new in the Standard Model is that the uncharged (in the sense of the whole gauge group) gauge boson can now fluctuate to a different uncharged gauge boson which leads to a lot more diagrams for the 2-point functions. Let us start again with the simplest correlation functions, the 2-point functions.
 \subsection{2-point functions}
-{\bf Z-boson self-energy}
+{\bf Z-boson self-energy}\\
+One of the 2-point functions in the Standard Model which gets a contribution from QED at 1-loop level is the Z-boson 2-point function. The fermionic loop correction is given by
 \begin{align*}
 \begin{gathered}
 \feynmandiagram [layered layout, horizontal=b to c] {
@@ -12,28 +13,28 @@ As already mentioned above, the Standard Model is a chiral theory which will mak
 	c -- [photon, momentum=\(p_1\)] d [particle={\(\beta,Z\)}] ,
 };
 \end{gathered} \qquad
-& =\int\frac{d^dq}{\left( 2\pi \right)^d} \left( -1 \right) \Tr \lbr \frac{ig}{cos\theta_W} \gamma^{\alpha} \left( g_V - g_A \gamma_5 \right) \frac{i \left( \fsl{p}_1+\fsl{q}+m \right)}{\left( p_1+q \right)^2 - m^2} \frac{ig}{cos\theta_W} \gamma^{\beta} \times \right. & \\
-& \times \left. \left( g_V - g_A \gamma_5 \right) \frac{i \left( \fsl{q}+m \right)}{q^2 - m^2} \rbr = & \\
-& =\int\frac{d^dq}{\left( 2\pi \right)^d} \frac{-g^2}{\cos^2\theta_W} \Tr \lbr \gamma^{\alpha} \left( g_V - g_A \gamma_5 \right) \frac{ \left( \fsl{p}_1+\fsl{q}+m \right)}{\left( p_1+q \right)^2 - m^2} \gamma^{\beta} \left( g_V - g_A \gamma_5 \right) \frac{ \left( \fsl{q}+m \right)}{q^2 - m^2} \rbr & \\
+& =\int\frac{d^dq}{\left( 2\pi \right)^d} \left( -1 \right) \Tr \lbr \frac{ig}{cos\theta_W} \gamma^{\alpha} \left( g_V - g_A \gamma_5 \right) \frac{i \left( \fsl{p}_1+\fsl{q}+m_f \right)}{\left( p_1+q \right)^2 - m_f^2} \frac{ig}{cos\theta_W} \gamma^{\beta} \times \right. & \\
+& \times \left. \left( g_V - g_A \gamma_5 \right) \frac{i \left( \fsl{q}+m_f \right)}{q^2 - m_f^2} \rbr = & \\
+& =\int\frac{d^dq}{\left( 2\pi \right)^d} \frac{-g^2}{\cos^2\theta_W} \Tr \lbr \gamma^{\alpha} \left( g_V - g_A \gamma_5 \right) \frac{ \left( \fsl{p}_1+\fsl{q}+m_f \right)}{\left( p_1+q \right)^2 - m_f^2} \gamma^{\beta} \left( g_V - g_A \gamma_5 \right) \frac{ \left( \fsl{q}+m_f \right)}{q^2 - m_f^2} \rbr & \\
 & \equiv \int\frac{d^dq}{\left( 2\pi \right)^d} \frac{\bar{N}}{\bar{D}_1\bar{D}_0} &
 \end{align*}
-
-
+From the $d$-dimensional numerator function we can as usual extract the $\epsilon$-dimensional part we are interested in.
 \begin{align*}
 \bar{N} (\bar{q}) = & - \frac{g^2}{\cos^2\theta_W} \ \Tr  \lbr \bar{\gamma}^{\alpha} \left( g_V - g_A \gamma_5 \right) \left( \bar{\fsl{p}}_1+\bar{\fsl{q}}+m \right) \bar{\gamma}^{\beta} \left( g_V - g_A \gamma_5 \right) \left( \bar{\fsl{q}}+m \right) \rbr = & \\
 &= \frac{-g^2}{\cos^2\theta_W} \Tr \lbr \gamma^{\alpha} \left( g_V - g_A \gamma_5 \right) \left( \fsl{p}_1 + \fsl{q} + m \right) \gamma^{\beta} \left( g_V - g_A \gamma_5 \right) \left( \fsl{q} + m \right) + \gamma^{\alpha} \left( g_V^2 + g_A^2 \right) \wtilde{\fsl{q}} \gamma^{\beta} \wtilde{\fsl{q}} \rbr \equiv N + \wtilde{N} &
 \end{align*}
-Where we used $ \left[ \gamma_5, \wtilde{\gamma}^{\mu} \right] = 0 $ and the fact that the gamma matrices will be contracted with external momenta.
+Where we used $ \left[ \gamma_5, \wtilde{\gamma}^{\mu} \right] = 0 $ and the fact that the gamma matrices will be contracted with external momenta. We can further simplify $\wtilde{N}$ by evaluating the trace over the gamma matrices
 \begin{equation*}
 \wtilde{N} = \frac{-g^2}{\cos^2\theta_W} \left( g_V^2 + g_A^2 \right) \left( - \wtilde{q}^2 \right) \Tr\left( \gamma^{\alpha}\gamma^{\beta} \right) = \frac{4g^2\wtilde{q}^2}{\cos^2\theta_W} \left( g_V^2 + g_A^2 \right) g^{\alpha\beta}
 \end{equation*}
+Plugging this into the definition of $R_2$ gives
 \begin{align*}
 R_2^{ZZ} & = \frac{1}{\left( 2\pi \right) ^4} \int d^d\bar{q} \frac{\wtilde{N}}{\bar{D}_1\bar{D}_0} = \frac{4g^2g^{\alpha\beta}}{\left( 2\pi \right)^4 \cos^2\theta_W} \left( g_V^2 + g_A^2 \right) \int d^d\bar{q} \frac{\wtilde{q}^2}{\bar{D}_1\bar{D}_0} = & \\
 & = \frac{4g^2g^{\alpha\beta}}{\left( 2\pi \right)^4 \cos^2\theta_W} \left( g_V^2 + g_A^2 \right) \left( - \frac{i\pi^2}{2} \right) \left( 2m^2 - \frac{p_1^2}{3} \right) = \frac{-ig^2}{ 8 \pi^2 \cos^2\theta_W} \left( g_V^2 + g_A^2 \right)  \left( 2m^2 - \frac{p_1^2}{3} \right) g^{\alpha\beta} & \\ \numberthis \label{eqn:R2ZZ}
 \end{align*}
 \\
-
-{\bf Photon/Z-boson mixed self-energy}
+{\bf Photon/Z-boson mixed self-energy}\\
+Since the Z-boson is a singlet under $SU(2)_L \times U(1)_Y$ it can also oscillate into a photon via a fermion loop. The amplitude of this process is given by
 \begin{align*}
 \begin{gathered}
 \feynmandiagram [layered layout, horizontal=b to c] {
@@ -48,19 +49,18 @@ R_2^{ZZ} & = \frac{1}{\left( 2\pi \right) ^4} \int d^d\bar{q} \frac{\wtilde{N}}{
 & =\int\frac{d^dq}{\left( 2\pi \right)^d} \frac{eQ_fg}{\cos\theta_W} \Tr \lbr \gamma^{\alpha} \frac{ \left( \fsl{p}_1+\fsl{q}+m \right)}{\left( p_1+q \right)^2 - m^2} \gamma^{\beta} \left( g_V - g_A \gamma_5 \right) \frac{ \left( \fsl{q}+m \right)}{q^2 - m^2} \rbr & \\
 & \equiv \int\frac{d^dq}{\left( 2\pi \right)^d} \frac{\bar{N}}{\bar{D}_1\bar{D}_0} &
 \end{align*}
-
+We simplify the $d$-dimensional denominator function
 \begin{align*}
-\bar{N} (\bar{q}) = & \frac{eQ_fg}{\cos\theta_W} \ \Tr \lbr \bar{\gamma}^{\alpha} \left( \bar{\fsl{p}}_1+\bar{\fsl{q}}+m \right) \bar{\gamma}^{\beta} \left( g_V - g_A \gamma_5 \right) \left( \bar{\fsl{q}}+m \right) \rbr = & \\
-&= \frac{eQ_fg}{\cos\theta_W} \Tr \lbr \gamma^{\alpha} \left( \fsl{p}_1 + \fsl{q} + m \right) \gamma^{\beta} \left( g_V - g_A \gamma_5 \right) \left( \fsl{q} + m \right) + \gamma^{\alpha} \wtilde{\fsl{q}} \gamma^{\beta} g_V \wtilde{\fsl{q}} \rbr \equiv N + \wtilde{N} &
+\bar{N} (\bar{q}) & = \frac{eQ_fg}{\cos\theta_W} \ \Tr \lbr \bar{\gamma}^{\alpha} \left( \bar{\fsl{p}}_1+\bar{\fsl{q}}+m \right) \bar{\gamma}^{\beta} \left( g_V - g_A \gamma_5 \right) \left( \bar{\fsl{q}}+m \right) \rbr = & \\
+& = \frac{eQ_fg}{\cos\theta_W} \Tr \lbr \gamma^{\alpha} \left( \fsl{p}_1 + \fsl{q} + m \right) \gamma^{\beta} \left( g_V - g_A \gamma_5 \right) \left( \fsl{q} + m \right) + \gamma^{\alpha} \wtilde{\fsl{q}} \gamma^{\beta} g_V \wtilde{\fsl{q}} \rbr \equiv N + \wtilde{N} &
 \end{align*}
-Where we have used $\Tr\left( \gamma^{\alpha}\gamma^{\beta}\gamma_5 \right) = 0$.
-
+Where we have used $\Tr\left( \gamma^{\alpha}\gamma^{\beta}\gamma_5 \right) = 0$ and the fact that the gamma matrices are contracted with external momenta. The last term defines $\wtilde{N}$ and can be further simplified by evaluating the trace
 \begin{equation*}
 \wtilde{N} = \frac{eQ_fg}{cos\theta_W} \Tr\lbr \gamma^{\alpha} \wtilde{\fsl{q}} \gamma^{\beta} g_V \wtilde{\fsl{q}} \rbr = \frac{-4eQ_fgg_V}{\cos\theta_W} \wtilde{q}^2 g^{\alpha\beta}
 \end{equation*}
-
+With this we can calculate the $R_2$ for the mixed photon/Z-boson self-energy.
 \begin{align*}
-R_2^{\gamma Z} & = \frac{1}{\left( 2\pi \right)^4} \int d^d \bar{q} \frac{\wtilde{N}}{\bar{D}_1\bar{D}_0} = \frac{-4eQ_fgg_V}{\left( 2\pi \right)^4\cos\theta_W} g^{\alpha\beta} \int d^d\bar{q} \frac{\wtilde{q}^2}{\bar{D}_1\bar{D}_0} & \\
+R_2^{\gamma Z} & = \frac{1}{\left( 2\pi \right)^4} \int d^d \bar{q} \frac{\wtilde{N}}{\bar{D}_1\bar{D}_0} = \frac{-4eQ_fgg_V}{\left( 2\pi \right)^4\cos\theta_W} g^{\alpha\beta} \int d^d\bar{q} \frac{\wtilde{q}^2}{\bar{D}_1\bar{D}_0} = & \\
 & = \frac{-4eQ_fgg_V}{\left( 2\pi \right)^4\cos\theta_W} \left( -\frac{i\pi^2}{2} \right) g^{\alpha\beta} \left( 2m^2 - \frac{p_1^2}{3} \right) = \frac{ieQ_fgg_V}{8\pi^2\cos\theta_W} g^{\alpha\beta} \left( 2m^2 - \frac{p_1^2}{3} \right) & \numberthis \label{eqn:R2photonZ}
 \end{align*}
 
