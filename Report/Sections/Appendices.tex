@@ -2,7 +2,7 @@
 {\bf\Large Appendices} \\
 \section{Feynman Rules}
 \label{sec:FeynmanRules}
-In this appendix all of the Feynman rules which were used for the calculations are listed. The Feynman rules are given for the whole Standard Model, but the pure QED Feynman rules can be obtained by taking $Q_f \rightarrow Q_e = -1$ and $m_f \rightarrow m_e$. \\
+In this appendix all of the Feynman rules which were used for the calculations are listed. The Feynman rules are given for the whole Standard Model, but the pure QED Feynman rules can be obtained by taking $Q_f \rightarrow Q_e = -1$ and $m_f \rightarrow m_e\equiv m$. \\
 
 {\bf Propagator}
 \begin{equation*}
@@ -101,7 +101,7 @@ In the calculation of $R_2$ we have to evaluate 2-,3- and 4-point functions. The
 \int  d^d \bar{q} \frac{\tilde{q}^2 q^2}{\bar{D}_i\bar{D}_j\bar{D}_k\bar{D}_l} =  -\frac{i\pi^2}{3} + O(\epsilon) 
 \end{equation}
 
-\section{Traceology}
+\section{Identities for Gamma Matrices}
 \label{app:Traceology}
 In a theory with fermions the Dirac matrices appear as the generators of the spinor representation of the Poincaré algebra. The following identities for Dirac matrices are very useful when evaluating Feynman diagrams
 \begin{itemize}
@@ -109,13 +109,17 @@ In a theory with fermions the Dirac matrices appear as the generators of the spi
 
 \item[2.] $\Tr \left( \gamma^{\alpha}\gamma^{\beta}\gamma^{\gamma}\gamma^{\delta} \right) = d \left( g^{\alpha\beta}g^{\gamma\delta} - g^{\alpha\gamma}g^{\beta\delta} + g^{\alpha\delta}g^{\beta\gamma} \right)$ \numberitem\label{eqn:Tr4g}
 
-\item[3.] $\gamma^{\alpha}\gamma_{\alpha} = d$ \numberitem\label{eqn:2g}
+\item[3.] $\Tr \left( \gamma^{\alpha_1}\gamma^{\alpha_2} \cdots \gamma^{\alpha_n} \right) = 0$ \quad for n odd \numberitem\label{eqn:Troddg}
 
-\item[4.] $\gamma^{\alpha}\gamma^{\beta}\gamma_{\alpha} = \left( 2-d \right) \gamma^{\beta}$ \numberitem\label{eqn:3g}
+\item[4.] $\Tr \left( \gamma^{\alpha}\gamma^{\beta} \gamma_5 \right) = 0$ \numberitem\label{eqn:Tr2g5}
 
-\item[5.] $\gamma^{\alpha}\gamma^{\beta}\gamma^{\gamma}\gamma_{\alpha} = d\gamma^{\beta}\gamma^{\gamma} + 2 \left[ \gamma^{\gamma}, \gamma^{\beta} \right]$ \numberitem\label{eqn:4g}
+\item[5.] $\gamma^{\alpha}\gamma_{\alpha} = d$ \numberitem\label{eqn:2g}
 
-\item[6.] $\fsl{a}\fsl{b} = a \cdot b$ \numberitem\label{eqn:fsldot}
+\item[6.] $\gamma^{\alpha}\gamma^{\beta}\gamma_{\alpha} = \left( 2-d \right) \gamma^{\beta}$ \numberitem\label{eqn:3g}
+
+\item[7.] $\gamma^{\alpha}\gamma^{\beta}\gamma^{\gamma}\gamma_{\alpha} = d\gamma^{\beta}\gamma^{\gamma} + 2 \left[ \gamma^{\gamma}, \gamma^{\beta} \right]$ \numberitem\label{eqn:4g}
+
+\item[8.] $\fsl{a}\fsl{b} = a \cdot b$ \numberitem\label{eqn:fsldot}
 
 \end{itemize}
 The Dirac matrices obey the Clifford algebra $\lbr \gamma^{\mu}, \gamma^{\nu} \rbr = 2 g^{\mu\nu} \mathds{1}_d$ with $g^{\mu\nu}$ the Minkowski metric in $d$ dimensions
@@ -127,10 +131,9 @@ The Dirac matrices obey the Clifford algebra $\lbr \gamma^{\mu}, \gamma^{\nu} \r
 0 \quad\qquad\qquad \text{for } \mu \neq \nu
 \end{cases}
 \end{equation*}
-
-
-
-{\bf Proofs for identities}
+In a few of the identities also the fifth gamma matrix appears which is defined as $\gamma_5 = i/4! \ \epsilon_{\mu_1 \dots \mu_4} \gamma^{\mu_1} \cdots \gamma^{\mu_4}$. It is hermitian, traceless and self-inverse: $\gamma_5^2 = \mathds{1}_d$.
+\newpage
+{\bf Proofs for identities}\\
 
 1. $\mathrm{Tr} \left( \gamma^{\alpha} \gamma^{\beta} \right) = dg^{\alpha\beta}$
 \begin{proof}
@@ -155,29 +158,50 @@ The Dirac matrices obey the Clifford algebra $\lbr \gamma^{\mu}, \gamma^{\nu} \r
 \end{equation*}
 \end{proof}
 
+3. $\Tr \left( \gamma^{\alpha_1}\gamma^{\alpha_2} \cdots \gamma^{\alpha_n} \right) = 0$ for n odd
+\begin{proof}
+\begin{align*}
+& \Tr \left( \gamma^{\alpha_1}\gamma^{\alpha_2} \cdots \gamma^{\alpha_n} \right) = \Tr \left( \gamma_5^2 \gamma^{\alpha_1}\gamma^{\alpha_2} \cdots \gamma^{\alpha_n} \right) = \left( -1 \right)^n \Tr \left(\gamma_5 \gamma^{\alpha_1}\gamma^{\alpha_2} \cdots \gamma^{\alpha_n} \gamma_5 \right) \overset{\text{n odd}}{=} - \Tr \left( \gamma_5^2 \gamma^{\alpha_1}\gamma^{\alpha_2} \cdots \gamma^{\alpha_n} \right) = & \\
+& = - \Tr \left( \gamma^{\alpha_1}\gamma^{\alpha_2} \cdots \gamma^{\alpha_n} \right)
+\Rightarrow \Tr \left( \gamma^{\alpha_1}\gamma^{\alpha_2} \cdots \gamma^{\alpha_n} \right) = 0 \text{ for n odd} &
+\end{align*}
+\end{proof}
 
-3. $\gamma^{\alpha}\gamma_{\alpha} = d$
+4. $\Tr \left( \gamma^{\alpha}\gamma^{\beta} \gamma_5 \right) = 0$
+\begin{proof}
+\begin{align*}
+&\Tr \left( \gamma^{\alpha}\gamma^{\beta} \gamma_5 \right) \overset{=}{5.} \frac{1}{d}\Tr \left( \gamma_{\mu}\gamma^{\mu}\gamma^{\alpha}\gamma^{\beta} \gamma_5 \right) \overset{=}{\lbr \gamma^{\mu},\gamma_5 \rbr =0}  \frac{\left(-1\right)^3}{d} \Tr \left( \gamma_{\mu}\gamma_5\gamma^{\mu}\gamma^{\alpha}\gamma^{\beta} \right) = & \\
+& = -\frac{1}{d} \Tr \left(\gamma^{\mu}\gamma^{\alpha}\gamma^{\beta}\gamma_{\mu}\gamma_5 \right) \overset{=}{7.} -\frac{1}{d} \Tr \left( \left( d\gamma^{\beta}\gamma^{\gamma} + 2 \left[ \gamma^{\gamma}, \gamma^{\beta} \right] \right) \gamma_5 \right) = - \left(1+\frac{2}{d}\right) \Tr \left( \gamma^{\alpha}\gamma^{\beta}\gamma_5 \right) + \frac{2}{d} \Tr \left( \gamma^{\beta}\gamma^{\alpha}\gamma_5 \right) =  & \\
+& = - \left(1+\frac{2}{d}\right) \Tr \left( \gamma^{\alpha}\gamma^{\beta}\gamma_5 \right) + \frac{2}{d} \Tr \left( \left( 2g^{\beta\alpha} - \gamma^{\alpha}\gamma^{\beta} \right)\gamma_5 \right) = - \left(1+\frac{4}{d}\right) \Tr \left( \gamma^{\alpha}\gamma^{\beta}\gamma_5 \right) + \frac{4}{d} g^{\beta\alpha} \underbrace{\Tr \left(\gamma_5 \right)}_{=0} = & \\
+& = - \left(1+\frac{4}{d} \right) \Tr \left( \gamma^{\alpha}\gamma^{\beta} \gamma_5 \right) &
+\end{align*}
+\begin{equation*}
+\Rightarrow \Tr \left( \gamma^{\alpha}\gamma^{\beta} \gamma_5 \right) = 0
+\end{equation*}
+\end{proof}
+
+5. $\gamma^{\alpha}\gamma_{\alpha} = d$
 \begin{proof}
 \begin{equation*}
 \gamma^{\alpha}\gamma_{\alpha} = \frac{1}{2} \left( \gamma^{\alpha}\gamma_{\alpha} + \gamma_{\alpha}\gamma^{\alpha} \right) = \frac{1}{2} \lbr \gamma^{\alpha}, \gamma_{\alpha} \rbr = \frac{1}{2} 2 g^{\alpha}_{ \ \alpha} = d
 \end{equation*}
 \end{proof}
 
-4. $\gamma^{\alpha}\gamma^{\beta}\gamma_{\alpha} = \left( 2-d \right) \gamma^{\beta}$
+6. $\gamma^{\alpha}\gamma^{\beta}\gamma_{\alpha} = \left( 2-d \right) \gamma^{\beta}$
 \begin{proof}
 \begin{equation*}
 \gamma^{\alpha}\gamma^{\beta}\gamma_{\alpha} = \left( 2g^{\alpha\beta} - \gamma^{\beta}\gamma^{\alpha} \right) \gamma_{\alpha} = \left( 2-d \right) \gamma^{\beta}
 \end{equation*}
 \end{proof}
 
-5. $\gamma^{\alpha}\gamma^{\beta}\gamma^{\gamma}\gamma_{\alpha} = d\gamma^{\beta}\gamma^{\gamma} + 2 \left[ \gamma^{\gamma}, \gamma^{\beta} \right]$
+7. $\gamma^{\alpha}\gamma^{\beta}\gamma^{\gamma}\gamma_{\alpha} = d\gamma^{\beta}\gamma^{\gamma} + 2 \left[ \gamma^{\gamma}, \gamma^{\beta} \right]$
 \begin{proof}
 \begin{equation*}
 \gamma^{\alpha}\gamma^{\beta}\gamma^{\gamma}\gamma_{\alpha} = \left( 2g^{\alpha\beta} - \gamma^{\beta}\gamma^{\alpha} \right) \gamma^{\gamma}\gamma_{\alpha} \overset{4.}{=} 2 \left( \gamma^{\gamma}\gamma^{\beta} - \gamma^{\beta}\gamma^{\gamma} \right) + d\gamma^{\beta}\gamma^{\gamma} = d\gamma^{\beta}\gamma^{\gamma} + 2 \left[ \gamma^{\gamma}, \gamma^{\beta} \right]		
 \end{equation*}
 \end{proof}
 
-6. $\fsl{a}\fsl{b} = a \cdot b$
+8. $\fsl{a}\fsl{b} = a \cdot b$
 \begin{proof}
 \begin{equation*}
 \fsl{a} \fsl{b} = a_{\alpha} b_{\beta} \gamma^{\alpha}\gamma^{\beta} = a_{\alpha} b_{\beta} \left( 2 g^{\alpha\beta} - \gamma^{\beta}\gamma^{\alpha} \right) = 2 a \cdot b - \fsl{a}\fsl{b}
