@@ -27,7 +27,7 @@ We can now evaluate the trace and get
 \begin{equation*}
 \wtilde{N} = -e^2 \ \mathrm{Tr} \lbr \gamma^{\alpha} \wtilde{\fsl{q}} \gamma^{\beta} \wtilde{\fsl{q}} \rbr = 4 e^2 \wtilde{q}^2 g^{\alpha\beta}
 \end{equation*}
-Where we have used that the $\epsilon$-dimensional gamma matrices anti-commute with the 4-dimensional gamma matrices and the trace identity for 2 gamma matrices (equation \ref{eqn:Tr2g}) which can be found alongside a proof in appendix \ref{app:Traceology}. Plugging the expression for $\wtilde{N}$ in equation \ref{eqn:R2} gives
+Where we have used that the $\epsilon$-dimensional gamma matrices anticommute with the 4-dimensional gamma matrices and the trace identity for 2 gamma matrices (equation \ref{eqn:Tr2g}) which can be found alongside a proof in appendix \ref{app:Traceology}. Plugging the expression for $\wtilde{N}$ in equation \ref{eqn:R2} gives
 \begin{equation}
 \label{eqn:R2photon}
 R_2^{\gamma\gamma} = \frac{1}{\left( 2\pi \right) ^4} \int d^d\bar{q} \frac{\wtilde{N}}{\bar{D}_1\bar{D}_0} = \frac{4e^2}{16\pi^4} \underbrace{\int d^d\bar{q} \frac{\wtilde{q}^2}{\bar{D}_1\bar{D}_0}}_{-i\frac{\pi}{2} \left( 2m^2 - p_1^2/3 \right)} = \frac{-ie^2}{8\pi^2} g^{\alpha\beta} \left( 2m^2 -\frac{p_1^2}{3} \right)
@@ -56,7 +56,7 @@ Here, the first term is again the normal 4-dimensional numerator and the rest th
 \begin{equation*}
 \wtilde{N} = -e^2 \lbr \wtilde{\gamma}^{\alpha} \left( \bar{\fsl{p}}_1 + \bar{\fsl{q}} + m \right) \wtilde{\gamma}_{\alpha} + \gamma^{\alpha} \wtilde{\fsl{q}} \gamma_{\alpha} + \wtilde{\gamma}^{\alpha} \wtilde{\fsl{q}} \wtilde{\gamma}_{\alpha} \rbr = -e^2 \lbr - \underbrace{\wtilde{\gamma}^{\alpha} \wtilde{\gamma}_{\alpha}}_{= \epsilon} \left( \bar{\fsl{p}}_1 + \bar{\fsl{q}} - m \right) - \underbrace{\gamma^{\alpha} \gamma_{\alpha}}_{=4} \wtilde{\fsl{q}} + \wtilde{\gamma}^{\alpha} \wtilde{\fsl{q}} \wtilde{\gamma}_{\alpha} \rbr
 \end{equation*}
-where we have used again that the $\epsilon$-dimensional gamma matrices anti-commute with the 4-dimensional gamma matrices and equation \ref{eqn:2g} to simplify the expression. Plugging $\tilde{N}$ into the definition of $R_2$ we get
+where we have used again that the $\epsilon$-dimensional gamma matrices anticommute with the 4-dimensional gamma matrices and equation \ref{eqn:2g} to simplify the expression. Plugging $\tilde{N}$ into the definition of $R_2$ we get
 \begin{align*}
 R_2^{\mathrm{ee}} & = \frac{1}{\left( 2\pi \right) ^4} \int d^d\bar{q} \frac{\wtilde{N}}{\bar{D}_1\bar{D}_0} = \frac{-e^2}{\left( 2\pi \right) ^4} \int d^d\bar{q} \frac{1}{\bar{D}_1\bar{D}_0} \left( -\epsilon \left( \fsl{p}_1 + \fsl{q} - m \right) + \underbrace{\wtilde{\fsl{q}} \left( \ldots \right)}_{=0} \right) = & \\ 
 & = \frac{e^2}{\left( 2\pi \right) ^4} \lbr \underbrace{\int d^d\bar{q} \frac{\epsilon \left( \fsl{p}_1 - m \right)}{\bar{D}_1\bar{D}_0}}_{=-2\epsilon \frac{i \pi^2}{\epsilon}  \left( \fsl{p}_1 -m \right)}  + \underbrace{\int d^d\bar{q} \frac{\epsilon \fsl{q}}{\bar{D}_1\bar{D}_0}}_{=\epsilon \frac{i\pi^2}{\epsilon} \fsl{p}_1} \rbr = \frac{e^2}{\left( 2\pi \right) ^4} \epsilon \frac{i\pi^2}{\epsilon} \left( \left( -2 \right) \left( \fsl{p}_1 - m \right) + \fsl{p}_1 \right) = \frac{-ie^2}{16 \pi^2}  \left( \fsl{p}_1 - 2m \right) & \numberthis \label{eqn:R2ee}
@@ -169,7 +169,7 @@ We used again that the gamma matrices are contracted with external momenta. The 
 & \left. + p_{1\mu} \left( g^{\beta\gamma}g^{\alpha\mu} - g^{\beta\alpha}g^{\gamma\mu} + g^{\beta\mu}g^{\alpha\gamma} \right) - p_{2\mu} \left( g^{\beta\gamma}g^{\mu\alpha} - g^{\beta\mu}g^{\alpha\gamma} + g^{\alpha\beta}g^{\gamma\mu} \right) \rbr = & \\
 & = -4e^3 \wtilde{q}^2 \lbr q^{\beta}g^{\alpha\gamma} + q^{\gamma}g^{\alpha\beta} + q^{\alpha}g^{\beta\gamma} + p_1^{\alpha}g^{\beta\gamma} - p_1^{\gamma}g^{\alpha\beta} + p_1^{\beta}g^{\alpha\gamma} - p_2^{\alpha}g^{\beta\gamma} + p_2^{\beta}g^{\alpha\gamma} - p_2^{\gamma}g^{\alpha\beta} \rbr &
 \end{align*}
-From the second to the third line we have used that 4- and $\epsilon$-dimensional gamma matrices commute as well as equations \ref{eqn:Tr4g} and \ref{eqn:fsldot}. \\
+From the second to the third line we have used that 4- and $\epsilon$-dimensional gamma matrices anticommute as well as equations \ref{eqn:Tr4g} and \ref{eqn:fsldot}. \\
 This gives for the $R_2$ contribution of the first diagram
 \begin{align*}
 R_2^1 & = \frac{1}{\left( 2\pi \right)^4} \int d^d\bar{q} \frac{\wtilde{N}}{\bar{D}_1\bar{D}_{-2}\bar{D}_0} = & \\
@@ -244,7 +244,7 @@ where $D_{13} = \left( p_3 + p_1 +q \right) ^2 -m^2$. From this we get for the $
 &  \left. + \gamma^{\alpha} \wtilde{\fsl{q}} \gamma^{\beta} \wtilde{\fsl{q}} \gamma^{\gamma} \wtilde{\fsl{q}} \gamma^{\delta} \wtilde{\fsl{q}} + \gamma^{\alpha} \wtilde{\fsl{q}} \gamma^{\beta} \wtilde{\fsl{q}} \gamma^{\gamma} \fsl{q} \gamma^{\delta} \fsl{q}  + \gamma^{\alpha} \fsl{q} \gamma^{\beta} \wtilde{\fsl{q}} \gamma^{\gamma} \wtilde{\fsl{q}} \gamma^{\delta} \fsl{q} + \gamma^{\alpha} \fsl{q} \gamma^{\beta} \fsl{q} \gamma^{\gamma} \wtilde{\fsl{q}} \gamma^{\delta} \wtilde{\fsl{q}} + \gamma^{\alpha} \wtilde{\fsl{q}} \gamma^{\beta} \fsl{q} \gamma^{\gamma} \fsl{q} \gamma^{\delta} \wtilde{\fsl{q}} + \right. & \\
 & \left. + \gamma^{\alpha} \wtilde{\fsl{q}} \gamma^{\beta} \fsl{q} \gamma^{\gamma} \wtilde{\fsl{q}} \gamma^{\delta} \fsl{q} + \gamma^{\alpha} \fsl{q} \gamma^{\beta} \wtilde{\fsl{q}} \gamma^{\gamma} \fsl{q} \gamma^{\delta} \wtilde{\fsl{q}} \rbr \equiv N + \wtilde{N} &
 \end{align*}
-Where all of the terms besides the first one define $\wtilde{N}$. Furthermore, we have used that the gamma matrices are contracted with external momenta and that the trace of an odd number of Dirac matrices is zero. Using the fact that 4- and $\epsilon$-dimensional gamma matrices commute as well as equation \ref{eqn:fsldot}, $\wtilde{N}$ can be further simplified to
+Where all of the terms besides the first one define $\wtilde{N}$. Furthermore, we have used that the gamma matrices are contracted with external momenta and that the trace of an odd number of Dirac matrices is zero. Using the fact that 4- and $\epsilon$-dimensional gamma matrices anticommute as well as equation \ref{eqn:fsldot}, $\wtilde{N}$ can be further simplified to
 \begin{align*}
 \wtilde{N} = & -e^4 \mathrm{Tr} \lbr \left( -1 \right)^{10} \wtilde{q}^4 \gamma^{\alpha} \gamma^{\beta} \gamma^{\gamma} \gamma^{\delta} + \wtilde{q}^2 \left[ \left( -1 \right) ^3  \gamma^{\alpha} \gamma^{\beta} \gamma^{\gamma} \fsl{q} \gamma^{\delta} \fsl{q}  + \left( -1 \right)^7 \gamma^{\alpha} \fsl{q} \gamma^{\beta} \gamma^{\gamma} \gamma^{\delta} \fsl{q} + \left( -1 \right)^{11} \gamma^{\alpha} \fsl{q} \gamma^{\beta} \fsl{q} \gamma^{\gamma} \gamma^{\delta} + \right. \right. & \\
 & \left. \left. + \left( -1 \right)^7 \gamma^{\alpha} \gamma^{\beta} \fsl{q} \gamma^{\gamma} \fsl{q} \gamma^{\delta} + \left( -1 \right)^5 \gamma^{\alpha} \gamma^{\beta} \fsl{q} \gamma^{\gamma} \gamma^{\delta} \fsl{q} + \left( -1 \right)^9 \gamma^{\alpha} \fsl{q} \gamma^{\beta} \gamma^{\gamma} \fsl{q} \gamma^{\delta} \right] \rbr = & \\
