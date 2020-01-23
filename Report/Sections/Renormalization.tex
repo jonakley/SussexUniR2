@@ -148,7 +148,7 @@ p_{\mu} B^{\mu} & = \int \frac{d^dq}{i\pi^2} \frac{p \cdot q}{\left( q^2-m_0^2 \
 g_{\mu\nu} B^{\mu\nu} & = \int \frac{d^dq}{i\pi^2} \frac{q^2}{\left( q^2-m_0^2 \right) \left( \left( p+q \right)^2 -m_1^2 \right)} = d B_{00} + B_{11} p^2 & \\
 p_{\mu}p_{\nu} B^{\mu\nu} & = \int \frac{d^dq}{i\pi^2} \frac{\left(p \cdot q\right)^2}{\left( q^2-m_0^2 \right) \left( \left( p+q \right)^2 -m_1^2 \right)} = p^2 B_{00} + B_{11} p^4 &
 \end{align*}
-(!!!!!!!!!!!!!!!!!!maybe use identity for $B_{00}d + B_{11}p^2$ in terms of A and B functions!!!!!!!!!!!!!!) which are useful for our calculations. We also have to be careful about taking the limit $d \rightarrow 4$ since $d = O(\epsilon)$ and $B_{i} = O(\epsilon^{-1})$. E.g., for $B_0$ we have in dimensional regularisation with the well-known expression for $B_0$ and $d = 4 - \epsilon$
+which are useful for our calculations. We also have to be careful about taking the limit $d \rightarrow 4$ since $d = O(\epsilon)$ and $B_{i} = O(\epsilon^{-1})$. E.g., for $B_0$ we have in dimensional regularisation with the well-known expression for $B_0$ and $d = 4 - \epsilon$
 \begin{equation}
 d \cdot B_0 = \left( 4 - \epsilon \right) \left( \frac{2}{\epsilon} - \int_0^1 dx \log \left( \frac{\Delta(x,m_i^2,p^2)}{4\pi e^{-\gamma_E}\mu^2} \right) \right) \rightarrow 4 B_0 - \frac{2\epsilon}{\epsilon} = 4B_0 - 2
 \end{equation}
@@ -163,6 +163,7 @@ d \cdot B_{11} & \longrightarrow 4 B_{11} - \frac{2}{3} & \numberthis \label{eqn
 \subsection{Renormalization of Pure QED}
 \label{sec:QEDren}
 {\bf Photon self-energy} \\
+Let us start with the renormalization of the photon field. The photon self-energy contribution is given by
 \begin{align*}
 \begin{gathered}
 \feynmandiagram [layered layout, horizontal=b to c] {
@@ -180,15 +181,10 @@ Let's work on the trace so we can express the numerator of the 2-point function 
 & = 4 \lbr m^2 g^{\alpha\beta} + \left( p+q \right)_{\mu} q_{\nu} \left( g^{\alpha\mu}g^{\beta\nu} - g^{\alpha\beta}g^{\mu\nu} + g^{\alpha\nu}g^{\beta\mu} \right) \rbr = & \\
 & = 4 \left( m^2 g^{\alpha\beta} + \left( p+q \right)^{\alpha} q^{\beta} - g^{\alpha\beta} \left( p+q \right) \cdot q + g^{\alpha} \left( p+q \right)^{\beta} \right) &
 \end{align*}
-
+where we have used equation \ref{eqn:Tr2g}. Now we can express the integrals in terms of B-functions as follows
 \begin{align*}
 i\Pi^{\alpha\beta} & = -e^2 \int \frac{d^dq}{\left( 2\pi \right)^d} \frac{4\lbr m^2g^{\alpha\beta} + p^{\alpha}q^{\beta} + q^{\alpha}p^{\beta} + 2 q^{\alpha}q^{\beta} - g^{\alpha\beta} p \cdot q - g^{\alpha\beta} q^2 \rbr}{\left( \left( p+q \right)^2 - m^2 \right) \left( q^2 - m^2 \right)} = & \\
-& = -\frac{4ie^2}{16\pi^2} \lbr m^2 B_0 g^{\alpha\beta} + 2 p^{\alpha}p^{\beta} B_1 + 2 \left( B_{11} p^{\alpha}p^{\beta} + B_{00} g^{\alpha\beta} \right) - g^{\alpha\beta} B_1 p^2 - g^{\alpha\beta} \left( d \cdot B_{00} + B_{11} p^2 \right) \rbr 
-\end{align*}
-Now we can evaluate all of the limits in $i\Pi^{\alpha\beta}$
-\begin{align*}
-i\Pi^{\alpha\beta} & = -\frac{ie^2}{4\pi^2} \lbr m^2 B_0 g^{\alpha\beta} + 2 p^{\alpha}p^{\beta} B_1 + 2 \left( B_{11} p^{\alpha}p^{\beta} + B_{00} g^{\alpha\beta} \right) - g^{\alpha\beta} B_1 p^2 - g^{\alpha\beta} \left( d \cdot B_{00} + B_{11} p^2 \right) \rbr = & \\
-& = -\frac{ie^2}{4\pi^2} \lbr m^2 g^{\alpha\beta} B_0 + \left( 2p^{\alpha}p^{\beta} - g^{\alpha\beta} p^2 \right) \left(B_1 + B_{11} \right) + 2g^{\alpha\beta} B_{00} - d \cdot B_{00}g^{\alpha\beta} \rbr = & \\
+& = -\frac{4ie^2}{16\pi^2} \lbr m^2 B_0 g^{\alpha\beta} + 2 p^{\alpha}p^{\beta} B_1 + 2 \left( B_{11} p^{\alpha}p^{\beta} + B_{00} g^{\alpha\beta} \right) - g^{\alpha\beta} B_1 p^2 - g^{\alpha\beta} \left( d \cdot B_{00} + B_{11} p^2 \right) \rbr = & \\
 & = -\frac{ie^2}{4\pi^2} \lbr \left( 2p^{\alpha}p^{\beta} - g^{\alpha\beta} p^2 \right) \left(B_1 + B_{11} \right) + g^{\alpha\beta} \left( m^2 g^{\alpha\beta} B_0 + \left( 2-d  \right) B_{00} \right) \rbr \longrightarrow & \\
 & \longrightarrow -\frac{ie^2}{4\pi^2} \lbr \left( 2p^{\alpha}p^{\beta} - g^{\alpha\beta} p^2 \right) \left(B_1 + B_{11} \right) + g^{\alpha\beta} \left( m^2 g^{\alpha\beta} B_0 - 2 B_{00} + \frac{1}{6} \left( p^2 - 6m^2 \right) \right) \rbr  &
 \end{align*}
@@ -196,6 +192,7 @@ The arguments of the scalar integrals are suppressed to keep the notation compac
 The expression can be further simplified using identities between the scalar integrals.\\
 
 {\bf Electron self-energy} \\
+For the renormalization of the electron field and electron mass we have to evaluate the following diagram
 \begin{align*}
 \begin{gathered}
 \feynmandiagram [layered layout, horizontal=b to c] {
@@ -211,48 +208,17 @@ With a bit of gamma-matrix algebra the numerator can be written as
 \begin{align*}
 \gamma^{\beta} \left( \fsl{p} + \fsl{q} + m \right) \gamma_{\beta} = \left( p+q \right)_{\alpha} \gamma^{\beta}\gamma^{\alpha}\gamma_{\beta} + m \gamma^{\beta}\gamma_{\beta} = d \cdot m + \left( 2-d \right) \left( \fsl{p} + \fsl{q} \right)
 \end{align*}
-where we used equations \ref{eqn:2g} and \ref{eqn:3g}.
-
+where we used equations \ref{eqn:2g} and \ref{eqn:3g}. For the self-energy we then get
 \begin{align*}
 i\Sigma(\fsl{p}) & = -e^2 \int \frac{d^dq}{\left( 2\pi \right)^d} \frac{d \cdot m + \left( 2-d \right) \left( \fsl{p} + \fsl{q} \right)}{\left( \left( p+q \right)^2 - m^2 \right)q^2} = - \frac{ie^2}{16\pi^2} \lbr d \cdot m B_0 + \left( 2-d \right) \fsl{p} \left( B_0 + B_1 \right) \rbr \longrightarrow & \\
-& \longrightarrow \frac{-ie^2}{16\pi^2} \lbr m \left( 4B_0 - 2 \right) + 2 \fsl{p} \left( B_0 + B_1 \right) - \left( 4B_0 - 2 + 4B_1 + 1 \right) \rbr = \frac{-ie^2}{16\pi^2} \lbr m \left( 4B_0 -2 \right) - \fsl{p} \left( 2 \left( B_0 + B_1 \right) - 1 \right) \rbr &
+& \longrightarrow \frac{-ie^2}{16\pi^2} \lbr m \left( 4B_0 - 2 \right) + \fsl{p} \left( 2 \left( B_0 + B_1 \right) - \left( 4B_0 - 2 + 4B_1 + 1 \right) \right) \rbr = \frac{-ie^2}{16\pi^2} \lbr m \left( 4B_0 -2 \right) - \fsl{p} \left( 2 \left( B_0 + B_1 \right) - 1 \right) \rbr &
 \end{align*}
 Where the arguments of the B-functions are suppressed again. They are $B_i = B_i(p^2,0,m^2)$. \\
 
 \subsection{QED Contribution to the Renormalization of the Standard Model}
 \label{sec:SMrenorm}
-{\bf Photon/Z-boson mixed self-energy} \\
-\begin{align*}
-\begin{gathered}
-\feynmandiagram [layered layout, horizontal=b to c] {
-	a [particle={\(Z,\alpha\)}] -- [photon, momentum=\(p\)] b
-	  -- [fermion, half left, looseness=1.5, momentum=\(p+q\)] c
-	  -- [fermion, half left, looseness=1.5, momentum=\(q\)] b,
-	c -- [photon, momentum=\(p\)] d [particle={\(\beta,\gamma\)}] ,
-};
-\end{gathered}
-& = \int\frac{d^dq}{\left( 2\pi \right)^d} \left( -1 \right) \Tr \lbr \left( -ie Q_f \right) \gamma^{\alpha} \frac{i \left( \fsl{p}+\fsl{q}+m \right)}{\left( p+q \right)^2 - m^2} i \frac{g}{\cos\theta_W} \gamma^{\beta} \left( g_V - g_A \gamma_5 \right) \times \right. & \\
-& \left. \times \frac{i \left( \fsl{q}+m \right)}{q^2 - m^2} \rbr \equiv i\Pi^{\alpha\beta}_{\gamma Z} &
-\end{align*}
-Let's work on the trace so we can express the numerator of the 2-point function in terms of scalar integrals.
-\begin{align*}
-& \Tr \lbr \gamma^{\alpha} \left( \fsl{p} + \fsl{q} + m \right) \gamma^{\beta} \left( g_V - g_A \gamma_5 \right) \left( \fsl{q} + m \right) \rbr = g_V \Tr \lbr \gamma^{\alpha} \left( \fsl{p} + \fsl{q} \right) \gamma^{\beta} \fsl{q} + m^2 \gamma^{\alpha}\gamma^{\beta} \rbr - g_A \Tr \lbr \gamma^{\alpha} \left( \fsl{p} + \fsl{q} \right) \gamma^{\beta} \gamma_5 \fsl{q} \rbr = & \\
-& = 4 g_V \lbr \left( p+q \right)_{\mu} q_{\nu} \left( g^{\alpha\mu}g^{\beta\nu} - g^{\alpha\beta}g^{\mu\nu} + g^{\alpha\nu}g^{\beta\mu} \right) + m^2 g^{\alpha\beta} \rbr - 4i g_A \left( p+q \right)_{\mu} q_{\nu} \epsilon^{\alpha\mu\beta\nu} = & \\
-& = 4 \lbr g_V \left[ \left( p+q \right)^{\alpha}q^{\beta} - g^{\alpha\beta} \left( p+q \right) \cdot q + q^{\alpha} \left( p+q \right)^{\beta} + m^2 g^{\alpha\beta} \right] - i g_A \epsilon^{\alpha\mu\beta\nu} p_{\mu}q_{\nu} \rbr &
-\end{align*}
-Where we used that a symmetric tensor contracted with an antisymmetric tensor vanishes and equation \ref{eqn:Tr4g}. The arguments of the B-functions were suppressed again, they are $B_i = B_i(p^2,m^2,m^2)$.
-
-\begin{align*}
-i\Pi^{\alpha\beta}_{\gamma Z} & = \frac{4Q_feg}{\cos\theta_W} \int \frac{d^dq}{\left( 2\pi \right)^d} \frac{g_V \left( \left( p+q \right)^{\alpha}q^{\beta} - g^{\alpha\beta} \left( p+q \right) \cdot q + q^{\alpha} \left( p+q \right)^{\beta} + m^2 g^{\alpha\beta} \right) - i g_A \epsilon^{\alpha\mu\beta\nu} p_{\mu}q_{\nu}}{\left( \left( p+q \right)^2 -m^2 \right) \left( q^2 - m^2 \right)} = & \\
-& = \frac{4Q_feg}{\cos\theta_W} \frac{i\pi^2}{\left( 2\pi \right)^4} \lbr -ig_A \epsilon^{\alpha\mu\beta\nu}p_{\mu}B_1 p_{\nu} + g_V \left[ B_1 p^{\alpha}p^{\beta} + B_{00}g^{\alpha\beta} + B_{11} p^{\alpha}p^{\beta} - g^{\alpha\beta} \left( B_1 p^2 + d B_{00} + B_{11} p^2 \right) + \right. \right. & \\
-& \left. \left. + B_1 p^{\alpha}p^{\beta} + B_{00} g^{\alpha\beta} + B_{11} p^{\alpha}p^{\beta} + B_0 m^2 g^{\alpha\beta} \right]\rbr = & \\
-& = \frac{iQ_fegg_V}{4\pi^2\cos\theta_W} \lbr 2 p^{\alpha}p^{\beta} \left( B_1 + B_{11} \right) + g^{\alpha\beta} \left( m^2 B_0 + \left( 2 - d \right) B_{00} -p^2 \left( B_1 + B_{11} \right) \right) \rbr \longrightarrow & \\
-& \longrightarrow \frac{iQ_fegg_V}{4\pi^2\cos\theta_W} \lbr 2 p^{\alpha}p^{\beta} \left( B_1 + B_{11} \right) + g^{\alpha\beta} \left( m^2 B_0 - 2 B_{00} + \frac{1}{6} \left( p^2 - 6m^2 \right) -p^2 \left( B_1 + B_{11} \right) \right) \rbr = & \\
-& = \frac{iQ_fegg_V}{4\pi^2\cos\theta_W} \lbr \left( 2 p^{\alpha}p^{\beta} - p^2g^{\alpha\beta} \right) \left( B_1 + B_{11} \right) + g^{\alpha\beta} \left( m^2 B_0 - 2 B_{00} + \frac{1}{6} \left( p^2 - 6m^2 \right) \right) \rbr &
-\end{align*}
-From the second to third line we used that a symmetric tensor contracted with an antisymmetric tensor vanishes.
-
 {\bf Z-Boson self-energy} \\
+The first addition to renormalization in the full Standard Model is the renormalization of the additional neutral vector boson which gets a contribution from QED. It is given by
 \begin{align*}
 \begin{gathered}
 \feynmandiagram [layered layout, horizontal=b to c] {
@@ -262,27 +228,61 @@ From the second to third line we used that a symmetric tensor contracted with an
 	c -- [photon, momentum=\(p\)] d [particle={\(\beta,Z\)}] ,
 };
 \end{gathered}
-& = \int\frac{d^dq}{\left( 2\pi \right)^d} \left( -1 \right) \Tr \lbr \frac{ig}{\cos\theta_W} \gamma^{\alpha} \left( g_V - g_A \gamma_5 \right) \frac{i \left( \fsl{p}+\fsl{q}+m \right)}{\left( p+q \right)^2 - m^2} \frac{ig}{\cos\theta_W} \gamma^{\beta} \times \right. & \\ 
-& \left. \times \left( g_V - g_A \gamma_5 \right) \frac{i \left( \fsl{q}+m \right)}{q^2 - m^2} \rbr \equiv i\Pi^{\alpha\beta}_{ZZ} &
+& = \int\frac{d^dq}{\left( 2\pi \right)^d} \left( -1 \right) \Tr \lbr \frac{ig}{\cos\theta_W} \gamma^{\alpha} \left( g_V - g_A \gamma_5 \right) \frac{i \left( \fsl{p}+\fsl{q}+m_f \right)}{\left( p+q \right)^2 - m^2_f} \frac{ig}{\cos\theta_W} \gamma^{\beta} \times \right. & \\ 
+& \left. \times \left( g_V - g_A \gamma_5 \right) \frac{i \left( \fsl{q}+m_f \right)}{q^2 - m^2_f} \rbr \equiv i\Pi^{\alpha\beta}_{ZZ} &
 \end{align*}
 Let's work on the trace so we can express the numerator of the 2-point function in terms of scalar integrals.
 
 \begin{align*}
-& \Tr \lbr \gamma^{\alpha} \left( g_V - g_A \gamma_5 \right) \left( \fsl{p}+\fsl{q}+m \right) \gamma^{\beta} \left( g_V - g_A \gamma_5 \right) \left( \fsl{q}+m \right) \rbr = \Tr \lbr \gamma^{\alpha} \left( g_V - g_A \gamma_5 \right)^2 \left( \fsl{p}+\fsl{q}-m \right) \gamma^{\beta} \left( \fsl{q}+m \right) \rbr = & \\
-& = \left( g_V^2 + g_A^2 \right) \Tr \lbr \gamma^{\alpha} \left( \fsl{p} + \fsl{q} - m \right) \gamma^{\beta} \left( \fsl{q} + m \right) \rbr = \left( g_V^2 + g_A^2 \right) \Tr \lbr \gamma^{\alpha} \left( \fsl{p} + \fsl{q} \right) \gamma^{\beta} \fsl{q} - m^2 \gamma^{\alpha}\gamma^{\beta} \rbr = & \\
-& = \left( g_V^2 + g_A^2 \right) \lbr \left( p+q \right)_{\mu} q_{\nu} 4 \left( g^{\alpha\mu}g^{\beta\nu} - g^{\alpha\beta}g^{\mu\nu} + g^{\alpha\nu}g^{\beta\mu} \right) - 4m^2 g^{\alpha\beta} \rbr = & \\
-& = 4 \left( g_V^2 + g_A^2 \right) \lbr \left( p+q \right)^{\alpha}q^{\beta} - g^{\alpha\beta} \left( p+q \right) \cdot q + q^{\alpha} \left( p+q \right)^{\beta} - m^2 g^{\alpha\beta} \rbr &
+& \Tr \lbr \gamma^{\alpha} \left( g_V - g_A \gamma_5 \right) \left( \fsl{p}+\fsl{q}+m_f \right) \gamma^{\beta} \left( g_V - g_A \gamma_5 \right) \left( \fsl{q}+m_f \right) \rbr = \Tr \lbr \gamma^{\alpha} \left( g_V - g_A \gamma_5 \right)^2 \left( \fsl{p}+\fsl{q}-m_f \right) \gamma^{\beta} \left( \fsl{q}+m_f \right) \rbr = & \\
+& = \left( g_V^2 + g_A^2 \right) \Tr \lbr \gamma^{\alpha} \left( \fsl{p} + \fsl{q} - m_f \right) \gamma^{\beta} \left( \fsl{q} + m_f \right) \rbr = \left( g_V^2 + g_A^2 \right) \Tr \lbr \gamma^{\alpha} \left( \fsl{p} + \fsl{q} \right) \gamma^{\beta} \fsl{q} - m^2_f \gamma^{\alpha}\gamma^{\beta} \rbr = & \\
+& = \left( g_V^2 + g_A^2 \right) \lbr \left( p+q \right)_{\mu} q_{\nu} 4 \left( g^{\alpha\mu}g^{\beta\nu} - g^{\alpha\beta}g^{\mu\nu} + g^{\alpha\nu}g^{\beta\mu} \right) - 4m^2_f g^{\alpha\beta} \rbr = & \\
+& = 4 \left( g_V^2 + g_A^2 \right) \lbr \left( p+q \right)^{\alpha}q^{\beta} - g^{\alpha\beta} \left( p+q \right) \cdot q + q^{\alpha} \left( p+q \right)^{\beta} - m^2_f g^{\alpha\beta} \rbr &
 \end{align*}
+Here, we used equations \ref{eqn:Tr2g} and \ref{eqn:Tr4g}. We can now express the integrals in terms of B-functions
+\begin{align*}
+i\Pi^{\alpha\beta}_{ZZ} & = \int \frac{d^4q}{\left( 2\pi \right)^4} \frac{4g^2\left(g_V^2 + g_A^2 \right)}{\cos^2\theta_W} \frac{\left( p+q \right)^{\alpha}q^{\beta} - g^{\alpha\beta} \left( p+q \right) \cdot q + q^{\alpha} \left( p+q \right)^{\beta} - m^2_f g^{\alpha\beta}}{\left( \left( p+q \right)^2 -m^2_f \right) \left( q^2 - m^2_f \right)} = & \\
+& = \frac{4g^2\left(g_V^2 + g_A^2 \right)}{\cos^2\theta_W} \int \frac{d^4q}{\left( 2\pi \right)^4} \frac{p^{\alpha}q^{\beta}+q^{\alpha}p^{\beta}+2q^{\alpha}q^{\beta} - g^{\alpha\beta} \left( m^2_f + q \cdot p + q^2 \right)}{\left( \left( p+q \right)^2 -m^2_f \right) \left( q^2 - m^2_f \right)} = & \\
+& = \frac{4g^2\left(g_V^2 + g_A^2 \right)}{\cos^2\theta_W} \frac{i\pi^2}{\left( 2\pi \right)^4} \lbr 2 p^{\alpha}p^{\beta} B_1 + 2 \left( B_{00} g^{\alpha\beta} + B_{11} p^{\alpha}p^{\beta} \right) - g^{\alpha\beta} \left( m^2_f B_0 + B_1 p^2 + d B_{00} + B_{11} p^2 \right) \rbr = & \\
+& = \frac{ig^2\left(g_V^2 + g_A^2 \right)}{4\pi^2\cos^2\theta_W} \lbr \left( 2p^{\alpha}p^{\beta} -p^2 g^{\alpha\beta} \right) \left( B_1 + B_{11} \right) + g^{\alpha\beta} \left( \left( 2-d \right) B_{00} - m^2_f B_0  \right) \rbr \longrightarrow & \\
+& \longrightarrow \frac{ig^2\left(g_V^2 + g_A^2 \right)}{4\pi^2\cos^2\theta_W} \lbr \left( 2p^{\alpha}p^{\beta} -p^2 g^{\alpha\beta} \right) \left( B_1 + B_{11} \right) - g^{\alpha\beta} \left( 2 B_{00} - \frac{1}{6} \left( p^2 - 6m^2_f \right) + m^2_f B_0  \right) \rbr
+\end{align*}
+The arguments of the B-functions were suppressed again, they are $B_i = B_i(p^2,m^2_f,m^2_f)$. \\
+
+{\bf Photon/Z-boson mixed self-energy} \\
+As for the $R_2$ contribution there is also a mixed contribution to the renormalization of the neutral vector bosons in the Standard Model. It is given by
+\begin{align*}
+\begin{gathered}
+\feynmandiagram [layered layout, horizontal=b to c] {
+	a [particle={\(Z,\alpha\)}] -- [photon, momentum=\(p\)] b
+	  -- [fermion, half left, looseness=1.5, momentum=\(p+q\)] c
+	  -- [fermion, half left, looseness=1.5, momentum=\(q\)] b,
+	c -- [photon, momentum=\(p\)] d [particle={\(\beta,\gamma\)}] ,
+};
+\end{gathered}
+& = \int\frac{d^dq}{\left( 2\pi \right)^d} \left( -1 \right) \Tr \lbr \left( -ie Q_f \right) \gamma^{\alpha} \frac{i \left( \fsl{p}+\fsl{q}+m_f \right)}{\left( p+q \right)^2 - m^2_f} i \frac{g}{\cos\theta_W} \gamma^{\beta} \left( g_V - g_A \gamma_5 \right) \times \right. & \\
+& \left. \times \frac{i \left( \fsl{q}+m_f \right)}{q^2 - m^2_f} \rbr \equiv i\Pi^{\alpha\beta}_{\gamma Z} &
+\end{align*}
+Let's work on the trace so we can express the numerator of the 2-point function in terms of scalar integrals.
+\begin{align*}
+& \Tr \lbr \gamma^{\alpha} \left( \fsl{p} + \fsl{q} + m_f \right) \gamma^{\beta} \left( g_V - g_A \gamma_5 \right) \left( \fsl{q} + m_f \right) \rbr = g_V \Tr \lbr \gamma^{\alpha} \left( \fsl{p} + \fsl{q} \right) \gamma^{\beta} \fsl{q} + m^2_f \gamma^{\alpha}\gamma^{\beta} \rbr - g_A \Tr \lbr \gamma^{\alpha} \left( \fsl{p} + \fsl{q} \right) \gamma^{\beta} \gamma_5 \fsl{q} \rbr = & \\
+& = 4 g_V \lbr \left( p+q \right)_{\mu} q_{\nu} \left( g^{\alpha\mu}g^{\beta\nu} - g^{\alpha\beta}g^{\mu\nu} + g^{\alpha\nu}g^{\beta\mu} \right) + m^2_f g^{\alpha\beta} \rbr - 4i g_A \left( p+q \right)_{\mu} q_{\nu} \epsilon^{\alpha\mu\beta\nu} = & \\
+& = 4 \lbr g_V \left[ \left( p+q \right)^{\alpha}q^{\beta} - g^{\alpha\beta} \left( p+q \right) \cdot q + q^{\alpha} \left( p+q \right)^{\beta} + m^2_f g^{\alpha\beta} \right] - i g_A \epsilon^{\alpha\mu\beta\nu} p_{\mu}q_{\nu} \rbr &
+\end{align*}
+Where we used that a symmetric tensor contracted with an antisymmetric tensor vanishes and equation \ref{eqn:Tr4g}. 
 
 \begin{align*}
-i\Pi^{\alpha\beta}_{ZZ} & = \int \frac{d^4q}{\left( 2\pi \right)^4} \frac{4g^2\left(g_V^2 + g_A^2 \right)}{\cos^2\theta_W} \frac{\left( p+q \right)^{\alpha}q^{\beta} - g^{\alpha\beta} \left( p+q \right) \cdot q + q^{\alpha} \left( p+q \right)^{\beta} - m^2 g^{\alpha\beta}}{\left( \left( p+q \right)^2 -m^2 \right) \left( q^2 - m^2 \right)} = & \\
-& = \frac{4g^2\left(g_V^2 + g_A^2 \right)}{\cos^2\theta_W} \int \frac{d^4q}{\left( 2\pi \right)^4} \frac{p^{\alpha}q^{\beta}+q^{\alpha}p^{\beta}+2q^{\alpha}q^{\beta} - g^{\alpha\beta} \left( m^2 + q \cdot p + q^2 \right)}{\left( \left( p+q \right)^2 -m^2 \right) \left( q^2 - m^2 \right)} = & \\
-& = \frac{4g^2\left(g_V^2 + g_A^2 \right)}{\cos^2\theta_W} \frac{i\pi^2}{\left( 2\pi \right)^4} \lbr 2 p^{\alpha}p^{\beta} B_1 + 2 \left( B_{00} g^{\alpha\beta} + B_{11} p^{\alpha}p^{\beta} \right) - g^{\alpha\beta} \left( m^2 B_0 + B_1 p^2 + d B_{00} + B_{11} p^2 \right) \rbr = & \\
-& = \frac{ig^2\left(g_V^2 + g_A^2 \right)}{4\pi^2\cos^2\theta_W} \lbr \left( 2p^{\alpha}p^{\beta} -p^2 g^{\alpha\beta} \right) \left( B_1 + B_{11} \right) + g^{\alpha\beta} \left( \left( 2-d \right) B_{00} - m^2 B_0  \right) \rbr \longrightarrow & \\
-& \longrightarrow \frac{ig^2\left(g_V^2 + g_A^2 \right)}{4\pi^2\cos^2\theta_W} \lbr \left( 2p^{\alpha}p^{\beta} -p^2 g^{\alpha\beta} \right) \left( B_1 + B_{11} \right) - g^{\alpha\beta} \left( 2 B_{00} - \frac{1}{6} \left( p^2 - 6m^2 \right) + m^2 B_0  \right) \rbr
+i\Pi^{\alpha\beta}_{\gamma Z} & = \frac{4Q_feg}{\cos\theta_W} \int \frac{d^dq}{\left( 2\pi \right)^d} \frac{g_V \left( \left( p+q \right)^{\alpha}q^{\beta} - g^{\alpha\beta} \left( p+q \right) \cdot q + q^{\alpha} \left( p+q \right)^{\beta} + m^2_f g^{\alpha\beta} \right) - i g_A \epsilon^{\alpha\mu\beta\nu} p_{\mu}q_{\nu}}{\left( \left( p+q \right)^2 -m^2_f \right) \left( q^2 - m^2_f \right)} = & \\
+& = \frac{4Q_feg}{\cos\theta_W} \frac{i\pi^2}{\left( 2\pi \right)^4} \lbr -ig_A \epsilon^{\alpha\mu\beta\nu}p_{\mu}B_1 p_{\nu} + g_V \left[ B_1 p^{\alpha}p^{\beta} + B_{00}g^{\alpha\beta} + B_{11} p^{\alpha}p^{\beta} - g^{\alpha\beta} \left( B_1 p^2 + d B_{00} + B_{11} p^2 \right) + \right. \right. & \\
+& \left. \left. + B_1 p^{\alpha}p^{\beta} + B_{00} g^{\alpha\beta} + B_{11} p^{\alpha}p^{\beta} + B_0 m^2_f g^{\alpha\beta} \right]\rbr = & \\
+& = \frac{iQ_fegg_V}{4\pi^2\cos\theta_W} \lbr 2 p^{\alpha}p^{\beta} \left( B_1 + B_{11} \right) + g^{\alpha\beta} \left( m^2_f B_0 + \left( 2 - d \right) B_{00} -p^2 \left( B_1 + B_{11} \right) \right) \rbr \longrightarrow & \\
+& \longrightarrow \frac{iQ_fegg_V}{4\pi^2\cos\theta_W} \lbr 2 p^{\alpha}p^{\beta} \left( B_1 + B_{11} \right) + g^{\alpha\beta} \left( m^2_f B_0 - 2 B_{00} + \frac{1}{6} \left( p^2 - 6m^2 \right) -p^2 \left( B_1 + B_{11} \right) \right) \rbr = & \\
+& = \frac{iQ_fegg_V}{4\pi^2\cos\theta_W} \lbr \left( 2 p^{\alpha}p^{\beta} - p^2g^{\alpha\beta} \right) \left( B_1 + B_{11} \right) + g^{\alpha\beta} \left( m^2_f B_0 - 2 B_{00} + \frac{1}{6} \left( p^2 - 6m^2_f \right) \right) \rbr &
 \end{align*}
+From the second to third line we used that a symmetric tensor contracted with an antisymmetric tensor vanishes. The arguments of the B-functions are $B_i = B_i(p^2,m^2_f,m^2_f)$.\\
 
 {\bf Gluon self-energy} \\
+The gluon self-energy contribution can again be extracted from the photonic contribution by exchanging the vector couplings and noticing that gluons only couple to quarks.
 \begin{align*}
 & i\Pi^{\alpha\beta}_{gg} = 
 \begin{gathered}
@@ -303,5 +303,6 @@ i\Pi^{\alpha\beta}_{ZZ} & = \int \frac{d^4q}{\left( 2\pi \right)^4} \frac{4g^2\l
 };
 \end{gathered}
 \left( eQ_f \rightarrow g_S T^a, \ m \rightarrow m_q \right) = & \\
-& = -\frac{ig_S^2\Tr\left( T^a T^b\right)}{4\pi^2} \lbr 8 g^{\alpha\beta} \left( \frac{m^2}{2} B_0 - \left( B_{00} + m_q^2 \right) \right) + 4\left( 2p^{\alpha}p^{\beta} - p^2g^{\alpha\beta} \right) \left( B_1 + B_{11} + \frac{1}{12} \right) \rbr &
+& = -\frac{ig_S^2\Tr\left( T^a T^b\right)}{4\pi^2} \lbr \left( 2p^{\alpha}p^{\beta} - g^{\alpha\beta} p^2 \right) \left(B_1 + B_{11} \right) + g^{\alpha\beta} \left( m^2_q g^{\alpha\beta} B_0 - 2 B_{00} + \frac{1}{6} \left( p^2 - 6m^2_q \right) \right) \rbr &
 \end{align*}
+Here, the arguments of the B-functions are $B_i = B_i(p^2,m^2_q,m^2_q)$.
