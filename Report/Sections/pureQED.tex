@@ -105,7 +105,8 @@ R_2^{\gamma\mathrm{ee}} = & \frac{1}{\left( 2\pi \right) ^4} \int d^d\bar{q} \fr
 & = \frac{e^3}{\left( 2\pi \right) ^4} \frac{i \pi^2}{2} \lbr \gamma^{\alpha}\gamma^{\mu}\gamma_{\alpha} - 2\gamma^{\mu} + O(\epsilon) \rbr = \frac{-ie^3}{8\pi^2} \gamma^{\mu} & \numberthis \label{eqn:R2photonee}
 \end{align*}
 Where we used the 3-point integrals \ref{eqn:3ptintq2} and \ref{eqn:3ptintq2vec} and in the last step equation \ref{eqn:3g}.\\
-As already mentioned, there is one more 3-point function at the 1-loop level which is permitted by the Feynman rules: the 3-point function with only photons as external particles. But it does not contribute to $R_2$ which we will show now. Because of the symmetry of the 3-point function there are 2 contributing diagrams
+As already mentioned, there is one more 3-point function at the 1-loop level which is generally permitted by the Feynman rules: the 3-point function with only photons as external particles. But on a second look, this process is forbidden by parity. Since the photon is a spin-1 particle the parity of the initial state is $P(\gamma) = -1$, while it is $P(\gamma\gamma) = \left( -1 \right)^2 =1$ for the final state. It is now interesting to see if the $R_2$ contribution also vanishes as it should according to parity. \\
+Because of the symmetry of the 3-point function there are 2 contributing diagrams
 \begin{align*}
 \begin{gathered}
 \feynmandiagram [small, horizontal=i1 to v] {
@@ -192,6 +193,7 @@ Now we add up both terms to get the full contribution of the photon triangle dia
 \begin{equation}
 R_2^{3\gamma} = R_2^1 + R_2^2 = R_2^1 - R_2^1 = 0
 \end{equation}
+as expected.
 
 \subsection{4-point function}
 For the 4-point function we have to be more careful. The 1PI contribution at the 1-loop level consists of several diagrams. They are obtained by symmetrizing the external momenta of the diagram as follows
