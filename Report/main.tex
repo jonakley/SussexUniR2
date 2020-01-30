@@ -69,11 +69,11 @@
 
 \begin{abstract}
 For years it has been of high interest to automate the calculation of Feynman diagrams in the Standard Model (SM) in order to be able to keep up with the increasing precision of experimental data. A lot of efforts have been made in the early 2000s to make progress in this direction where one of the big milestones was the proof that any amplitude in the SM can be decomposed into a box-, a triangle-, a bubble-, a tadpole-subdiagram and a rational term which can be of two types. In this paper we investigate the $\epsilon$-dimensional contribution of dimensional regularisation to this rational term. If all of the coefficients in the composition into the mentioned subdiagrams alongside the rational terms are known we obtain an effective treelike theory giving us 1-loop results for the whole SM. \\
-This paper is structured as follows: After a short introduction to the subject, we first calculate $R_2$ in pure QED as a warm-up and then the QED contribution to $R_2$ in the SM. Then, we renormalize QED in terms of scalar integrals and calculate the contribution of QED to the renormalization of the SM. Once this is done, we are able to implement an algorithm to automate calculations in the SM and can compare our results to the results from other references.\end{abstract}
+This paper is structured as follows: After a short introduction to the subject, we first calculate $R_2$ in pure QED as a warm-up and then the QED contribution to $R_2$ in the SM. Then, we renormalize QED in terms of scalar integrals and calculate the contribution of QED to the renormalization of the SM. Once this is done, the calculations can be implemented in an algorithm like \textit{OpenLoops} to automate calculations in the SM.\end{abstract}
 
 
 % keywords can be removed
-\keywords{QFT \and 1-loop Feynman Diagrams \and Rational Terms \and More}
+\keywords{QFT \and 1-loop Feynman Diagrams \and Rational Terms \and QED \and Standard Model}
 
 \newpage
 \tableofcontents
@@ -83,6 +83,9 @@ This paper is structured as follows: After a short introduction to the subject, 
 \include{Sections/pureQED}
 \include{Sections/QED2SM}
 \include{Sections/Renormalization}
+{\bf\Large Acknowledgements} \\
+
+I want to thank Jonas Lindert for making this research project possible. He didn't hesitate for an instant to offer me possible topics when I asked him if I could do a research project during my term abroad at the University of Sussex. He took his time to answer all of my questions, be it about the project itself or further questions about his research. Our weekly meetings were very helpful and I learned a lot about perturbative calculations in the SM, how they can be implemented in automated calculations and how we can - using them - gain information about physics beyond the SM.
 \include{Sections/Appendices}
 
 
