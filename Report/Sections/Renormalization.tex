@@ -78,6 +78,7 @@ By requiring the dressed propagator to have a pole at the physical mass $\fsl{p}
 m - m + \Sigma(m) + \delta_2 m - \left( \delta_2 + \delta_m \right) m = 0
 \end{equation}
 \begin{equation}
+\label{eqn:dm}
 \Rightarrow \delta_m = \frac{1}{m} \Sigma(m)
 \end{equation}
 We also want the propagator to have a residue of unity at the pole. This gives the renormalization condition for the electron field
@@ -86,6 +87,7 @@ We also want the propagator to have a residue of unity at the pole. This gives t
 & = \lim_{\fsl{p} \rightarrow m} \frac{\fsl{p} - m}{\fsl{p} - m + \left( \Sigma(\fsl{p}) + \delta_2 \fsl{p} - \left( \delta_2 + \delta_m \right) m \right)} \overset{\mathrm{L'H}}{=} \lim_{\fsl{p} \rightarrow m} \frac{1}{1 + \frac{d\Sigma}{d\fsl{p}} + \delta_2} \overset{\mathrm{!}}{=} 1 &
 \end{align*}
 \begin{equation}
+\label{eqn:d2}
 \Rightarrow \delta_2 = - \frac{d\Sigma(\fsl{p})}{d\fsl{p}} \biggr\rvert_{\fsl{p} = m}
 \end{equation}
 $Z_1$ and $Z_2$ are related by symmetry, so we do not have to evaluate the electron-photon 3-point function. It was first shown by Ward in 1950 that $Z_1 = Z_2$ \cite{WardId}. \\
@@ -132,6 +134,7 @@ By requiring the propagator to have a residue of unity at the physical photon ma
 & = \lim_{p^2 \rightarrow 0} \frac{p^2}{p^2 \left( 1 + \Pi(p^2) + \delta_3 \right)} = \frac{1}{1+\Pi(0)+\delta_3} \overset{\mathrm{!}}{=} 1 &
 \end{align*}
 \begin{equation}
+\label{eqn:d3}
 \Rightarrow \delta_3 = - \Pi(0)
 \end{equation}
 The renormalization procedure for the whole Standard Model is obviously a lot more involved, since there are a lot more fields and parameters in the theory. But it still follows the same lines as for the simpler QED case. The whole derivation for the renormalization conditions of the electroweak part of the Standard Model can be found in \cite{SMrenorm}. We will use the results from there and calculate the needed self-energies in section \ref{sec:SMrenorm}. \\
@@ -214,9 +217,12 @@ i\Sigma(\fsl{p}) & = -e^2 \int \frac{d^dq}{\left( 2\pi \right)^d} \frac{d \cdot 
 & \longrightarrow \frac{-ie^2}{16\pi^2} \lbr m \left( 4B_0 - 2 \right) + \fsl{p} \left( 2 \left( B_0 + B_1 \right) - \left( 4B_0 - 2 + 4B_1 + 1 \right) \right) \rbr = \frac{-ie^2}{16\pi^2} \lbr m \left( 4B_0 -2 \right) - \fsl{p} \left( 2 \left( B_0 + B_1 \right) - 1 \right) \rbr &
 \end{align*}
 Where the arguments of the B-functions are suppressed again. They are $B_i = B_i(p^2,0,m^2)$. \\
+This concludes the calculations for the renormalization of pure QED at 1-loop. With the help of equations \ref{eqn:dm}, \ref{eqn:d2} and \ref{eqn:d3}, we found the expressions for an effective Lagrangian which absorbs all infinities at 1-loop level. \\
 
 \subsection{QED Contribution to the Renormalization of the Standard Model}
 \label{sec:SMrenorm}
+Now, we can continue with the more involved renormalization of the whole SM. In addition to the self-energies that already appear for pure QED, we also have to calculate mixed self-energies that also appeared for the rational terms in the SM. \\
+
 {\bf Z-Boson self-energy} \\
 The first addition to renormalization in the full Standard Model is the renormalization of the additional neutral vector boson which gets a contribution from QED. It is given by
 \begin{align*}
@@ -242,7 +248,9 @@ Let's work on the trace so we can express the numerator of the 2-point function 
 Here, we used equations \ref{eqn:Tr2g} and \ref{eqn:Tr4g}. We can now express the integrals in terms of B-functions
 \begin{align*}
 i\Pi^{\alpha\beta}_{ZZ} & = \int \frac{d^4q}{\left( 2\pi \right)^4} \frac{4g^2\left(g_V^2 + g_A^2 \right)}{\cos^2\theta_W} \frac{\left( p+q \right)^{\alpha}q^{\beta} - g^{\alpha\beta} \left( p+q \right) \cdot q + q^{\alpha} \left( p+q \right)^{\beta} - m^2_f g^{\alpha\beta}}{\left( \left( p+q \right)^2 -m^2_f \right) \left( q^2 - m^2_f \right)} = & \\
-& = \frac{4g^2\left(g_V^2 + g_A^2 \right)}{\cos^2\theta_W} \int \frac{d^4q}{\left( 2\pi \right)^4} \frac{p^{\alpha}q^{\beta}+q^{\alpha}p^{\beta}+2q^{\alpha}q^{\beta} - g^{\alpha\beta} \left( m^2_f + q \cdot p + q^2 \right)}{\left( \left( p+q \right)^2 -m^2_f \right) \left( q^2 - m^2_f \right)} = & \\
+& = \frac{4g^2\left(g_V^2 + g_A^2 \right)}{\cos^2\theta_W} \int \frac{d^4q}{\left( 2\pi \right)^4} \frac{p^{\alpha}q^{\beta}+q^{\alpha}p^{\beta}+2q^{\alpha}q^{\beta} - g^{\alpha\beta} \left( m^2_f + q \cdot p + q^2 \right)}{\left( \left( p+q \right)^2 -m^2_f \right) \left( q^2 - m^2_f \right)} = & 
+\end{align*}
+\begin{align*}
 & = \frac{4g^2\left(g_V^2 + g_A^2 \right)}{\cos^2\theta_W} \frac{i\pi^2}{\left( 2\pi \right)^4} \lbr 2 p^{\alpha}p^{\beta} B_1 + 2 \left( B_{00} g^{\alpha\beta} + B_{11} p^{\alpha}p^{\beta} \right) - g^{\alpha\beta} \left( m^2_f B_0 + B_1 p^2 + d B_{00} + B_{11} p^2 \right) \rbr = & \\
 & = \frac{ig^2\left(g_V^2 + g_A^2 \right)}{4\pi^2\cos^2\theta_W} \lbr \left( 2p^{\alpha}p^{\beta} -p^2 g^{\alpha\beta} \right) \left( B_1 + B_{11} \right) + g^{\alpha\beta} \left( \left( 2-d \right) B_{00} - m^2_f B_0  \right) \rbr \longrightarrow & \\
 & \longrightarrow \frac{ig^2\left(g_V^2 + g_A^2 \right)}{4\pi^2\cos^2\theta_W} \lbr \left( 2p^{\alpha}p^{\beta} -p^2 g^{\alpha\beta} \right) \left( B_1 + B_{11} \right) - g^{\alpha\beta} \left( 2 B_{00} - \frac{1}{6} \left( p^2 - 6m^2_f \right) + m^2_f B_0  \right) \rbr
@@ -269,8 +277,7 @@ Let's work on the trace so we can express the numerator of the 2-point function 
 & = 4 g_V \lbr \left( p+q \right)_{\mu} q_{\nu} \left( g^{\alpha\mu}g^{\beta\nu} - g^{\alpha\beta}g^{\mu\nu} + g^{\alpha\nu}g^{\beta\mu} \right) + m^2_f g^{\alpha\beta} \rbr - 4i g_A \left( p+q \right)_{\mu} q_{\nu} \epsilon^{\alpha\mu\beta\nu} = & \\
 & = 4 \lbr g_V \left[ \left( p+q \right)^{\alpha}q^{\beta} - g^{\alpha\beta} \left( p+q \right) \cdot q + q^{\alpha} \left( p+q \right)^{\beta} + m^2_f g^{\alpha\beta} \right] - i g_A \epsilon^{\alpha\mu\beta\nu} p_{\mu}q_{\nu} \rbr &
 \end{align*}
-Where we used that a symmetric tensor contracted with an antisymmetric tensor vanishes and equation \ref{eqn:Tr4g}. 
-
+Where we used that a symmetric tensor contracted with an antisymmetric tensor vanishes and equation \ref{eqn:Tr4g}. Now we can express $i\Pi^{\alpha\beta}_{\gamma Z}$ in terms of B-functions
 \begin{align*}
 i\Pi^{\alpha\beta}_{\gamma Z} & = \frac{4Q_feg}{\cos\theta_W} \int \frac{d^dq}{\left( 2\pi \right)^d} \frac{g_V \left( \left( p+q \right)^{\alpha}q^{\beta} - g^{\alpha\beta} \left( p+q \right) \cdot q + q^{\alpha} \left( p+q \right)^{\beta} + m^2_f g^{\alpha\beta} \right) - i g_A \epsilon^{\alpha\mu\beta\nu} p_{\mu}q_{\nu}}{\left( \left( p+q \right)^2 -m^2_f \right) \left( q^2 - m^2_f \right)} = & \\
 & = \frac{4Q_feg}{\cos\theta_W} \frac{i\pi^2}{\left( 2\pi \right)^4} \lbr -ig_A \epsilon^{\alpha\mu\beta\nu}p_{\mu}B_1 p_{\nu} + g_V \left[ B_1 p^{\alpha}p^{\beta} + B_{00}g^{\alpha\beta} + B_{11} p^{\alpha}p^{\beta} - g^{\alpha\beta} \left( B_1 p^2 + d B_{00} + B_{11} p^2 \right) + \right. \right. & \\
